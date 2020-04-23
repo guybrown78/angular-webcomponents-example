@@ -1,0 +1,55 @@
+<tf-side-drawer display-title="Main Menu">
+	<tf-side-drawer-nav
+		(tfRouterLinkClicked)="onRouterNavClicked($event)"
+	>
+
+		<tf-side-drawer-nav-link 
+			icon="chevron-down" 
+			href-title="Example"
+			router-link="/"
+		>
+			Example
+		</tf-side-drawer-nav-link>
+
+		<tf-side-drawer-nav-link 
+			icon="chevron-down" 
+			href-title="Example"
+			router-link="/"
+			(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
+		>
+			Example Route Link Capture
+		</tf-side-drawer-nav-link>
+
+		
+		<tf-side-drawer-nav-link 
+			icon="chevron-down" 
+		>
+			Content
+			<tf-side-drawer-sub-nav slot="sub">
+				<tf-side-drawer-sub-nav-link
+					router-link="/login"
+					href-title="Opinionated login form"
+				>
+					Login
+				</tf-side-drawer-sub-nav-link>
+
+				<tf-side-drawer-sub-nav-link
+					router-link="/reactive-login"
+					href-title="Reactive Login form eaxample"
+				>
+					Reactive Login
+				</tf-side-drawer-sub-nav-link>
+
+			</tf-side-drawer-sub-nav>
+
+		</tf-side-drawer-nav-link>
+
+		<tf-side-drawer-nav-link 
+			href-title="Visit NeutronVR's website"
+			href-link="https:www.neutronvr.com"
+		>
+			External HREF link
+		</tf-side-drawer-nav-link>
+	</tf-side-drawer-nav>
+	
+</tf-side-drawer>

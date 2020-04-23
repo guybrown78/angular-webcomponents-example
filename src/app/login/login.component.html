@@ -1,0 +1,17 @@
+
+<!-- <tf-flex fill-height layout-align="center center"> -->
+
+	<tf-login-form 
+		forgotten-url="#"
+		api-endpoint="http://www.mocky.io/v2/5e947bba31000067005e31f5"
+		api-method="POST"
+		api-headers="{
+			'Content-Type':'application/json',
+			'Access-Control-Allow-Origin':'*'
+		}"
+		body-prop-email="username"
+		body-prop-password="secret"
+		(tfLoginSuccess)="onLoginSuccess($event)"
+	></tf-login-form>
+
+<!-- </tf-flex> -->

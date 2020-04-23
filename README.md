@@ -7,12 +7,15 @@ The Transform Web Components are then installed as a project dependancy from npm
 
 https://www.npmjs.com/package/tf-core-components
 
-Tho install, run;
+To install, run;
 
 ```
 	npm i --save tf-core-components
 ```
 
+## Additional scaffolding
+
+The project has evolved from the initial bootstrap so be aware additional modules have been added. These modules are things like `AppRoutingModule`, `HttpClientModule`, `FormsModule` and `ReactiveFormsModule` etc.
 
 ## app.module
 

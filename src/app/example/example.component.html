@@ -1,0 +1,283 @@
+<tf-stats-panel>
+	<tf-stat-data-card colour="blue">
+		<span slot="title">Data Title</span>
+		<span slot="data">75,562</span>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="green">
+		<span slot="title">Avg. Open Rate</span>
+		<span slot="data">58.16%</span>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="amber">
+		<span slot="title">Avg. Click Rate</span>
+		<span slot="data">54.57%</span>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="red">
+		<span slot="title">Todays sales</span>
+		<span slot="data">£1.20</span>
+	</tf-stat-data-card>
+
+</tf-stats-panel>
+
+
+
+<tf-card>
+
+	<tf-list>
+
+		<tf-list-wrapping-item>
+
+			<tf-list-wrapping-cell>
+				<tf-user></tf-user>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell content-align="center" >
+				<tf-status traffic-light-colour="red">Inactive</tf-status>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">Cold Water Survival</span>
+					<span slot="light">CA321</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">42</span>
+					<span slot="light">Courses</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+		</tf-list-wrapping-item>
+
+		<tf-list-wrapping-item>
+
+			<tf-list-wrapping-cell>
+				<tf-user></tf-user>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell content-align="center" >
+				<tf-status traffic-light-colour="green">Active</tf-status>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">Optito Bosiet with CA-EBS</span>
+					<span slot="light">CA321</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">16</span>
+					<span slot="light">Courses</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+		</tf-list-wrapping-item>
+
+	</tf-list>
+
+</tf-card>
+
+
+<tf-card>
+	<tf-node>
+		<div class="max-w-3xl space-x-4 flex flex-row items-center justify-center">
+
+			<tf-button colour="default" size="xs">Extra Small Button</tf-button>
+
+			<tf-button size="s" colour="aqua">My Small Button</tf-button>
+
+			<tf-button>Standard</tf-button>
+
+			<tf-button size="large" colour="grey">Tailwind Button</tf-button>
+
+			<tf-button size="xl" colour="navy">XL Tailwind Button</tf-button>
+			
+		</div>
+		
+
+	</tf-node>
+</tf-card> 
+
+<tf-card>
+	<tf-node>
+		
+		<div class="max-w-3xl space-x-4 flex flex-row items-center justify-center">
+			
+			<tf-button size="xs" icon="chevron-down" icon-position="left">
+				tiny
+			</tf-button>
+
+			<tf-button size="s" colour="navy" icon="chevron-down" icon-position="left">
+				small
+			</tf-button>
+
+			<tf-button size="m" icon="chevron-left" colour="grey" icon-position="left">
+				medium
+			</tf-button>
+
+			<tf-button colour="aqua" size="l" icon="envelope" icon-position="left">
+				large
+			</tf-button>
+
+			<tf-button size="xl" icon="chevron-up" icon-position="left">
+				extra large
+			</tf-button>
+
+		</div>
+
+	</tf-node>
+</tf-card> 
+
+<tf-card>
+	<tf-node>
+		
+		<div class="max-w-3xl space-x-4 flex flex-row items-center justify-center">
+			
+			<tf-button size="xs" colour="navy" icon="chevron-down" icon-position="right">
+				tiny
+			</tf-button>
+
+			<tf-button size="s" colour="aqua" icon="chevron-down" icon-position="right">
+				small
+			</tf-button>
+
+			<tf-button size="m" icon="chevron-right" icon-position="right">
+				medium
+			</tf-button>
+
+			<tf-button size="l" icon="chevron-down" icon-position="right">
+				large
+			</tf-button>
+
+			<tf-button size="xl" colour="grey" icon="chevron-down" icon-position="right">
+				extra large
+			</tf-button>
+
+		</div>
+
+	</tf-node>
+</tf-card> 
+
+
+<tf-card>
+	<tf-node>
+		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+
+			<tf-input name="email-1" label="Email" placeholder="name@example.com"></tf-input>
+
+			<tf-input 
+				name="email-2" 
+				label="Email" 
+				placeholder="name@example.com"
+				input-hint="Enter the email address you registered with"
+			></tf-input>
+
+
+			<tf-input 
+				name="email-3" 
+				label="Email" 
+				placeholder="name@example.com"
+				input-hint="Enter the email address you registered with"
+				input-error="That's not an email address"
+				error
+			></tf-input>
+
+			<tf-input 
+				name="email-4" 
+				label="Email" 
+				placeholder="name@example.com"
+				hide-label
+				icon="envelope"
+				icon-position="left"
+			></tf-input>
+
+			<tf-input 
+				name="search" 
+				label="Search Delegate" 
+				placeholder="Joe Bloggs"
+				icon="search"
+				icon-position="right"
+			></tf-input>
+
+		</div>
+		
+	</tf-node>
+	
+</tf-card> 	
+
+
+<tf-card>
+	<tf-node>
+		<tf-dropdown></tf-dropdown>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-node>
+	<div style="padding:20px 0; margin:0 auto; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(4, 1fr); grid-column-gap: 50px; grid-row-gap: 50px;">
+
+			<tf-leading-icon-label>
+				<tf-icon-check slot="icon"></tf-icon-check>
+				Check
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-chevron-down slot="icon"></tf-icon-chevron-down>
+				Chevron Down
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-chevron-left slot="icon"></tf-icon-chevron-left>
+				Chevron Left
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-chevron-right slot="icon"></tf-icon-chevron-right>
+				Chevron Right
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-chevron-up slot="icon"></tf-icon-chevron-up>
+				Chevron Up
+			</tf-leading-icon-label>
+			
+			<tf-leading-icon-label>
+				<tf-icon-close slot="icon"></tf-icon-close>
+				Close
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-envelope slot="icon"></tf-icon-envelope>
+				Envelope
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-exclamation slot="icon"></tf-icon-exclamation>
+				Exclamation
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-notification slot="icon"></tf-icon-notification>
+				Notification
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-search slot="icon"></tf-icon-search>
+				Search
+			</tf-leading-icon-label>
+
+			<tf-leading-icon-label>
+				<tf-icon-user slot="icon"></tf-icon-user>
+				User
+			</tf-leading-icon-label>
+
+
+		</div>
+	</tf-node>
+</tf-card>
