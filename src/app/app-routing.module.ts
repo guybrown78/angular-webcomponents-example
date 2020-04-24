@@ -2,12 +2,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // pages
 import { ExampleComponent } from './example/example.component'; 
+import { InputsComponent } from './inputs/inputs.component'
 import { LoginComponent } from './login/login.component'; 
-import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component'; 
+import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
 const routes: Routes = [
 	{ 
 		path: '', 
 		component: ExampleComponent, 
+		data: {} 
+	},
+	{ 
+		path: 'inputs', 
+		component: InputsComponent, 
 		data: {} 
 	},
 	{ 
@@ -16,8 +22,8 @@ const routes: Routes = [
 		data: {} 
 	},
 	{ 
-		path: 'reactive-login', 
-		component: ReactiveLoginComponent, 
+		path: 'decoupled-login', 
+		component: DecoupledLoginComponent, 
 		data: {} 
 	},
 	

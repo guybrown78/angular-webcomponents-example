@@ -10,7 +10,9 @@ import { ExampleComponent } from './example/example.component';
 import { LoginComponent } from './login/login.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { HeaderComponent } from './header/header.component';
-import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component'; 
+import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component';
+import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component';
+import { InputsComponent } from './inputs/inputs.component'; 
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.co
 		NavigationComponent,
 		HeaderComponent,
 		ReactiveLoginComponent,
+		DecoupledLoginComponent,
+		InputsComponent,
   ],
   imports: [
 		BrowserModule,

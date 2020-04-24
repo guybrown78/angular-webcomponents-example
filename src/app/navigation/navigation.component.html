@@ -24,20 +24,28 @@
 		<tf-side-drawer-nav-link 
 			icon="chevron-down" 
 		>
-			Content
+			Forms
 			<tf-side-drawer-sub-nav slot="sub">
+
+				<tf-side-drawer-sub-nav-link
+					router-link="/inputs"
+					href-title="Simple input components"
+				>
+					Inputs
+				</tf-side-drawer-sub-nav-link>
+
 				<tf-side-drawer-sub-nav-link
 					router-link="/login"
 					href-title="Opinionated login form"
 				>
-					Login
+					Login form
 				</tf-side-drawer-sub-nav-link>
 
 				<tf-side-drawer-sub-nav-link
-					router-link="/reactive-login"
-					href-title="Reactive Login form eaxample"
+					router-link="/decoupled-login"
+					href-title="Decoupled Login form eaxample"
 				>
-					Reactive Login
+					Decoupled login form
 				</tf-side-drawer-sub-nav-link>
 
 			</tf-side-drawer-sub-nav>
