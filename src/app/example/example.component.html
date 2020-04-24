@@ -167,9 +167,34 @@
 
 
 <tf-card>
+	
 	<tf-node>
-		<tf-dropdown></tf-dropdown>
+		<div class="max-w-3xl space-x-4 flex flex-row items-center justify-center">
+
+			<tf-dropdown position="left" display-title="Left Aligned">
+				<tf-dropdown-link router-link="#">Account Settings</tf-dropdown-link>
+				<tf-dropdown-link router-link="#">Support</tf-dropdown-link>
+				<tf-dropdown-link router-link="#">License</tf-dropdown-link>
+				<tf-dropdown-link router-link="#">Sign Out</tf-dropdown-link>
+			</tf-dropdown>
+
+			<tf-dropdown display-title="Links">
+				<tf-dropdown-link href-link="https://www.google.com">Google</tf-dropdown-link>
+				<tf-dropdown-link href-link="https://bbc.co.uk" href-target="_blank">BBC</tf-dropdown-link>
+				<tf-dropdown-link href-link="https://www.neutronvr.com" href-target="_top">NeutronVR</tf-dropdown-link>
+			</tf-dropdown>
+
+
+			<tf-dropdown display-title="Actions" colour="blue">
+				<tf-dropdown-link colour="blue" router-link="#">Add User</tf-dropdown-link>
+				<tf-dropdown-link colour="blue" router-link="#">Add Course</tf-dropdown-link>
+				<tf-dropdown-link colour="blue" router-link="#">Remove</tf-dropdown-link>
+			</tf-dropdown>
+
+		</div>
+		
 	</tf-node>
+	
 </tf-card>
 
 <tf-card>
