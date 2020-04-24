@@ -12,7 +12,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { HeaderComponent } from './header/header.component';
 import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component';
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component';
-import { InputsComponent } from './inputs/inputs.component'; 
+import { InputsComponent } from './inputs/inputs.component';
+import { ButtonsComponent } from './elements/buttons/buttons.component';
+import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'; 
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { InputsComponent } from './inputs/inputs.component';
 		ReactiveLoginComponent,
 		DecoupledLoginComponent,
 		InputsComponent,
+		ButtonsComponent,
+		DropdownsComponent,
   ],
   imports: [
 		BrowserModule,
