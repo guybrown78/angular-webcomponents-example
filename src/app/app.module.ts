@@ -14,7 +14,9 @@ import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.co
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component';
 import { InputsComponent } from './inputs/inputs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
-import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'; 
+import { DropdownsComponent } from './elements/dropdowns/dropdowns.component';
+import { ModalComponent } from './modal/modal.component';
+import { LayoutsComponent } from './layouts/layouts.component'; 
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { DropdownsComponent } from './elements/dropdowns/dropdowns.component';
 		InputsComponent,
 		ButtonsComponent,
 		DropdownsComponent,
+		ModalComponent,
+		LayoutsComponent,
   ],
   imports: [
 		BrowserModule,

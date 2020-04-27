@@ -1,0 +1,25 @@
+<tf-card>
+	<tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Launch Modal Popup Overlay</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="aqua"
+				id="launchModalPopupBtn"
+				(click)="onButtonClicked($event)"
+			>
+				Launch Modal
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+</tf-card>
+
+<tf-modal 
+	[opened]="opened" 
+	(tfModalClosed)="tfModalClosedHandler($event)"
+	(tfModalConfirmed)="tfModalConfirmedHandler($event)"
+	display-title="Modal popup example"
+>
+	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
+</tf-modal>

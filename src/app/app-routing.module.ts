@@ -9,7 +9,9 @@ import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login
 // elements
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
-
+//
+import { ModalComponent } from './modal/modal.component';
+import { LayoutsComponent } from './layouts/layouts.component';
 const routes: Routes = [
 	{ 
 		path: '', 
@@ -39,6 +41,17 @@ const routes: Routes = [
 	{ 
 		path: 'dropdowns', 
 		component: DropdownsComponent, 
+		data: {} 
+	},
+	{ 
+		path: 'modals', 
+		component: ModalComponent, 
+		data: {} 
+	},
+	
+	{ 
+		path: 'layouts', 
+		component: LayoutsComponent, 
 		data: {} 
 	},
 	

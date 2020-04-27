@@ -1,4 +1,4 @@
-<tf-card>
+<!-- <tf-card>
 	
 	<tf-node>
 		<tf-dropdown 
@@ -48,4 +48,55 @@
 		
 	</tf-node>
 	
+</tf-card> -->
+
+<tf-card>
+			
+	<tf-node>
+		<tf-node-fxl-flex>
+			<tf-dropdown 
+				slot="fxl"
+				position="left" 
+				display-title="Left Aligned"
+				(tfDropdownLinkClicked)="onLeftDropdownClicked($event)"
+			>
+				<tf-dropdown-link router-link="/">Account Settings</tf-dropdown-link>
+				<tf-dropdown-link router-link="/">Support</tf-dropdown-link>
+				<tf-dropdown-link router-link="/">License</tf-dropdown-link>
+				<tf-dropdown-link router-link="login">Sign Out</tf-dropdown-link>
+			</tf-dropdown>
+			<tf-p-tag slot="flex">Menu dropdown containing schematically correct a tags for accessibitlity. Rendered as default (right / grey)</tf-p-tag>
+		</tf-node-fxl-flex>	
+	</tf-node>
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<tf-p-tag slot="flex">Menu dropdown containing schematically correct a tags for accessibitlity. Rendered as default (right / grey)</tf-p-tag>
+			<tf-dropdown slot="fxr" display-title="Links">
+				<tf-dropdown-link href-link="https://www.google.com">Google</tf-dropdown-link>
+				<tf-dropdown-link href-link="https://bbc.co.uk" href-target="_blank">BBC</tf-dropdown-link>
+				<tf-dropdown-link href-link="https://www.neutronvr.com" href-target="_top">NeutronVR</tf-dropdown-link>
+			</tf-dropdown>
+		</tf-node-flex-fxr>	
+	</tf-node>
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<tf-p-tag slot="flex">Dropdown with 'OPTIONS'. Dropdown emits 'tfDropdownSelected' with the selected option. This dropdown has the blue colour porperty added</tf-p-tag>
+			<tf-dropdown 
+				slot="fxr"
+				display-title="Actions" 
+				colour="blue" 
+				dropdown-id="options-dd"
+				(tfDropdownSelected)="onDropdownOptionSelected($event)">
+				<!-- <tf-dropdown-options slot="options"> -->
+					<tf-dropdown-option value="1" >Add User</tf-dropdown-option>
+					<tf-dropdown-option value="2" >Add Course</tf-dropdown-option>
+					<tf-dropdown-option value="3" >Edit Course</tf-dropdown-option>
+					<tf-dropdown-option value="4" >Remove</tf-dropdown-option>
+				<!-- </tf-dropdown-options> -->
+			</tf-dropdown>
+		</tf-node-flex-fxr>	
+	</tf-node>
+
 </tf-card>
