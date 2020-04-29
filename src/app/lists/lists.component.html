@@ -1,0 +1,88 @@
+<tf-card>
+	<tf-card-title>Simple List</tf-card-title>
+	<tf-list>
+		<tf-list-item>One</tf-list-item>
+		<tf-list-item>Two</tf-list-item>
+		<tf-list-item>Three</tf-list-item>
+	</tf-list>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Lists ul > (li > a)tf-list-wrapping-item </tf-card-title>
+	<tf-list>
+
+		<tf-list-wrapping-item>
+
+			<tf-list-wrapping-cell>
+				<tf-user></tf-user>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell content-align="center" >
+				<tf-status traffic-light-colour="red">Inactive</tf-status>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">Cold Water Survival</span>
+					<span slot="light">CA321</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">42</span>
+					<span slot="light">Courses</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+		</tf-list-wrapping-item>
+
+		<tf-list-wrapping-item>
+
+			<tf-list-wrapping-cell>
+				<tf-user></tf-user>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell content-align="center" >
+				<tf-status traffic-light-colour="green">Active</tf-status>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">Optito Bosiet with CA-EBS</span>
+					<span slot="light">CA321</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+			<tf-list-wrapping-cell>
+				<tf-value-pair>
+					<span slot="dark">16</span>
+					<span slot="light">Courses</span>
+				</tf-value-pair>
+			</tf-list-wrapping-cell>
+
+		</tf-list-wrapping-item>
+
+	</tf-list>
+
+</tf-card>
+
+
+
+<tf-card>
+	<tf-card-title>Lists Incorporating Node-Flex</tf-card-title>
+	<tf-list>
+		<tf-list-item>
+			<tf-node-flex-fxr r-width="30%">
+				<tf-p-tag slot="flex">Course title example 1</tf-p-tag>
+				<tf-node-text justify="center" slot="fxr">1008</tf-node-text>
+			</tf-node-flex-fxr>
+		</tf-list-item>
+		<tf-list-item>
+			<tf-node-flex-fxr r-width="30%">
+				<tf-p-tag slot="flex">Course title example 2</tf-p-tag>
+				<tf-node-text justify="center" slot="fxr">2008</tf-node-text>
+			</tf-node-flex-fxr>
+		</tf-list-item>
+	</tf-list>
+</tf-card>

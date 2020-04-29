@@ -3,22 +3,7 @@
 		(tfRouterLinkClicked)="onRouterNavClicked($event)"
 	>
 
-		<tf-side-drawer-nav-link 
-			icon="chevron-down" 
-			href-title="Example"
-			router-link="/"
-		>
-			Example
-		</tf-side-drawer-nav-link>
-
-		<tf-side-drawer-nav-link 
-			icon="chevron-down" 
-			href-title="Example"
-			router-link="/"
-			(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
-		>
-			Example Route Link Capture
-		</tf-side-drawer-nav-link>
+		
 
 		<!-- Form Sub Navigation -->
 		<tf-side-drawer-nav-link 
@@ -29,9 +14,16 @@
 
 				<tf-side-drawer-sub-nav-link
 					router-link="/inputs"
-					href-title="Simple input components"
+					href-title="Form input components"
 				>
-					Inputs
+					Input Form Components
+				</tf-side-drawer-sub-nav-link>
+
+				<tf-side-drawer-sub-nav-link
+					router-link="/form-elements"
+					href-title="Form components"
+				>
+					Other Form Components
 				</tf-side-drawer-sub-nav-link>
 
 				<tf-side-drawer-sub-nav-link
@@ -75,12 +67,49 @@
 
 		</tf-side-drawer-nav-link>
 
-		<tf-side-drawer-nav-link 
-			router-link="/layouts"
-			href-title="Layout examples"
-		>
-			Layouts
-		</tf-side-drawer-nav-link>
+			<!-- Form Sub Navigation -->
+			<tf-side-drawer-nav-link >
+				Page Layouts
+				<tf-side-drawer-sub-nav slot="sub">
+	
+					<tf-side-drawer-sub-nav-link
+						router-link="/cards"
+						href-title="Card layout exapmles"
+					>
+						Cards
+					</tf-side-drawer-sub-nav-link>
+					
+					<tf-side-drawer-sub-nav-link
+						router-link="/nodes"
+						href-title="Nodes elements exapmles"
+					>
+						Node
+					</tf-side-drawer-sub-nav-link>
+
+					<tf-side-drawer-sub-nav-link
+						router-link="/node-flex"
+						href-title="Node-flex exapmles"
+					>
+						Node-flex
+					</tf-side-drawer-sub-nav-link>
+					
+					<tf-side-drawer-sub-nav-link
+						router-link="/lists"
+						href-title="List exapmles"
+					>
+						Lists
+					</tf-side-drawer-sub-nav-link>
+
+					<tf-side-drawer-sub-nav-link
+						router-link="/tables"
+						href-title="Table exapmles"
+					>
+						Tables
+					</tf-side-drawer-sub-nav-link>
+
+				</tf-side-drawer-sub-nav>
+	
+			</tf-side-drawer-nav-link>
 
 		<tf-side-drawer-nav-link 
 			router-link="/modals"
@@ -89,6 +118,24 @@
 			Modals
 		</tf-side-drawer-nav-link>
 
+
+		<tf-side-drawer-nav-link 
+			icon="chevron-down" 
+			href-title="Example"
+			router-link="/"
+		>
+			Example
+		</tf-side-drawer-nav-link>
+
+		<tf-side-drawer-nav-link 
+			icon="chevron-down" 
+			href-title="Example"
+			router-link="/"
+			(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
+		>
+			Example Route Link Capture
+		</tf-side-drawer-nav-link>
+		
 		<tf-side-drawer-nav-link 
 			href-title="Visit NeutronVR's website"
 			href-link="https:www.neutronvr.com"

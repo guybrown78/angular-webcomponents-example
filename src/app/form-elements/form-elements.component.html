@@ -1,0 +1,109 @@
+<tf-card>
+	<tf-card-title>Textarea</tf-card-title>
+	<tf-node>
+		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+
+			<tf-textarea
+				name="about-you" 
+				label="About You" 
+				placeholder="Type here"
+				input-hint="Describe yourself"
+			>
+			</tf-textarea>
+
+
+			<tf-textarea
+				name="message" 
+				label="Message" 
+				placeholder="Type your message"
+				row-count=9
+				input-error="You need to add your message!"
+				error
+			>
+			</tf-textarea>
+
+		</div>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Select</tf-card-title>
+	<tf-node>
+		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+			<tf-select
+				name="country" 
+				label="Country / Six Nation Team" 
+				select-hint="Who you think will win the Six Nations?"
+			>
+				<tf-select-option value="1.1">England</tf-select-option>
+				<tf-select-option value="1.2">Scotland</tf-select-option>
+				<tf-select-option value="1.3">Wales</tf-select-option>
+				<tf-select-option value="1.4">Ireland</tf-select-option>
+				<tf-select-option value="1.5">France</tf-select-option>
+				<tf-select-option value="2">Italy</tf-select-option>
+			</tf-select>	
+
+			<tf-select
+				name="jsFramework" 
+				label="Javascript Framework" 
+				select-error="Please select a framework"
+				error
+			>
+				<tf-select-option value=""></tf-select-option>
+				<tf-select-option value="ang">Angular</tf-select-option>
+				<tf-select-option value="ebr">Ember</tf-select-option>
+				<tf-select-option value="rct">React</tf-select-option>
+				<tf-select-option value="vue">Vue</tf-select-option>
+			</tf-select>	
+		</div>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Checkbox</tf-card-title>
+	<tf-node>
+		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+			<tf-checkbox 
+				name="rememberMe" 
+				label="Remember Me" 
+			></tf-checkbox>
+
+			<tf-checkbox 
+				name="marketing" 
+				label="Send notifications" 
+				item-checked
+				select-hint="We will only contact you with relevant information"
+			></tf-checkbox>
+
+			<tf-checkbox 
+				name="termsConditions" 
+				label="Agree to terms and conditions" 
+				select-error="Please agree to our Terms and Contitions to continue"
+				error
+			></tf-checkbox>
+		</div>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Radio</tf-card-title>
+	<tf-node>
+		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+			<tf-radio 
+				name="gender-m" 
+				group-name="gender"
+				label="Male" 
+			></tf-radio>
+			<tf-radio 
+				name="gender-f" 
+				group-name="gender"
+				label="Female" 
+			></tf-radio>
+			<tf-radio 
+				name="gender-na" 
+				group-name="gender"
+				label="Rather not disclose" 
+			></tf-radio>
+		</div>
+	</tf-node>
+</tf-card>

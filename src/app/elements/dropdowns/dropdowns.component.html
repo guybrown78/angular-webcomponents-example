@@ -51,7 +51,7 @@
 </tf-card> -->
 
 <tf-card>
-			
+	<tf-card-title>Dropdown Examples</tf-card-title>
 	<tf-node>
 		<tf-node-fxl-flex>
 			<tf-dropdown 
@@ -65,13 +65,13 @@
 				<tf-dropdown-link router-link="/">License</tf-dropdown-link>
 				<tf-dropdown-link router-link="login">Sign Out</tf-dropdown-link>
 			</tf-dropdown>
-			<tf-p-tag slot="flex">Menu dropdown containing schematically correct a tags for accessibitlity. Rendered as default (right / grey)</tf-p-tag>
+			<tf-p-tag slot="flex">Menu dropdown framework 'router-link'. Use the router-link to trigger the 'tfDropdownLinkClicked' from the dropdown. The handler can then maintain the applications routes. Rendered as default (left / grey)</tf-p-tag>
 		</tf-node-fxl-flex>	
 	</tf-node>
 
 	<tf-node>
 		<tf-node-flex-fxr>
-			<tf-p-tag slot="flex">Menu dropdown containing schematically correct a tags for accessibitlity. Rendered as default (right / grey)</tf-p-tag>
+			<tf-p-tag slot="flex">Menu dropdown containing schematically correct 'a' tags for accessibitlity. Rendered as default (right / grey)</tf-p-tag>
 			<tf-dropdown slot="fxr" display-title="Links">
 				<tf-dropdown-link href-link="https://www.google.com">Google</tf-dropdown-link>
 				<tf-dropdown-link href-link="https://bbc.co.uk" href-target="_blank">BBC</tf-dropdown-link>
@@ -82,7 +82,7 @@
 
 	<tf-node>
 		<tf-node-flex-fxr>
-			<tf-p-tag slot="flex">Dropdown with 'OPTIONS'. Dropdown emits 'tfDropdownSelected' with the selected option. This dropdown has the blue colour porperty added</tf-p-tag>
+			<tf-p-tag slot="flex">Dropdown with 'OPTIONS'. Dropdown emits 'tfDropdownSelected' with the selected option. Useful for performing methods within the component. This dropdown has the blue colour porperty added</tf-p-tag>
 			<tf-dropdown 
 				slot="fxr"
 				display-title="Actions" 

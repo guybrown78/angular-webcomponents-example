@@ -16,7 +16,13 @@ import { InputsComponent } from './inputs/inputs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component';
 import { ModalComponent } from './modal/modal.component';
-import { LayoutsComponent } from './layouts/layouts.component'; 
+import { LayoutsComponent } from './layouts/layouts.component';
+import { FormElementsComponent } from './form-elements/form-elements.component';
+import { CardsComponent } from './cards/cards.component';
+import { NodesComponent } from './nodes/nodes.component';
+import { NodeFlexComponent } from './node-flex/node-flex.component';
+import { ListsComponent } from './lists/lists.component';
+import { TableComponent } from './table/table.component'; 
 
 @NgModule({
   declarations: [
@@ -32,6 +38,12 @@ import { LayoutsComponent } from './layouts/layouts.component';
 		DropdownsComponent,
 		ModalComponent,
 		LayoutsComponent,
+		FormElementsComponent,
+		CardsComponent,
+		NodesComponent,
+		NodeFlexComponent,
+		ListsComponent,
+		TableComponent,
   ],
   imports: [
 		BrowserModule,

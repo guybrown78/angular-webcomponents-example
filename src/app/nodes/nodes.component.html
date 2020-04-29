@@ -1,0 +1,95 @@
+<!-- <tf-node>
+	<p>Node example</p>
+</tf-node> -->
+
+<tf-card>
+	<tf-card-title>Nodes</tf-card-title>
+	<tf-node>
+		<p>Node - designed to be used within a card</p>
+	</tf-node>
+
+	<tf-node>
+		<p>
+			A tf-node is a flexbox row. It will take the full width of any parent that allows flexbox to flow, eg tf-main-content, tf-card and tf-node-list (see Node List card below). Nodes are naturally a row, therefore items inside them will flow along the 'x' axis. However, it can be used to flow as a column by adding a singular child component inside set to column. Example follows in the next node .
+		</p>
+	</tf-node>
+
+	<tf-node>
+		<div style="display: flex; flex-direction: column;">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ut posuere lacus. Duis fringilla nunc turpis, vitae finibus enim commodo sed. Duis finibus facilisis luctus. Integer eget pharetra mauris. Ut luctus erat vel varius molestie. Duis pretium elementum convallis. Aenean nec leo dui. Aenean pulvinar imperdiet elementum. Donec finibus nisi id lectus varius, sit amet posuere ex consectetur. Morbi ultricies tincidunt enim sed finibus. Nulla dui ipsum, tristique vitae viverra ac, elementum ut lectus. In porta sodales suscipit.</p>
+			<div style="
+				display: flex; 
+				flex:1; 
+				justify-content:center; 
+				align-items: center; 
+				border:solid 1px rebeccapurple;
+				min-height:85px;
+			">
+				<p>Lorum ipsum</p>
+			</div>
+			<p>Cras sit amet magna sagittis, volutpat nisl at, tempus nisi. Duis convallis elementum pretium. Vestibulum dapibus iaculis urna. Nullam dui libero, cursus ac ultrices in, auctor sit amet ex. Etiam mollis fermentum odio sit amet venenatis. Etiam bibendum leo sem, eu sollicitudin sem viverra nec. Vestibulum eget arcu quis ex placerat finibus. Phasellus volutpat scelerisque ex vitae dapibus. Quisque fringilla volutpat sem, id ultricies ex congue id. Nulla in rhoncus risus. Sed suscipit venenatis ipsum eu vestibulum. Donec eget lorem venenatis, auctor ligula sed, molestie mauris. Quisque ultricies ante at ex laoreet placerat.</p>
+		</div>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Node Lists</tf-card-title>
+
+
+	<tf-node-header>
+		<tf-node-header-title>
+			Delegates
+		</tf-node-header-title>
+		<tf-node-header-title justify="center">
+			Courses
+		</tf-node-header-title>
+	</tf-node-header>
+
+	<tf-node-list>
+		<tf-node>
+			<tf-node-text>Joe Blogs</tf-node-text>
+			<tf-node-text justify="center">42</tf-node-text>
+		</tf-node>
+		<tf-node>
+			<tf-node-text>Barry Smith</tf-node-text>
+			<tf-node-text justify="center">12</tf-node-text>
+		</tf-node>
+		<tf-node>
+			<tf-node-text>Steven Paul</tf-node-text>
+			<tf-node-text justify="center">0</tf-node-text>
+		</tf-node>
+		<tf-node>
+			<tf-node-text>Garry Cooper</tf-node-text>
+			<tf-node-text justify="center"></tf-node-text>
+		</tf-node>
+		<tf-node>
+			<tf-node-text>Alex Brown</tf-node-text>
+			<tf-node-text justify="center">118</tf-node-text>
+		</tf-node>
+	</tf-node-list>
+
+	<tf-node>
+		<p>The above Node List demonstrates a data grid example using nodes and other components such as tf-node-text, tf-node-header and tf-node-header-title. tf-node-text and tf-node-header-text allows for a property called 'justify' to organise the items within nodes.</p>
+	</tf-node>
+</tf-card>
+
+<tf-card>
+	<tf-card-title>Node Items</tf-card-title>
+	<tf-node>
+		<tf-user></tf-user>
+		<tf-status traffic-light-colour="red">Inactive</tf-status>
+		<tf-value-pair>
+			<span slot="dark">Cold Water Survival</span>
+			<span slot="light">CA321</span>
+		</tf-value-pair>
+		<tf-value-pair>
+			<span slot="dark">42</span>
+			<span slot="light">Courses</span>
+		</tf-value-pair>
+	</tf-node>
+	<tf-node>
+		<p>Adding 'flex' items into a node will space out evenly as above, but for more control, use the <a [routerLink]="['/node-flex']" style="color: rebeccapurple; text-decoration: underline; padding: 0 0.25rem;"> tf-node-flex </a> which will allow you to manipulate the x-axis layout</p>
+	</tf-node>
+</tf-card>
+
+

@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExampleComponent } from './example/example.component'; 
 // forms
 import { InputsComponent } from './inputs/inputs.component'
+import { FormElementsComponent } from './form-elements/form-elements.component'
 import { LoginComponent } from './login/login.component'; 
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
 // elements
@@ -11,6 +12,12 @@ import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
 //
 import { ModalComponent } from './modal/modal.component';
+// page layouts
+import { CardsComponent } from './cards/cards.component';
+import { NodesComponent } from './nodes/nodes.component';
+import { NodeFlexComponent} from './node-flex/node-flex.component';
+import { ListsComponent } from './lists/lists.component';
+import { TableComponent } from './table/table.component';
 import { LayoutsComponent } from './layouts/layouts.component';
 const routes: Routes = [
 	{ 
@@ -22,6 +29,10 @@ const routes: Routes = [
 		path: 'inputs', 
 		component: InputsComponent, 
 		data: {} 
+	},
+	{
+		path: 'form-elements',
+		component: FormElementsComponent,
 	},
 	{ 
 		path: 'login', 
@@ -55,6 +66,31 @@ const routes: Routes = [
 		data: {} 
 	},
 	
+	{ 
+		path: 'cards',
+		component: CardsComponent,
+		data: {}
+	},
+	{ 
+		path: 'nodes',
+		component: NodesComponent,
+		data: {}
+	},
+	{ 
+		path: 'node-flex',
+		component: NodeFlexComponent,
+		data: {}
+	},
+	{ 
+		path: 'lists',
+		component: ListsComponent,
+		data: {}
+	},
+	{ 
+		path: 'tables',
+		component: TableComponent,
+		data: {}
+	},
 ];
 
 @NgModule({

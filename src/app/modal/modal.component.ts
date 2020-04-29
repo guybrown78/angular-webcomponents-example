@@ -6,22 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent implements OnInit {
-	opened:boolean = false;	
+	modalOpened:boolean = false;	
+	alertModalOpened:boolean = false;	
   constructor() { }
   ngOnInit() {
   }
 
-	onButtonClicked(event){
+	onModalClicked(event){
 		console.log(`launch modal`);
-		this.opened = true;
+		this.modalOpened = true;
+	}
+	onAlertModalClicked(event){
+		console.log(`launch alert modal`);
+		this.alertModalOpened = true;
 	}
 
 	tfModalConfirmedHandler(event){
 		console.log("modal confirmed")
-		this.opened = false;
+		this.modalOpened = false;
 	}
 	tfModalClosedHandler(event){
 		console.log("modal closed")
-		this.opened = false;
+		this.modalOpened = false;
+	}
+
+	tfAlertModalConfirmedHandler(event){
+		console.log("alert modal closed")
+		this.alertModalOpened = false;
 	}
 }
