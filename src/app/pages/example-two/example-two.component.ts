@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./example-two.component.css']
 })
 export class ExampleTwoComponent implements OnInit {
+	loaded = false;
 	data = [
 		{
 			id: 1,
@@ -47,6 +48,9 @@ export class ExampleTwoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+		if(this.data.length){
+			this.loaded = true;
+		}
   }
 
 	onCourseActionSelected(event, courseId){

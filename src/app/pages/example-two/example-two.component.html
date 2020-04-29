@@ -1,6 +1,16 @@
 <tf-card>
 	<tf-card-title>Table</tf-card-title>
-	<tf-table>
+	<!-- check if data is loaded -->
+	
+	<!-- if loaded = false, show loading state -->
+	<tf-node *ngIf="!loaded">
+		<div style="display:flex; flex:1; justify-content: center; margin-top: 15px;">
+			<tf-spinner></tf-spinner>
+		</div>
+	</tf-node>
+
+	<!-- display if loaded = true -->
+	<tf-table *ngIf="loaded">
 
 		<tf-table-head slot="table-head">
 			<tf-table-head-cell>Name</tf-table-head-cell>
@@ -44,7 +54,7 @@
 				<div slot="fxr">&nbsp;</div>
 			</tf-node-flex-fxr>
 		</tf-node-header>
-		
+
 		<tf-node  
 			*ngFor="let course of data"
 		>
