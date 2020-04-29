@@ -119,29 +119,36 @@
 		</tf-side-drawer-nav-link>
 
 
-		<tf-side-drawer-nav-link 
-			icon="chevron-down" 
-			href-title="Example"
-			router-link="/"
-		>
-			Example
-		</tf-side-drawer-nav-link>
+			<!-- Form Sub Navigation -->
+			<tf-side-drawer-nav-link >
+				Example Pages
+				<tf-side-drawer-sub-nav slot="sub">
 
-		<tf-side-drawer-nav-link 
-			icon="chevron-down" 
-			href-title="Example"
-			router-link="/"
-			(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
-		>
-			Example Route Link Capture
-		</tf-side-drawer-nav-link>
-		
-		<tf-side-drawer-nav-link 
-			href-title="Visit NeutronVR's website"
-			href-link="https:www.neutronvr.com"
-		>
-			External HREF link
-		</tf-side-drawer-nav-link>
+					<tf-side-drawer-sub-nav-link
+						router-link="/"
+						href-title="Example app page"
+					>
+						Example App Page
+					</tf-side-drawer-sub-nav-link>
+
+					<tf-side-drawer-sub-nav-link
+						href-title="Example"
+						router-link="/example-two"
+						(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
+					>
+						App Page from Individual Route Link Capture
+					</tf-side-drawer-sub-nav-link>
+
+					<tf-side-drawer-sub-nav-link
+						href-title="Visit NeutronVR's website"
+						href-link="https:www.neutronvr.com"
+					>
+						External HREF link
+					</tf-side-drawer-sub-nav-link>
+
+				</tf-side-drawer-sub-nav>
+			</tf-side-drawer-nav-link>
+
 
 	</tf-side-drawer-nav>
 	

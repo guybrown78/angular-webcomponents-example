@@ -19,6 +19,10 @@ import { NodeFlexComponent} from './node-flex/node-flex.component';
 import { ListsComponent } from './lists/lists.component';
 import { TableComponent } from './table/table.component';
 import { LayoutsComponent } from './layouts/layouts.component';
+// pages 
+import { ExampleOneComponent } from './pages/example-one/example-one.component';
+import { ExampleTwoComponent } from './pages/example-two/example-two.component';
+//
 const routes: Routes = [
 	{ 
 		path: '', 
@@ -89,6 +93,16 @@ const routes: Routes = [
 	{ 
 		path: 'tables',
 		component: TableComponent,
+		data: {}
+	},
+	{ 
+		path: 'example-one',
+		component: ExampleOneComponent,
+		data: {}
+	},
+	{ 
+		path: 'example-two',
+		component: ExampleTwoComponent,
 		data: {}
 	},
 ];

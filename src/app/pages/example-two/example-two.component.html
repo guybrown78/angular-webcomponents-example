@@ -1,0 +1,77 @@
+<tf-card>
+	<tf-card-title>Table</tf-card-title>
+	<tf-table>
+
+		<tf-table-head slot="table-head">
+			<tf-table-head-cell>Name</tf-table-head-cell>
+			<tf-table-head-cell>Registered</tf-table-head-cell>
+		</tf-table-head>
+
+		<tf-table-row *ngFor="let course of data">
+			<tf-table-cell>
+				{{ course.name }}
+			</tf-table-cell>
+			<tf-table-cell>
+				{{ course.registered }}
+			</tf-table-cell>
+			<tf-table-cell text-align="right">
+				<a href="#" >Edit</a>
+			</tf-table-cell>
+		</tf-table-row>
+
+	</tf-table>
+
+</tf-card>
+
+<tf-card>
+
+	<tf-card-title>Node List</tf-card-title>
+
+	<tf-node-list>
+		
+		<tf-node-header>
+			<tf-node-flex-fxr r-width="110px">
+				<div slot="flex">
+					<div style="display:flex; flex:1;">
+						<tf-node-header-title style="width:50%;">
+							Courses
+						</tf-node-header-title>
+						<tf-node-header-title style="width:50%;" justify="center">
+							Registered
+						</tf-node-header-title>
+					</div>
+				</div>
+				<div slot="fxr">&nbsp;</div>
+			</tf-node-flex-fxr>
+		</tf-node-header>
+		
+		<tf-node  
+			*ngFor="let course of data"
+		>
+			<tf-node-flex-fxr r-width="110px">
+				<div slot="flex">
+					<div style="display:flex; flex:1;">
+						<tf-node-text style="width:50%;">
+							{{ course.name }}
+						</tf-node-text>
+						<tf-node-text style="width:50%;" justify="center">
+							{{ course.registered }}
+						</tf-node-text>
+					</div>
+				</div>
+				<div slot="fxr">
+					<tf-dropdown 
+						display-title="Actions" 
+						colour="blue" 
+						dropdown-id="course-actions"
+						(tfDropdownSelected)="onCourseActionSelected($event, course.id)">
+							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+					</tf-dropdown>
+				</div>
+			</tf-node-flex-fxr>
+		</tf-node>
+
+	</tf-node-list>
+</tf-card>
+

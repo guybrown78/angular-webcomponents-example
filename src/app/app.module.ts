@@ -22,7 +22,9 @@ import { CardsComponent } from './cards/cards.component';
 import { NodesComponent } from './nodes/nodes.component';
 import { NodeFlexComponent } from './node-flex/node-flex.component';
 import { ListsComponent } from './lists/lists.component';
-import { TableComponent } from './table/table.component'; 
+import { TableComponent } from './table/table.component';
+import { ExampleTwoComponent } from './pages/example-two/example-two.component';
+import { ExampleOneComponent } from './pages/example-one/example-one.component'; 
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { TableComponent } from './table/table.component';
 		NodeFlexComponent,
 		ListsComponent,
 		TableComponent,
+		ExampleTwoComponent,
+		ExampleOneComponent,
   ],
   imports: [
 		BrowserModule,
