@@ -1,3 +1,107 @@
+<form #f="ngForm" (ngSubmit)="submit(f)">
+	<div 
+		ngModelGroup="contact"
+		#contact="ngModelGroup"
+	>
+
+		<div class="form-group">
+				<label for="firstName">First Name</label>
+				<input 
+					ngModel 	
+					name="firstName" 
+					#firstName="ngModel"
+					(change)="log(firstName)"
+					required
+					minlength="3"
+					maxlength="10"
+					pattern="banana"
+					id="firstName" 
+					type="text" 
+					class="form-control"
+				>
+				<div 
+					class="alert alert-danger"
+					*ngIf="firstName.touched && !firstName.valid"
+				>
+					<div *ngIf="firstName.errors.required">
+						First Name is required
+					</div>
+					<div *ngIf="firstName.errors.minlength">
+						First Name should be min {{ firstName.errors.minlength.requiredLength }} chars
+					</div>
+					<div *ngIf="firstName.errors.pattern">
+						First Name doesn't match pattern '{{ firstName.errors.pattern.requiredPattern }}'
+					</div>
+				</div>
+		</div>
+
+	</div>
+	
+	<div class="form-group">
+		<label for="comment">Comment</label>
+		<textarea 
+			ngModel 
+			name="comment" 
+			id="comment" 
+			cols="30" 
+			rows="10" 
+			class="form-control">
+		</textarea>
+	</div>
+
+	<div class="checkbox">
+		<label>
+			<input 
+				type="checkbox"
+				ngModel
+				name="isSubscribed"
+			>
+			Subscribe to mailing list
+		</label>
+	</div>
+	<div class="form-group">
+		<label for="contactMethod">Contact Method</label>
+		<select 
+			ngModel 
+			name="contactMethod" 
+			id="contactMethod" 
+			class="form-control"
+		>
+			<option></option>
+			<option 
+				*ngFor="let method of contactMethods" 
+				[ngValue]="method"
+			>
+				{{ method.name }}
+			</option>
+		</select>
+	</div>
+
+	<div 
+		*ngFor="let method of contactMethods" 
+		class="radio"
+	>
+		
+		<label for="">
+			<input ngModel type="radio" name="contactMethod" [value]="method.id">
+			{{ method.name }}
+		</label>
+
+	</div>
+
+	<p>
+		{{ f.value | json }}
+	</p>
+
+	<button 
+		class="btn btn-primary"
+		[disabled]="!f.valid"
+	>
+		Submit
+	</button>
+</form>
+
+
 <tf-flex fill-height layout-align="center center">
 
 
@@ -14,24 +118,62 @@
 				<div class="bg-white pb-8 sm:rounded-lg">
 
 					<form 
-						#f="ngForm" (ngSubmit)="formSubmit(f)"
-						(onsubmit)="onSubmit()"
-						(tfOnInput)="tfOnInputHandler($event)"
+						#form="ngForm" 
+						(ngSubmit)="onNgSubmit(form)"
 					>
 
 						<tf-input 
-							name="email" 
-							input-type="email" 
-							input-required 
-							label="Email Address" 
+							name="name" 
+							label="Name" 
+							placeholder="Your Name" 
+							ngDefaultControl
+							[(ngModel)]="values.name"
+							#name="ngModel"
+							(change)="log(name)"
+							minlength="3"
+							maxlength="50"
+							pattern="^((?!billy).)*$"
+							required
+							[error]="name.dirty && !name.valid"
+							attr.input-error="{{
+								name.errors && name.errors.required 
+									? 'Please enter your name' 
+									: name.errors && name.errors.minlength
+										? 'You need at least 3 characters in your name'
+										: name.errors && name.errors.pattern 
+											? 'You can not be called billy' 
+											: ''
+							}}"
 						></tf-input>
 
 						<tf-input 
+							name="nickname" 
+							label="Nickname" 
+							placeholder="Your Nickname" 
+							ngDefaultControl
+							[(ngModel)]="values.nickname"
+							#nickame="ngModel"
+							(change)="log(nickname)"
+						></tf-input>
+
+						<!-- <tf-input 
+							name="email" 
+							input-type="email" 
+							input-required 
+							label="Email Address"
+							ngDefaultControl
+							[(ngModel)]="email"
+						></tf-input> -->
+
+						<!-- <tf-input 
 							name="password" 
 							input-type="password" 
 							input-required 
 							label="Password" 
-						></tf-input>
+							ngDefaultControl
+							[(ngModel)]="password"
+							
+						></tf-input> -->
 
 						<div class="mt-6 flex items-center justify-between">
 
@@ -44,13 +186,26 @@
 							<tf-button 
 								colour="aqua" 
 								button-type="submit"
-								[disabled]="!formValid || loading"
-								(click)="onSubmit()"
+								[disabled]="!form.form.valid"
 							>
 								{{ loading ? 'Loading...' : 'Login'}}
 							</tf-button>
 
+
 						</div>
+
+						<p>
+							{{ form.value | json }}
+						</p>
+						<!-- <p>
+							{{ form.form | json }}
+						</p> -->
+						<!-- <p>
+							{{ name.touched}}
+						</p>
+						<p>
+							{{ name.isValid}}
+						</p> -->
 					</form>
 
 				</div>

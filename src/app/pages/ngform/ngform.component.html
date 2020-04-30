@@ -1,0 +1,80 @@
+
+<tf-flex fill-height layout-align="center center">
+
+		<div class="bg-white w-3/5 rounded-lg flex flex-col justify-center py-12 px-5">
+
+			<div class="login-header sm:mx-auto sm:w-full sm:max-w-md">
+				<h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
+					ngForm: Template Form Example
+				</h2>
+			</div>
+
+			<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+
+				<div class="bg-white pb-8 sm:rounded-lg">
+
+					<form 
+						#form="ngForm" 
+						(ngSubmit)="onNgSubmit(form)"
+					>
+
+						<tf-input 
+							name="name" 
+							label="Name" 
+							placeholder="Your Name" 
+							ngDefaultControl
+							[(ngModel)]="values.name"
+							#name="ngModel"
+							minlength="3"
+							maxlength="50"
+							pattern="^((?!billy).)*$"
+							required
+							[error]="name.dirty && !name.valid"
+							attr.input-error="{{
+								name.errors && name.errors.required 
+									? 'Please enter your name' 
+									: name.errors && name.errors.minlength
+										? 'You need at least 3 characters in your name'
+										: name.errors && name.errors.pattern 
+											? 'You can not be called billy' 
+											: ''
+							}}"
+						></tf-input>
+
+						<tf-input 
+							name="nickname" 
+							label="Nickname" 
+							placeholder="Your Nickname" 
+							ngDefaultControl
+							[(ngModel)]="values.nickname"
+							#nickame="ngModel"
+						></tf-input>
+
+
+						<tf-node-flex-fxr>
+
+							<tf-button 
+								slot="fxr"
+								colour="aqua" 
+								button-type="submit"
+								[disabled]="!form.form.valid"
+							>
+								Submit
+							</tf-button>
+
+						</tf-node-flex-fxr>
+
+
+						<p>
+							{{ form.value | json }}
+						</p>
+						<p>
+							Form submitted: {{ form.submitted }}
+						</p>
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+</tf-flex>

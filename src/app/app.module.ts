@@ -24,7 +24,10 @@ import { NodeFlexComponent } from './node-flex/node-flex.component';
 import { ListsComponent } from './lists/lists.component';
 import { TableComponent } from './table/table.component';
 import { ExampleTwoComponent } from './pages/example-two/example-two.component';
-import { ExampleOneComponent } from './pages/example-one/example-one.component'; 
+import { ExampleOneComponent } from './pages/example-one/example-one.component';
+import { ExampleThreeComponent } from './pages/example-three/example-three.component';
+import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
+import { NgformComponent } from './pages/ngform/ngform.component'; 
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { ExampleOneComponent } from './pages/example-one/example-one.component';
 		TableComponent,
 		ExampleTwoComponent,
 		ExampleOneComponent,
+		ExampleThreeComponent,
+		ReactiveFormComponent,
+		NgformComponent,
   ],
   imports: [
 		BrowserModule,

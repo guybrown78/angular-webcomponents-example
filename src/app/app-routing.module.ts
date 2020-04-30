@@ -7,6 +7,7 @@ import { InputsComponent } from './inputs/inputs.component'
 import { FormElementsComponent } from './form-elements/form-elements.component'
 import { LoginComponent } from './login/login.component'; 
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
+import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component'
 // elements
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
@@ -22,6 +23,8 @@ import { LayoutsComponent } from './layouts/layouts.component';
 // pages 
 import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleTwoComponent } from './pages/example-two/example-two.component';
+import { ExampleThreeComponent } from './pages/example-three/example-three.component';
+import { NgformComponent } from './pages/ngform/ngform.component';
 //
 const routes: Routes = [
 	{ 
@@ -48,6 +51,7 @@ const routes: Routes = [
 		component: DecoupledLoginComponent, 
 		data: {} 
 	},
+	{ path:'reactive-login', component: ReactiveLoginComponent},
 	{ 
 		path: 'buttons', 
 		component: ButtonsComponent, 
@@ -105,6 +109,12 @@ const routes: Routes = [
 		component: ExampleTwoComponent,
 		data: {}
 	},
+	{ 
+		path: 'example-three',
+		component: ExampleThreeComponent,
+		data: {}
+	},
+	{ path: 'ngform', component: NgformComponent}
 ];
 
 @NgModule({
