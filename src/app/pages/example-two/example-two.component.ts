@@ -53,9 +53,9 @@ export class ExampleTwoComponent implements OnInit {
 		}
   }
 
-	onCourseActionSelected(event, courseId){
-		console.log("ACTION")
+	onCourseActionSelected(event){
 		const details = event.detail;
+		const courseId = Number(details.dropdownId);
 		console.log(`onCourseActionSelected - Action selected for course ${courseId}. Action value selected is ${details.value}`);
 		console.log(event, courseId, details);
 	}

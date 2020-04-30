@@ -10,7 +10,10 @@
 	</tf-node>
 
 	<!-- display if loaded = true -->
-	<tf-table *ngIf="loaded">
+	<tf-table 
+		*ngIf="loaded"
+		(tfDropdownSelected)="onCourseActionSelected($event)"
+	>
 
 		<tf-table-head slot="table-head">
 			<tf-table-head-cell>Name</tf-table-head-cell>
@@ -25,7 +28,15 @@
 				{{ course.registered }}
 			</tf-table-cell>
 			<tf-table-cell text-align="right">
-				<a href="#" >Edit</a>
+				<tf-dropdown 
+					display-title="Actions" 
+					colour="blue" 
+					attr.dropdown-id="{{course.id}}"
+				>
+						<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+						<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+				</tf-dropdown>
+				<!-- <a href="#" >Edit</a> -->
 			</tf-table-cell>
 		</tf-table-row>
 
@@ -73,8 +84,8 @@
 					<tf-dropdown 
 						display-title="Actions" 
 						colour="blue" 
-						dropdown-id="course-actions"
-						(tfDropdownSelected)="onCourseActionSelected($event, course.id)">
+						attr.dropdown-id="{{course.id}}"
+						(tfDropdownSelected)="onCourseActionSelected($event)">
 							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
 							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
 					</tf-dropdown>
