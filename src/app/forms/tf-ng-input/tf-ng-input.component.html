@@ -1,0 +1,19 @@
+<div class="form-group">
+	
+	<tf-input 
+		name={{name}}
+		label={{label}} 
+		[value]="value"
+		inputType={{type}}
+		(tfOnInput)="onValueChange($event)"
+		(tfOnInput)="onChange($event)"
+		[error]="error"
+		[inputError]="inputError"
+	></tf-input>
+	<!-- </tf-input>
+			<tf-input 
+				[value]="value"
+				(valueChange)="onValueChange($event)"
+			></form-input-base>  -->
+
+</div>

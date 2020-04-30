@@ -1,3 +1,87 @@
-<p>
-  reactive-form works!
-</p>
+
+<tf-flex fill-height layout-align="center center">
+
+	<div class="bg-white w-3/5 rounded-lg flex flex-col justify-center py-12 px-5">
+
+		<div class="login-header sm:mx-auto sm:w-full sm:max-w-md">
+			<h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
+				Reactive Form Example
+			</h2>
+		</div>
+
+		<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+
+			<form [formGroup]="form">
+				<!-- <div class="form-group">
+						<label for="">Old Password</label>
+						<input formControlName="oldPassword" type="password" class="form-control">
+						<div *ngIf="oldPassword.touched && oldPassword.invalid" class="alert alert-danger">
+								<div *ngIf="oldPassword.errors.required">
+										Old password is required.
+								</div>
+								<div *ngIf="oldPassword.errors.invalidOldPassword">
+										Old password is invalid.
+								</div>
+						</div>
+				</div> 
+	-->
+				<!-- <div class="form-group">
+					<tf-input 
+						name="oldPassword" 
+						input-type="password" 
+						label="Old Password" 
+						ngDefaultControl
+						formControlName="oldPassword"
+					></tf-input> 
+				</div> -->
+				
+				<!-- <div class="form-group"> -->
+					<tf-ng-input 
+						[label]="'Current Password'" 
+						[name]="oldPassword"
+						[type]="'password'" 	
+						[formControl]="getControl('oldPassword')"
+						[error]="oldPassword.touched && oldPassword.invalid"
+						[inputError]="oldPassword.errors.required ? 'need' : ''"
+					></tf-ng-input>
+				<!-- </div> -->
+				
+
+				<!-- <div class="form-group">
+						<label for="">New Password</label>
+						<input formControlName="newPassword" type="password" class="form-control">
+						<div *ngIf="newPassword.touched && newPassword.invalid" class="alert alert-danger">
+								<div *ngIf="newPassword.errors.required">New password is required.</div>
+						</div>
+				</div> -->
+				<!-- <div class="form-group">
+						<label for="">Confirm Password</label>
+						<input formControlName="confirmPassword" type="password" class="form-control">
+						<div *ngIf="confirmPassword.touched && confirmPassword.invalid" class="alert alert-danger">
+								<div *ngIf="confirmPassword.errors.required">Confirm password is required.</div>
+						</div>
+						<div *ngIf="confirmPassword.valid && form.invalid && form.errors.passwordsShouldMatch" class="alert alert-danger">
+								Passwords do not match.
+						</div>
+				</div> -->
+
+				<tf-node-flex-fxr>
+
+					<tf-button 
+						slot="fxr"
+						colour="aqua" 
+						button-type="submit"
+					>
+						Change Password
+					</tf-button>
+
+				</tf-node-flex-fxr>
+			</form>
+				<!-- <form>
+					
+
+				</form> -->
+
+		</div>
+	</div>
+</tf-flex>

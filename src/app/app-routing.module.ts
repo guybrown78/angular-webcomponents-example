@@ -25,6 +25,7 @@ import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleTwoComponent } from './pages/example-two/example-two.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
+import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 //
 const routes: Routes = [
 	{ 
@@ -114,7 +115,8 @@ const routes: Routes = [
 		component: ExampleThreeComponent,
 		data: {}
 	},
-	{ path: 'ngform', component: NgformComponent}
+	{ path: 'ngform', component: NgformComponent},
+	{ path: 'reactive-form', component: ReactiveFormComponent},
 ];
 
 @NgModule({

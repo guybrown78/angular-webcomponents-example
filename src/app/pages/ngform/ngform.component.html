@@ -16,6 +16,7 @@
 					<form 
 						#form="ngForm" 
 						(ngSubmit)="onNgSubmit(form)"
+						disabled
 					>
 
 						<tf-input 
@@ -25,11 +26,12 @@
 							ngDefaultControl
 							[(ngModel)]="values.name"
 							#name="ngModel"
+							(change)="name.control.markAsTouched()"
 							minlength="3"
 							maxlength="50"
 							pattern="^((?!billy).)*$"
 							required
-							[error]="name.dirty && !name.valid"
+							[error]="name.touched && !name.valid"
 							attr.input-error="{{
 								name.errors && name.errors.required 
 									? 'Please enter your name' 
@@ -48,6 +50,7 @@
 							ngDefaultControl
 							[(ngModel)]="values.nickname"
 							#nickame="ngModel"
+							(change)="name.control.markAsTouched()"
 						></tf-input>
 
 

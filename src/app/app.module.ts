@@ -27,7 +27,8 @@ import { ExampleTwoComponent } from './pages/example-two/example-two.component';
 import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
-import { NgformComponent } from './pages/ngform/ngform.component'; 
+import { NgformComponent } from './pages/ngform/ngform.component';
+import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component'; 
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { NgformComponent } from './pages/ngform/ngform.component';
 		ExampleThreeComponent,
 		ReactiveFormComponent,
 		NgformComponent,
+		TfNgInputComponent,
   ],
   imports: [
 		BrowserModule,
