@@ -42,7 +42,11 @@
 						[type]="'password'" 	
 						[formControl]="getControl('oldPassword')"
 						[error]="oldPassword.touched && oldPassword.invalid"
-						[inputError]="oldPassword.errors.required ? 'need' : ''"
+						[inputError]="
+							oldPassword.errors && oldPassword.errors.required 
+								? 'Please enter your current password' 
+								: ''
+						" 
 					></tf-ng-input>
 				<!-- </div> -->
 				
