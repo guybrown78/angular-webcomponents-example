@@ -23,6 +23,8 @@ export class TfNgInputComponent implements ControlValueAccessor {
 	@Input() type: string;
 	@Input() inputError: string;
 	@Input() error: boolean;
+	@Input() placeholder: string;
+	@Input() inputHint: string;
 
 	//
 	/** Callback registered via registerOnTouched (ControlValueAccessor) */

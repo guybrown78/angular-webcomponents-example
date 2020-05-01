@@ -1,9 +1,12 @@
-import { AbstractControl } from '@angular/forms';
+import { AbstractControl, ValidatorFn } from '@angular/forms';
 
 export class PasswordValidators {
+
+
+
 	static validOldPassword(control: AbstractControl) {
 		return new Promise((resolve) => {
-			if (control.value !== 'password')
+			if (control.value !== 'pass1234')
 				resolve({ invalidOldPassword: true });
 			else
 				resolve(null);
