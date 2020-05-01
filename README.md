@@ -71,6 +71,29 @@ body {
 	height: 100vh;
 }
 ```
+# Forms
+
+Out of the box, we can not use the angular formControl or ngModel directive directly on a transform input component like we do with native form elements. This is because the form directives need to access direct native DOM properties. Transform components are build on the shadow DOM and wrapped in the 'tf-...' tag.
+
+ 
+## Reactive Forms
+
+A ControlValueAccessor acts as a bridge between the Angular forms API and a native element in the DOM
+
+https://angular.io/api/forms/ControlValueAccessor#description
+
+We have created an angular custom input (tf-ng-input) to wrap our form transform components and then use the formControl directive on it. Now, the data can flow two-way between Transform form components and angular form
+
+There is an example reative form page to show the tf-ng-input component working
+
+
+## Template Forms
+
+We can use the tf-ng-input within the NgForm directive too.
+
+Failing the use of tf-ng-input within NgForm, you can use the raw, unwrapped transform form components but we need to add a few properties;
+
+enforce ngDefaultControl onto tf-input components to bridge the communication from angular to the component. Also need to manually set touched and untouched properties (for now) with (change)="name.control.markAsTouched()"
 
 ## Build
 
