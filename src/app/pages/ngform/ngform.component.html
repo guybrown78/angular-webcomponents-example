@@ -19,6 +19,7 @@
 						disabled
 					>
 
+						<!-- enforce ngDefaultControl onto tf-input components to bridge the communication from angular to the component. Also need to manually set touched and untouched properties (for now) with (change)="name.control.markAsTouched()" -->
 						<tf-input 
 							name="name" 
 							label="Name" 
@@ -43,23 +44,21 @@
 							}}"
 						></tf-input>
 
-						<tf-input 
-							name="nickname" 
-							label="Nickname" 
-							placeholder="Your Nickname" 
-							ngDefaultControl
-							[(ngModel)]="values.nickname"
-							#nickame="ngModel"
-							(change)="name.control.markAsTouched()"
-						></tf-input>
-
-						<!-- <tf-ng-input 
+						<!-- Can use tf-ng-input to bridge NgForm API to tf-input components -->
+						<tf-ng-input 
 							[label]="'Nickname'" 
-							[name]="nickname"
+							[name]="'nickname'"
 							[placeholder]="'Your Nickname'"
 							[(ngModel)]="values.nickname"
-							#nickame="ngModel"
-						></tf-ng-input> -->
+							#nickname="ngModel"
+							required
+							[error]="nickname.touched && nickname.invalid"
+							[inputError]="
+								nickname.errors && nickname.errors.required 
+									? 'Please enter your nickname' 
+									: ''
+							"
+						></tf-ng-input> 
 						
 						<tf-node-flex-fxr>
 
