@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PasswordValidators } from './password.validators';
 
-
-
 @Component({
   selector: 'app-reactive-form',
   templateUrl: './reactive-form.component.html',
@@ -31,10 +29,16 @@ export class ReactiveFormComponent implements OnInit {
 
 	get oldPassword() { return this.form.get('oldPassword'); }
   get newPassword() { return this.form.get('newPassword'); }
-	get confirmPassword() { return this.form.get('confirmPassword'); }
+	get confirmPassword() { 
+		return this.form.get('confirmPassword'); 
+	}
 	
 	getControl(controlName:string) {
     return this.form.get(controlName);	
 	}
 	
+	onSubmit(){
+		console.log("submit")
+		console.log(this.form)
+	}
 }

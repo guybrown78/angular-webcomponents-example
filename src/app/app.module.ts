@@ -28,7 +28,8 @@ import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
-import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component'; 
+import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component';
+import { CreateCourseComponent } from './example/create-course/create-course.component'; 
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component';
 		ReactiveFormComponent,
 		NgformComponent,
 		TfNgInputComponent,
+		CreateCourseComponent,
   ],
   imports: [
 		BrowserModule,

@@ -63,10 +63,9 @@ export class TfNgInputComponent implements ControlValueAccessor {
   onValueChange(ev: any) {
     this.value = ev.target.value;
 	}
-	onChange(ev: any) {
+	onChange(event: any) {
 		if(!this._isTouched){
 			this._onTouchedCallback();
 		}
   }
-
 }

@@ -1,0 +1,39 @@
+<tf-node>
+    
+
+	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+
+			<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+					<tf-ng-input 
+							[label]="'Course Name'" 
+							[name]="name"
+							[type]="'input'"
+							[placeholder]="'Course Name'"
+							[error]="name.touched && name.invalid"
+							[formControl]="name"
+							[inputError]="
+									name.errors && name.errors.required
+									? 'Please Provide a Course Name'
+									: ''
+							"
+					>
+					</tf-ng-input>
+
+					<tf-node-flex-fxr>
+
+							<tf-button 
+									slot="fxr"
+									colour="aqua" 
+									button-type="submit"
+									[disabled]="!form.valid"
+							>
+									Submit
+							</tf-button>
+
+					</tf-node-flex-fxr>
+			</form>
+			
+	</div>
+	
+</tf-node>
