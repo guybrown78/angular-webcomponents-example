@@ -18,6 +18,7 @@ export class AddLocationComponent implements OnInit {
 		this.initialiseLocationForm()
   }
 
+	// addLocationForm
 	private initialiseForm(): void {
     this.addLocationForm = this.formBuilder.group({
       name: ['test',[ Validators.required, Validators.maxLength(256)]],
@@ -29,6 +30,21 @@ export class AddLocationComponent implements OnInit {
 		  postcode: ['ne28 9rh', [Validators.required, Validators.maxLength(256)]]
     })
 	}
+
+	onSubmit(): void {
+    if(this.addLocationForm.valid) {
+      this.createLocation();
+    } else {
+      //TODO SEND MESSAGE BACK TO TEMPLATE
+    }
+	}
+
+	private createLocation(): void {
+    console.log(this.addLocationForm.value)
+	}
+	// ------------------------------------------
+
+	// locationForm
 	private initialiseLocationForm(): void {
     this.locationForm = this.formBuilder.group({
       name: ['test',[ Validators.required, Validators.maxLength(256)]],
@@ -40,21 +56,8 @@ export class AddLocationComponent implements OnInit {
 		  postcode: ['ne28 9rh', [Validators.required, Validators.maxLength(256)]]
     })
   }
-	
-	onSubmit(): void {
-    if(this.addLocationForm.valid) {
-      this.createLocation();
-    } else {
-      //TODO SEND MESSAGE BACK TO TEMPLATE
-    }
-	}
-
 	onLocationFormSubmit(): void {
     console.log(this.locationForm.value)
 	}
 	
-
-	private createLocation(): void {
-    console.log(this.addLocationForm.value)
-  }
 }

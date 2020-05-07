@@ -1,7 +1,6 @@
 <tf-node>
 	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
 		<p>Example of a non Transform Component Form</p>
-
 		<div style="background-color: #eee; padding:20px;">
 			<section>
 				<form [formGroup]="addLocationForm" (ngSubmit)="onSubmit()" novalidate>
@@ -63,9 +62,9 @@
 	</div>
 </tf-node>
 
-
 <tf-node>
 	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+		<p>Example of a minimal Transform Component Form</p>
 		<form [formGroup]="locationForm" (ngSubmit)="onLocationFormSubmit()" novalidate>
 			<tf-ng-input label="Location Name" formControlName="name">
 			</tf-ng-input>
@@ -81,7 +80,6 @@
 			</tf-ng-input>
 			<tf-ng-input label="Post/Zip code" formControlName="postcode">
 			</tf-ng-input>
-			<tf-divider></tf-divider>
 			<tf-node-flex-fxr>
 				<tf-button slot="fxr" colour="aqua" button-type="submit" [disabled]="!locationForm.valid">
 					Submit
