@@ -32,6 +32,8 @@ export class TfNgInputComponent implements OnInit, ControlValueAccessor {
 	@Input() icon: string;
 	@Input() iconPosition: string;
 	//
+	@Input("formControlName") formControlName: string;
+	//
 	/** Callback registered via registerOnTouched (ControlValueAccessor) */
   protected _onTouchedCallback: () => void = noop;
   /** Callback registered via registerOnChange (ControlValueAccessor) */
@@ -49,6 +51,10 @@ export class TfNgInputComponent implements OnInit, ControlValueAccessor {
 		}
 		if(!this.hint && this.inputHint){
 			this.hint = this.inputHint
+		}
+		// set name from formControlName if not passed through
+		if(!this.name && this.formControlName){
+			this.name = String(this.formControlName);
 		}
 	}
 	// todo, accept changes to inputHint and inputError for legacy api
