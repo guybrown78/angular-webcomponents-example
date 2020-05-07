@@ -54,3 +54,150 @@
 	</tf-table>
 	
 </tf-card>
+
+
+
+<tf-card>
+	<tf-card-title>Table - Rendered on data *ngFor</tf-card-title>
+	<tf-p-tag>This table is rendered on a data object using *ngFor. It has a dropdown on each row which is handled on the parent table tag (see console).</tf-p-tag>
+	<br />
+	<tf-table 
+		(tfDropdownSelected)="onCourseActionSelected($event)"
+	>
+
+		<tf-table-head slot="table-head">
+			<tf-table-head-cell>Name</tf-table-head-cell>
+			<tf-table-head-cell>Code</tf-table-head-cell>
+			<tf-table-head-cell>Status</tf-table-head-cell>
+			<tf-table-head-cell>Registered</tf-table-head-cell>
+		</tf-table-head>
+
+		<tf-table-row *ngFor="let course of data">
+			<tf-table-cell>
+				{{ course.name }}
+			</tf-table-cell>
+			<tf-table-cell>
+				{{ course.code }}
+			</tf-table-cell>
+			<tf-table-cell>
+				{{ course.status }}
+			</tf-table-cell>
+			<tf-table-cell>
+				{{ course.registered }}
+			</tf-table-cell>
+			<tf-table-cell text-align="right">
+				<tf-dropdown 
+					display-title="Actions" 
+					colour="blue" 
+					attr.dropdown-id="{{course.id}}"
+				>
+						<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+						<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+				</tf-dropdown>
+			</tf-table-cell>
+		</tf-table-row>
+
+	</tf-table>
+
+</tf-card>
+
+
+<tf-card>
+	<tf-card-title>Table - Within Table Scrolling Container</tf-card-title>
+	<tf-p-tag>If you shrink the width of the browser you will see a few differences between this table and the one above.</tf-p-tag>
+	<br />
+	<tf-p-tag>The first difference is the x-scroll. As you run out of width, the table scrolls within the tf-table-scrolling-container component</tf-p-tag>
+	<br />
+	<tf-p-tag>However, this causes a problem when trying to display a dropdown. The dropdowns don't float out of the table bounds because we are allowing a table to scroll.</tf-p-tag>
+	<br />
+	<tf-p-tag>A better way to display data like this is with nodes...</tf-p-tag>
+	<br />
+
+	<tf-table-scrolling-container>
+		<tf-table 
+			(tfDropdownSelected)="onCourseActionSelected($event)"
+		>
+
+			<tf-table-head slot="table-head">
+				<tf-table-head-cell>Name</tf-table-head-cell>
+				<tf-table-head-cell>Code</tf-table-head-cell>
+				<tf-table-head-cell>Status</tf-table-head-cell>
+				<tf-table-head-cell>Registered</tf-table-head-cell>
+			</tf-table-head>
+
+			<tf-table-row *ngFor="let course of data">
+				<tf-table-cell>
+					{{ course.name }}
+				</tf-table-cell>
+				<tf-table-cell>
+					{{ course.code }}
+				</tf-table-cell>
+				<tf-table-cell>
+					{{ course.status }}
+				</tf-table-cell>
+				<tf-table-cell>
+					{{ course.registered }}
+				</tf-table-cell>
+				<tf-table-cell text-align="right">
+					<tf-dropdown 
+						display-title="Actions" 
+						colour="blue" 
+						attr.dropdown-id="{{course.id}}"
+					>
+							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+					</tf-dropdown>
+				</tf-table-cell>
+			</tf-table-row>
+
+		</tf-table>
+	</tf-table-scrolling-container>
+	
+
+</tf-card>
+
+
+
+<tf-card>
+	<tf-card-title>Table - Constraining the height</tf-card-title>
+	<tf-p-tag>Example to show the table scrolling in a container with a fixed height</tf-p-tag>
+	<br />
+
+	<div style="border:solid 1px red; height:120px; overflow: hidden;">
+		<tf-table-scrolling-container>
+			<tf-table 
+				(tfDropdownSelected)="onCourseActionSelected($event)"
+			>
+	
+				<tf-table-head slot="table-head">
+					<tf-table-head-cell>Name</tf-table-head-cell>
+					<tf-table-head-cell>Code</tf-table-head-cell>
+					<tf-table-head-cell>Status</tf-table-head-cell>
+					<tf-table-head-cell>Registered</tf-table-head-cell>
+				</tf-table-head>
+	
+				<tf-table-row *ngFor="let course of data">
+					<tf-table-cell>
+						{{ course.name }}
+					</tf-table-cell>
+					<tf-table-cell>
+						{{ course.code }}
+					</tf-table-cell>
+					<tf-table-cell>
+						{{ course.status }}
+					</tf-table-cell>
+					<tf-table-cell>
+						{{ course.registered }}
+					</tf-table-cell>
+					<tf-table-cell text-align="right">
+						<tf-button size="xs" colour="grey">Edit</tf-button>
+					</tf-table-cell>
+				</tf-table-row>
+	
+			</tf-table>
+		</tf-table-scrolling-container>
+	</div>
+	
+	
+
+</tf-card>
