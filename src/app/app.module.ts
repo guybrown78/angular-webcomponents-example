@@ -29,7 +29,13 @@ import { ExampleThreeComponent } from './pages/example-three/example-three.compo
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
 import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component';
-import { CreateCourseComponent } from './example/create-course/create-course.component'; 
+import { CreateCourseComponent } from './example/create-course/create-course.component';
+import { TfNgTextareaComponent } from './forms/tf-ng-textarea/tf-ng-textarea.component';
+import { TfNgSelectComponent } from './forms/tf-ng-select/tf-ng-select.component';
+import { TfNgCheckboxComponent } from './forms/tf-ng-checkbox/tf-ng-checkbox.component';
+import { TfNgRadioGroupComponent } from './forms/tf-ng-radio-group/tf-ng-radio-group.component';
+import { TfNgRadioComponent } from './forms/tf-ng-radio/tf-ng-radio.component';
+
 
 @NgModule({
   declarations: [
@@ -58,6 +64,11 @@ import { CreateCourseComponent } from './example/create-course/create-course.com
 		NgformComponent,
 		TfNgInputComponent,
 		CreateCourseComponent,
+		TfNgTextareaComponent,
+		TfNgSelectComponent,
+		TfNgCheckboxComponent,
+		TfNgRadioGroupComponent,
+		TfNgRadioComponent,
   ],
   imports: [
 		BrowserModule,

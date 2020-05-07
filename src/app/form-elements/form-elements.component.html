@@ -7,7 +7,7 @@
 				name="about-you" 
 				label="About You" 
 				placeholder="Type here"
-				input-hint="Describe yourself"
+				hint="Describe yourself"
 			>
 			</tf-textarea>
 
@@ -17,7 +17,7 @@
 				label="Message" 
 				placeholder="Type your message"
 				row-count=9
-				input-error="You need to add your message!"
+				error-message="You need to add your message!"
 				error
 			>
 			</tf-textarea>
@@ -33,7 +33,7 @@
 			<tf-select
 				name="country" 
 				label="Country / Six Nation Team" 
-				select-hint="Who you think will win the Six Nations?"
+				hint="Who you think will win the Six Nations?"
 			>
 				<tf-select-option value="1.1">England</tf-select-option>
 				<tf-select-option value="1.2">Scotland</tf-select-option>
@@ -46,8 +46,9 @@
 			<tf-select
 				name="jsFramework" 
 				label="Javascript Framework" 
-				select-error="Please select a framework"
+				error-message="Please select a framework"
 				error
+				value="rct"
 			>
 				<tf-select-option value=""></tf-select-option>
 				<tf-select-option value="ang">Angular</tf-select-option>
@@ -55,6 +56,18 @@
 				<tf-select-option value="rct">React</tf-select-option>
 				<tf-select-option value="vue">Vue</tf-select-option>
 			</tf-select>	
+
+
+			<tf-select
+				name="region" 
+				label="Region" 
+			>
+				<tf-select-option value="1">South</tf-select-option>
+				<tf-select-option value="2">North West</tf-select-option>
+				<tf-select-option value="3" selected>North East</tf-select-option>
+				<tf-select-option value="4">Midlands</tf-select-option>
+			</tf-select>	
+
 		</div>
 	</tf-node>
 </tf-card>
@@ -72,13 +85,13 @@
 				name="marketing" 
 				label="Send notifications" 
 				item-checked
-				select-hint="We will only contact you with relevant information"
+				hint="We will only contact you with relevant information"
 			></tf-checkbox>
 
 			<tf-checkbox 
 				name="termsConditions" 
 				label="Agree to terms and conditions" 
-				select-error="Please agree to our Terms and Contitions to continue"
+				error-message="Please agree to our Terms and Contitions to continue"
 				error
 			></tf-checkbox>
 		</div>
@@ -89,7 +102,7 @@
 	<tf-card-title>Radio</tf-card-title>
 	<tf-node>
 		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
-			<tf-radio 
+			<!-- <tf-radio 
 				name="gender-m" 
 				group-name="gender"
 				label="Male" 
@@ -103,7 +116,57 @@
 				name="gender-na" 
 				group-name="gender"
 				label="Rather not disclose" 
-			></tf-radio>
+			></tf-radio> -->
+
+			<tf-radio-group 
+				name="gender" 
+				label="Gender" 
+				description="Description about the radio group"
+				hint="You're gender">
+				<tf-radio 
+					name="gender-m" 
+					group-name="gender"
+					label="Male" 
+				></tf-radio>
+				<tf-radio 
+					name="gender-f" 
+					group-name="gender"
+					label="Female" 
+				></tf-radio>
+				<tf-radio 
+					name="gender-na" 
+					group-name="gender"
+					label="Rather not disclose" 
+				></tf-radio>
+			</tf-radio-group>
+
+			<tf-divider></tf-divider>
+
+			<tf-radio-group 
+				name="push" 
+				label="Push Notifications" 
+				description="These are delivered via SMS to your mobile phone."
+			>
+				<tf-radio 
+					name="push-everything" 
+					group-name="push"
+					label="Everything" 
+					hint="Hear about all the news"
+				></tf-radio>
+				<tf-radio 
+					name="push-courses" 
+					group-name="push"
+					label="Courses" 
+					hint="Be informed when a new course is published"
+				></tf-radio>
+				<tf-radio 
+					name="push-delegates" 
+					group-name="push"
+					label="Delegates" 
+					hint="Recieve notifications on delegate registration"
+				></tf-radio>
+			</tf-radio-group>
+
 		</div>
 	</tf-node>
 </tf-card>

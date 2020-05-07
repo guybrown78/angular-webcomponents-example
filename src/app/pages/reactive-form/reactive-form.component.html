@@ -13,7 +13,7 @@
 
 			<form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-					<tf-ng-input 
+					<!-- <tf-ng-input 
 						[label]="'Current Password'" 
 						[name]="oldPassword"
 						[type]="'password'" 	
@@ -32,6 +32,27 @@
 									? 'Old password is invalid. Hint: (pass1234)'
 									: ''
 						" 
+					></tf-ng-input> -->
+
+					<tf-ng-input 
+						[label]="'Current Password'" 
+						[name]="oldPassword"
+						[type]="'password'" 	
+						formControlName="oldPassword"
+						[error]="oldPassword.touched && oldPassword.invalid"
+						[placeholder]="'Enter your current password'"
+						[hint]="
+							oldPassword.untouched 
+								? 'Your current password is pass1234' 
+								: ''
+						"
+						[errorMessage]="
+							oldPassword.errors && oldPassword.errors.required 
+								? 'Please enter your current password!' 
+								: oldPassword.errors && oldPassword.errors.invalidOldPassword
+									? 'Old password is invalid. Hint: (pass1234)'
+									: ''
+						" 
 					></tf-ng-input>
 
 					<div class="my-6 sm:mx-auto sm:w-full sm:max-w-md">
@@ -42,7 +63,7 @@
 						[label]="'New Password'" 
 						[name]="newPassword"
 						[type]="'password'" 	
-						[formControl]="getControl('newPassword')"
+						formControlName="newPassword"
 						[error]="newPassword.touched && newPassword.invalid"
 						[inputError]="
 							newPassword.errors && newPassword.errors.required 
@@ -52,10 +73,10 @@
 					></tf-ng-input>
 
 					<tf-ng-input 
-						[label]="'Confirm  Password'" 
+						[label]="'Confirm Password'" 
 						[name]="confirmPassword"
 						[type]="'password'" 	
-						[formControl]="confirmPassword"
+						formControlName="confirmPassword"
 						[error]="confirmPassword.touched && confirmPassword.invalid"
 						[inputError]="
 							confirmPassword.errors && confirmPassword.errors.required 

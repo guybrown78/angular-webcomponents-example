@@ -1,32 +1,28 @@
-import { Component, OnInit, forwardRef, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, forwardRef, Input, ChangeDetectorRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR  } from '@angular/forms';
 
 export const CUSTOM_INPUT_VALUE_ACCESSOR: any = {
 	provide: NG_VALUE_ACCESSOR,
-	useExisting: forwardRef(() => TfNgInputComponent),
+	useExisting: forwardRef(() => TfNgSelectComponent),
 	multi: true
 };
 
 const noop = () => { };
 
 @Component({
-  selector: 'tf-ng-input',
-  templateUrl: './tf-ng-input.component.html',
-	styleUrls: ['./tf-ng-input.component.css'],
+  selector: 'tf-ng-select',
+  templateUrl: './tf-ng-select.component.html',
+	styleUrls: ['./tf-ng-select.component.css'],
 	providers: [CUSTOM_INPUT_VALUE_ACCESSOR]
 })
-export class TfNgInputComponent implements OnInit, ControlValueAccessor {
+export class TfNgSelectComponent implements ControlValueAccessor {
 
 	@Input() label: string;
 	@Input() name: string;
-	@Input() type: string;
 	@Input() errorMessage: string;
-	@Input() inputError: string;
 	@Input() error: boolean;
 	@Input() placeholder: string;
 	@Input() hint: string;
-	@Input() inputHint: string;
-	@Input() autoComplete: string;
 	@Input() required: boolean;
 	@Input() hideLabel: boolean;
 	@Input() icon: string;
@@ -43,18 +39,9 @@ export class TfNgInputComponent implements OnInit, ControlValueAccessor {
 		private cd: ChangeDetectorRef
 	) {}
 	
-	ngOnInit() {
-		if(!this.errorMessage && this.inputError){
-			this.errorMessage = this.inputError;
-		}
-		if(!this.hint && this.inputHint){
-			this.hint = this.inputHint
-		}
-	}
-	// todo, accept changes to inputHint and inputError for legacy api
-	
+
   get value(): any {
-      return this._value;
+    return this._value;
   }
 	
 	/** value setter */
@@ -75,7 +62,7 @@ export class TfNgInputComponent implements OnInit, ControlValueAccessor {
   registerOnTouched(fn: () => any): void {
     this._onTouchedCallback = fn;
   }
-	onValueChange(event: any) {
+  onValueChange(event: any) {
     this.value = event.detail.value;
 	}
 	onBlur() {

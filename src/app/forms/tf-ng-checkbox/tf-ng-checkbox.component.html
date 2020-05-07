@@ -1,0 +1,13 @@
+<tf-checkbox 
+	name={{name}}
+	label={{label}} 
+	[value]="value"
+	[checked]="checked"
+	required="required"
+	hideLabel="hideLabel"
+	[hint]="hint"
+	[error]="error"
+	[errorMessage]="errorMessage"
+	(tfOnChecked)="onValueChange($event)"
+	(focusout)="onBlur()"
+></tf-checkbox>

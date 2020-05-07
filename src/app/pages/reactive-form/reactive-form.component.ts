@@ -27,15 +27,16 @@ export class ReactiveFormComponent implements OnInit {
   ngOnInit() {
   }
 
-	get oldPassword() { return this.form.get('oldPassword'); }
+	get oldPassword() { 
+		console.log(this.form.get('oldPassword'))
+		return this.form.get('oldPassword'); 
+	}
   get newPassword() { return this.form.get('newPassword'); }
-	get confirmPassword() { 
-		return this.form.get('confirmPassword'); 
-	}
+	get confirmPassword() { return this.form.get('confirmPassword'); }
 	
-	getControl(controlName:string) {
-    return this.form.get(controlName);	
-	}
+	// getControl(controlName:string) {
+  //   return this.form.get(controlName);	
+	// }
 	
 	onSubmit(){
 		console.log("submit")

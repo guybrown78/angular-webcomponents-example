@@ -1,7 +1,7 @@
-<tf-input 
+<tf-textarea 
 	name={{name}}
 	label={{label}} 
-	inputType={{type}}
+	rowCount="{{rowCount}}"
 	autoComplete={{autoComplete}}
 	required="required"
 	hideLabel="hideLabel"
@@ -14,4 +14,4 @@
 	[errorMessage]="errorMessage"
 	(tfOnInput)="onValueChange($event)"
 	(focusout)="onBlur()"
-></tf-input>
+></tf-textarea>
