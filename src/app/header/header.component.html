@@ -3,5 +3,16 @@
 	app-title="Transform Web Components" 
 	app-initials="TF"
 	show-app-logo="true"
-></tf-app-base-header>
-	<!-- client-logo-source="https://dwglogo.com/wp-content/uploads/2016/01/Petrofac-Logo.png" -->
+	show-client-logo="true"
+	client-logo-source="https://dwglogo.com/wp-content/uploads/2016/01/Petrofac-Logo.png"
+>
+	<tf-quick-links
+	slot="quicklinks" 
+	dropdown-id="quicklinks-dd"
+	(tfDropdownSelected)="onQuicklinkOptionSelected($event)"
+	>
+		<tf-dropdown-option value="1" >Add User</tf-dropdown-option>
+		<tf-dropdown-option value="2" >Add Course</tf-dropdown-option>
+		<tf-dropdown-option value="3" >Quick Link</tf-dropdown-option>
+	</tf-quick-links>
+</tf-app-base-header>
