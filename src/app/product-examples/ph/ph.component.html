@@ -1,0 +1,27 @@
+<tf-info-panel>
+	<tf-ph-overview-button
+		product-initials="CM"
+		product-title="Competence Management"
+		is-active="false"
+		product-description="Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups."
+		product-id="cm"
+
+	></tf-ph-overview-button>
+	<tf-ph-overview-button
+		product-initials="TM"
+		product-title="Training Management"
+		is-active="false"
+		product-description="Training Management is the management application to administrate your corporations training"
+		product-id="tm-app"
+		marketing-cta-as-button="true"
+		product-cta="Want to know more about Training Management? Request a call from your Account Manager"
+		(tfPhOverviewFindOutMoreClicked)="onProductCtaClicked($event)"
+	></tf-ph-overview-button>
+	<tf-ph-overview-button
+		product-initials="LM"
+		product-title="Learning Management"
+		is-active="true"
+		product-id="lm"
+		(tfPhOverviewButtonClicked)="onProductClicked($event)"
+	></tf-ph-overview-button>
+</tf-info-panel>

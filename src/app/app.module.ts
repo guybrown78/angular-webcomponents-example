@@ -36,6 +36,7 @@ import { TfNgCheckboxComponent } from './forms/tf-ng-checkbox/tf-ng-checkbox.com
 import { TfNgRadioGroupComponent } from './forms/tf-ng-radio-group/tf-ng-radio-group.component';
 import { TfNgRadioComponent } from './forms/tf-ng-radio/tf-ng-radio.component';
 import { AddLocationComponent } from './example/add-location/add-location.component';
+import { PhComponent } from './product-examples/ph/ph.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { AddLocationComponent } from './example/add-location/add-location.compon
 		TfNgRadioGroupComponent,
 		TfNgRadioComponent,
 		AddLocationComponent,
+		PhComponent,
   ],
   imports: [
 		BrowserModule,

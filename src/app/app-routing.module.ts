@@ -26,6 +26,8 @@ import { ExampleTwoComponent } from './pages/example-two/example-two.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
+// product pages
+import { PhComponent } from './product-examples/ph/ph.component';
 //
 const routes: Routes = [
 	{ 
@@ -113,6 +115,11 @@ const routes: Routes = [
 	{ 
 		path: 'example-three',
 		component: ExampleThreeComponent,
+		data: {}
+	},
+	{
+		path: 'product-hub',
+		component: PhComponent,
 		data: {}
 	},
 	{ path: 'ngform', component: NgformComponent},
