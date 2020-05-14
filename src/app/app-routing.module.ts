@@ -17,6 +17,7 @@ import { ModalComponent } from './modal/modal.component';
 import { CardsComponent } from './cards/cards.component';
 import { NodesComponent } from './nodes/nodes.component';
 import { NodeFlexComponent} from './node-flex/node-flex.component';
+import { NodeRowComponent} from './node-row/node-row.component';
 import { ListsComponent } from './lists/lists.component';
 import { TableComponent } from './table/table.component';
 import { LayoutsComponent } from './layouts/layouts.component';
@@ -90,6 +91,11 @@ const routes: Routes = [
 	{ 
 		path: 'node-flex',
 		component: NodeFlexComponent,
+		data: {}
+	},
+	{ 
+		path: 'node-row',
+		component: NodeRowComponent,
 		data: {}
 	},
 	{ 
