@@ -1,5 +1,5 @@
 <tf-card>
-	<tf-card-title>Node List - With Row</tf-card-title>
+	<tf-card-title>Node Row - With Mobile Cell Headers</tf-card-title>
 	<tf-node-list>
 
 		<tf-node-row-header mobile-hide="true">
@@ -10,14 +10,18 @@
 				<h3>code</h3>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="10%" layout-align="center">
-				<h3>data</h3>
+				<h3>count</h3>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="flex" >	
 				<h3>description</h3>
 			</tf-node-row-cell>
 		</tf-node-row-header>
 
-		<tf-node-row *ngFor="let course of data" mobile-wrap="true">
+		<tf-node-row 
+			*ngFor="let course of data" 
+			mobile-wrap="true"
+			(tfDropdownSelected)="onCourseActionSelected($event)"
+		>
 			<tf-node-row-cell c-width="25%" >
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Course Title
@@ -59,7 +63,66 @@
 						display-title="Actions" 
 						colour="blue" 
 						attr.dropdown-id="{{course.id}}"
-						(tfDropdownSelected)="onCourseActionSelected($event)">
+					>
+							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+					</tf-dropdown>
+			</tf-node-row-cell>
+
+		</tf-node-row>
+	</tf-node-list>
+</tf-card>
+
+
+<tf-card>
+	<tf-card-title>Node Row - No Wrap</tf-card-title>
+	<tf-node-list>
+
+		<tf-node-row-header mobile-hide="false">
+			<tf-node-row-cell c-width="20%">
+				<h3>title</h3>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="125px" layout-align="center">
+				<h3>Number of Delegates</h3>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="flex" >	
+				<h3>description</h3>
+			</tf-node-row-cell>
+		</tf-node-row-header>
+
+		<tf-node-row 
+			*ngFor="let course of data" 
+			mobile-wrap="false"
+			(tfDropdownSelected)="onCourseActionSelected($event)"
+		>
+			<tf-node-row-cell c-width="20%" >
+				<span>{{ course.name }}</span>
+			</tf-node-row-cell>
+
+
+			<tf-node-row-cell 
+				c-width="125px" 
+				layout-align="center"
+			>
+				<tf-node-row-cell-h5 slot="mobilecellheader">
+					Registered
+				</tf-node-row-cell-h5>
+				<span>{{ course.registered }}</span>
+			</tf-node-row-cell>
+
+			<tf-node-row-cell c-width="flex">	
+				<span>{{ course.description }}</span>
+			</tf-node-row-cell>	
+
+			<tf-node-row-cell 
+				c-width="115px"
+				layout-align="flex-end"
+			>
+				<tf-dropdown 
+						display-title="Actions" 
+						colour="blue" 
+						attr.dropdown-id="{{course.id}}"
+					>
 							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
 							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
 					</tf-dropdown>

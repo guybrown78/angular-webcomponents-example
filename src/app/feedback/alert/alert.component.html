@@ -1,0 +1,60 @@
+<tf-card>
+	<tf-card-title>Alerts</tf-card-title>
+	<tf-p-tag>
+		Alerts are shown when a custom event 'tfShowAlert' is dispatched from the DOCUMENT.BODY.
+	</tf-p-tag><br />
+	<tf-p-tag>
+		tfShowAlert alerts are listend to by a factory component called tf-alerts. The tf-alerts component then manages and renders a tf-alert from the event details. The app should only contain a single tf-alerts component and it should be  architectured high up in the DOM hierachy, such as it is in this application (see app.component.html)
+	</tf-p-tag><br />
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Show standard alert massage</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="blue"
+				icon="notification" 
+				icon-position="left"
+				(click)="onStandardAlertClicked()"
+			>
+				Standard Alert
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Confirm/Success message (for 1 second)</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="aqua"
+				icon="check" 
+				icon-position="left"
+				(click)="onConfirmAlertClicked()"
+			>
+				Confirm Alert
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Failed message (for 1 second)</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="grey"
+				icon="close" 
+				icon-position="left"
+				(click)="onFailedAlertClicked()"
+			>
+				Failed Task Alert
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
+</tf-card>
+
+

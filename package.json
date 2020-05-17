@@ -23,7 +23,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.6.11",
     "rxjs": "~6.3.3",
-    "tf-core-components": "0.0.40",
+    "tf-core-components": "0.0.44",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {

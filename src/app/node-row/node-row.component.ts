@@ -67,4 +67,12 @@ export class NodeRowComponent implements OnInit {
   ngOnInit() {
   }
 
+
+
+	onCourseActionSelected(event){
+		const details = event.detail;
+		const courseId = Number(details.dropdownId);
+		console.log(`onCourseActionSelected - Action selected for course ${courseId}. Action value selected is ${details.value}`);
+		console.log(event, courseId, details);
+	}
 }

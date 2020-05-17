@@ -38,6 +38,7 @@ import { TfNgRadioComponent } from './forms/tf-ng-radio/tf-ng-radio.component';
 import { AddLocationComponent } from './example/add-location/add-location.component';
 import { PhComponent } from './product-examples/ph/ph.component';
 import { NodeRowComponent } from './node-row/node-row.component';
+import { AlertComponent } from './feedback/alert/alert.component';
 
 
 @NgModule({
@@ -75,6 +76,7 @@ import { NodeRowComponent } from './node-row/node-row.component';
 		AddLocationComponent,
 		PhComponent,
 		NodeRowComponent,
+		AlertComponent,
   ],
   imports: [
 		BrowserModule,

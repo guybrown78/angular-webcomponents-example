@@ -5,3 +5,6 @@
 <tf-main-content>
 	<router-outlet #outlet="outlet"></router-outlet>
 </tf-main-content>
+
+<!-- tf-alerts is a factory component that listens for the custom event tfShowAlert from the document.body. The tfShowAlert details contains config data to render a tf-alert. The app should only contain a single tf-alerts architectured high up in the DOM hierachy, such as it is here -->
+<tf-alerts></tf-alerts>

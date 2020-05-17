@@ -13,6 +13,8 @@ import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
 //
 import { ModalComponent } from './modal/modal.component';
+//
+import { AlertComponent } from './feedback/alert/alert.component'
 // page layouts
 import { CardsComponent } from './cards/cards.component';
 import { NodesComponent } from './nodes/nodes.component';
@@ -71,7 +73,10 @@ const routes: Routes = [
 		component: ModalComponent, 
 		data: {} 
 	},
-	
+	{
+		path: 'alerts',
+		component: AlertComponent
+	},
 	{ 
 		path: 'layouts', 
 		component: LayoutsComponent, 
