@@ -1,0 +1,30 @@
+<tf-page-title-breadcrumbs>
+	<tf-page-message slot="welcomeMessage"><tf-span-bold>Hello Beth,</tf-span-bold> welcome to your dashboard</tf-page-message>
+</tf-page-title-breadcrumbs>
+
+
+<tf-page-title-breadcrumbs>
+	<tf-page-title slot="pageTitle">Page Title</tf-page-title>
+</tf-page-title-breadcrumbs>
+
+<tf-page-title-breadcrumbs 
+	show-back-button="true" 
+	(tfBackButtonClicked)="onBackButtonClicked()"
+>
+	<tf-breadcrumbs slot="breadcrumbs">
+		<tf-breadcrumb 
+			href-link="#"
+			href-title="Parent Page"
+		>
+			Parent Page Title
+		</tf-breadcrumb>
+		<tf-breadcrumb 
+			router-link="/child-page"
+			href-title="Child Page"
+			(tfRouterLinkClicked)="onRouterLinkClicked($event)"
+		>
+			Child Page
+		</tf-breadcrumb>
+	</tf-breadcrumbs>
+	<tf-page-title slot="pageTitle">Page Title</tf-page-title>
+</tf-page-title-breadcrumbs>

@@ -39,6 +39,8 @@ import { AddLocationComponent } from './example/add-location/add-location.compon
 import { PhComponent } from './product-examples/ph/ph.component';
 import { NodeRowComponent } from './node-row/node-row.component';
 import { AlertComponent } from './feedback/alert/alert.component';
+import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
+
 
 
 @NgModule({
@@ -77,6 +79,7 @@ import { AlertComponent } from './feedback/alert/alert.component';
 		PhComponent,
 		NodeRowComponent,
 		AlertComponent,
+		PagetitleBreadcrumbsComponent,
   ],
   imports: [
 		BrowserModule,

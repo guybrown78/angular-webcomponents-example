@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
 import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component'
 // elements
+import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
 //
@@ -58,6 +59,10 @@ const routes: Routes = [
 		data: {} 
 	},
 	{ path:'reactive-login', component: ReactiveLoginComponent},
+	{
+		path:'title-breadcrumbs',
+		component: PagetitleBreadcrumbsComponent,
+	},
 	{ 
 		path: 'buttons', 
 		component: ButtonsComponent, 
