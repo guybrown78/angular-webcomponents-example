@@ -6,6 +6,6 @@
 	align-items: center;
 	width: 100%;
 }
-tf-button{
+tf-button, tf-icon-button{
 	margin: 10px;
 }

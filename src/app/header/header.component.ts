@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 	signOutConfirmationOpened:boolean = false;
-  constructor() { }
+	userAccountMenuItems:any;
+	// userAccountMenuItemsStringified:string;
+	headerData:boolean = false;
+	JSON:any;
+  constructor() {
+		this.userAccountMenuItems = [
+			{label:'My Account', value:'userAccount'},
+			{label:'Settings', value:'userSettings'},
+			{label:'Sign Out',value:'signOut'}
+		];
+		this.JSON = JSON;
+		// this.userAccountMenuItemsStringified = JSON.stringify(this.userAccountMenuItems)
+	}
 
   ngOnInit() {
+		this.headerData = true;
 	}
 	
 	onQuicklinkOptionSelected(event){
@@ -29,11 +42,18 @@ export class HeaderComponent implements OnInit {
 
 	tfModalConfirmedHandler(event){
 		console.log("Log Out confirmed, end the users session")
+		this.userAccountMenuItems = [
+			{label:'Sign In',value:'signIn'}
+		];
+		// this.userAccountMenuItemsStringified = JSON.stringify(this.userAccountMenuItems)
+		// console.log(this.userAccountMenuItemsStringified)
 		this.signOutConfirmationOpened = false;
+		// this.headerData = false;
 	}
 	tfModalClosedHandler(event){
 		console.log("modal closed")
 		this.signOutConfirmationOpened = false;
+		
 	}
 
 }
