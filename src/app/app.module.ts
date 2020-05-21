@@ -40,6 +40,10 @@ import { PhComponent } from './product-examples/ph/ph.component';
 import { NodeRowComponent } from './node-row/node-row.component';
 import { AlertComponent } from './feedback/alert/alert.component';
 import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
+import { TypographyComponent } from './design-system/typography/typography.component';
+import { ColourPalleteComponent } from './design-system/colour-pallete/colour-pallete.component';
+import { BrowserIconsComponent } from './design-system/browser-icons/browser-icons.component';
+import { ProductLogosComponent } from './design-system/product-logos/product-logos.component';
 
 
 
@@ -80,6 +84,10 @@ import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/
 		NodeRowComponent,
 		AlertComponent,
 		PagetitleBreadcrumbsComponent,
+		TypographyComponent,
+		ColourPalleteComponent,
+		BrowserIconsComponent,
+		ProductLogosComponent,
   ],
   imports: [
 		BrowserModule,

@@ -7,6 +7,157 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent implements OnInit {
+	navigationData = [
+		{
+			label:"Forms",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/inputs",
+					title:"Form input components",
+					label:"Input Form Components"
+				},
+				{
+					routerLink:"/form-elements",
+					title:"Form components",
+					label:"Other Form Components"
+				},
+				{
+					routerLink:"/login",
+					title:"Opinionated Login Form",
+					label:"Login form"
+				},
+				{
+					routerLink:"/decoupled-login",
+					title:"Decoupled login form example",
+					label:"Decoupled login form"
+				},
+				{
+					routerLink:"/ngform",
+					title:"Angular Template Form (ngForm)",
+					label:"Template Form"
+				},
+				{
+					routerLink:"/reactive-form",
+					title:"Angular Reactive Form (FormGroup, FormBuilder, Validators)",
+					label:"Reactive Form"
+				},
+			]
+		},
+		{
+			label:"",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+			]
+		},
+		{
+			label:"",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+			]
+		},
+		{
+			label:"",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+			]
+		},
+		{
+			label:"",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+			]
+		},
+		{
+			label:"",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+				{
+					routerLink:"/",
+					title:"",
+					label:""
+				},
+			]
+		},
+	]
+
+
 
   constructor(
 		private router: Router,

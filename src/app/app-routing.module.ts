@@ -32,7 +32,11 @@ import { NgformComponent } from './pages/ngform/ngform.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 // product pages
 import { PhComponent } from './product-examples/ph/ph.component';
-//
+// design-system
+import { ColourPalleteComponent } from './design-system/colour-pallete/colour-pallete.component';
+import { TypographyComponent } from './design-system/typography/typography.component';
+import { ProductLogosComponent } from './design-system/product-logos/product-logos.component';
+import { BrowserIconsComponent } from './design-system/browser-icons/browser-icons.component';
 const routes: Routes = [
 	{ 
 		path: '', 
@@ -140,6 +144,11 @@ const routes: Routes = [
 	},
 	{ path: 'ngform', component: NgformComponent},
 	{ path: 'reactive-form', component: ReactiveFormComponent},
+
+	{ path: 'typography', component: TypographyComponent},
+	{ path: 'colour-pallete', component: ColourPalleteComponent},
+	{ path: 'product-logos', component: ProductLogosComponent},
+	{ path: 'browser-icons', component: BrowserIconsComponent},
 ];
 
 @NgModule({
