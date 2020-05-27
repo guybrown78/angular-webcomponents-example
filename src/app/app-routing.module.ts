@@ -11,6 +11,7 @@ import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.co
 // elements
 import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
+import { IconsComponent } from './elements/icons/icons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
 //
 import { ModalComponent } from './modal/modal.component';
@@ -70,6 +71,11 @@ const routes: Routes = [
 	{ 
 		path: 'buttons', 
 		component: ButtonsComponent, 
+		data: {} 
+	},
+	{ 
+		path: 'icons', 
+		component: IconsComponent, 
 		data: {} 
 	},
 	{ 

@@ -44,6 +44,7 @@ import { TypographyComponent } from './design-system/typography/typography.compo
 import { ColourPalleteComponent } from './design-system/colour-pallete/colour-pallete.component';
 import { BrowserIconsComponent } from './design-system/browser-icons/browser-icons.component';
 import { ProductLogosComponent } from './design-system/product-logos/product-logos.component';
+import { IconsComponent } from './elements/icons/icons.component';
 
 
 
@@ -88,6 +89,7 @@ import { ProductLogosComponent } from './design-system/product-logos/product-log
 		ColourPalleteComponent,
 		BrowserIconsComponent,
 		ProductLogosComponent,
+		IconsComponent,
   ],
   imports: [
 		BrowserModule,

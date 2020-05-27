@@ -61,6 +61,11 @@ export class NavigationComponent implements OnInit {
 					label:"Buttons"
 				},
 				{
+					routerLink:"/icons",
+					title:"Available svg icons",
+					label:"Icons"
+				},
+				{
 					routerLink:"/dropdowns",
 					title:"Simple dropdown components",
 					label:"Dropdown"
