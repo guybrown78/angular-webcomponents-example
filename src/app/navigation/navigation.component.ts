@@ -46,112 +46,141 @@ export class NavigationComponent implements OnInit {
 			]
 		},
 		{
-			label:"",
+			label:"Elements",
 			title:"",
 			hasSub:true,
 			subItems:[
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/title-breadcrumbs",
+					title:"Page Title and Breadcrumbs",
+					label:"Page Title / Breadcrumbs"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/buttons",
+					title:"Simple button components",
+					label:"Buttons"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/dropdowns",
+					title:"Simple dropdown components",
+					label:"Dropdown"
 				},
 			]
 		},
 		{
-			label:"",
+			label:"Page Layouts",
 			title:"",
 			hasSub:true,
 			subItems:[
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/cards",
+					title:"Card layout examples",
+					label:"Cards"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/nodes",
+					title:"Nodes elements examples",
+					label:"node"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/node-flex",
+					title:"Node-flex examples",
+					label:"Node-flex"
+				},
+				{
+					routerLink:"/node-row",
+					title:"Node Responsive Row examples",
+					label:"Node Responsive Row"
+				},
+				{
+					routerLink:"/lists",
+					title:"List examples",
+					label:"Lists"
+				},
+				{
+					routerLink:"/tables",
+					title:"Table examples",
+					label:"Tables"
 				},
 			]
 		},
 		{
-			label:"",
+			routerLink:"/modals",
+			title:"Modals pop-up components",
+			label:"Modals",
+			hasSub:false,
+			subItems:null
+		},
+		{
+			label:"Feedback",
+			title:"",
+			hasSub:true,
+			subItems:[
+				{
+					routerLink:"/alerts",
+					title:"Feedback - alerts",
+					label:"Alerts"
+				}
+			]
+		},
+		{
+			label:"Example Pages",
 			title:"",
 			hasSub:true,
 			subItems:[
 				{
 					routerLink:"/",
 					title:"",
-					label:""
+					label:"Page one"
 				},
 				{
-					routerLink:"/",
+					routerLink:"/example-two",
 					title:"",
-					label:""
+					label:"Page Two"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					hrefLink:"https:www.neutronvr.com",
+					title:"Visit NeutronVR's website",
+					label:"External HREF link"
 				},
 			]
 		},
 		{
-			label:"",
+			label:"Product Pages",
 			title:"",
 			hasSub:true,
 			subItems:[
 				{
-					routerLink:"/",
-					title:"",
-					label:""
-				},
-				{
-					routerLink:"/",
-					title:"",
-					label:""
-				},
-				{
-					routerLink:"/",
-					title:"",
-					label:""
-				},
+					routerLink:"/product-hub",
+					title:"Product Hub Components",
+					label:"Product Hub"
+				}
 			]
 		},
 		{
-			label:"",
+			label:"Design System",
 			title:"",
 			hasSub:true,
 			subItems:[
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/colour-pallete",
+					title:"Colour Pallete",
+					label:"Colour Pallete"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/typography",
+					title:"Typography",
+					label:"Typography"
 				},
 				{
-					routerLink:"/",
-					title:"",
-					label:""
+					routerLink:"/product-logos",
+					title:"Product Logos",
+					label:"Product Logos"
+				},
+				{
+					routerLink:"/browser-icons",
+					title:"Broswer Icons & Page Titles",
+					label:"Broswer Icons & Page Titles"
 				},
 			]
 		},

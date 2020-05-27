@@ -1,245 +1,52 @@
 <tf-side-drawer display-title="Main Menu">
+
+
+
+	<!-- <tf-side-drawer-nav>
+		<tf-side-drawer-nav-link icon="chevron-down"> 
+			Forms 
+
+			<tf-side-drawer-sub-nav slot="sub">
+				
+				<tf-side-drawer-sub-nav-link href-title="Form input components" router-link="/inputs"> 
+					Input Form Components 
+				</tf-side-drawer-sub-nav-link>
+		
+			</tf-side-drawer-sub-nav>
+		</tf-side-drawer-nav-link>
+	</tf-side-drawer-nav> -->
+
+
+
+
+
 	<tf-side-drawer-nav
 		(tfRouterLinkClicked)="onRouterNavClicked($event)"
 	>
 
-		
-
-		<!-- Form Sub Navigation -->
 		<tf-side-drawer-nav-link 
-			icon="chevron-down" 
+			*ngFor="let item of navigationData"
+			attr.href-title="{{ item.title }}"
+			attr.href-link="{{ item.hrefLink }}"
+			attr.router-link="{{ item.routerLink }}"
+			icon="chevron-down"
 		>
-			Forms
-			<tf-side-drawer-sub-nav slot="sub">
+			{{ item.label }}
+
+			<tf-side-drawer-sub-nav 
+				slot="sub" 
+				*ngIf=" item.hasSub"
+			>
 
 				<tf-side-drawer-sub-nav-link
-					router-link="/inputs"
-					href-title="Form input components"
+					*ngFor="let subItem of item.subItems"
+					attr.href-title="{{ subItem.title }}"
+					attr.href-link="{{ subItem.hrefLink }}"
+					attr.router-link="{{ subItem.routerLink }}"
 				>
-					Input Form Components
-				</tf-side-drawer-sub-nav-link>
 
-				<tf-side-drawer-sub-nav-link
-					router-link="/form-elements"
-					href-title="Form components"
-				>
-					Other Form Components
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/login"
-					href-title="Opinionated login form"
-				>
-					Login form
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/decoupled-login"
-					href-title="Decoupled Login form eaxample"
-				>
-					Decoupled login form
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/ngform"
-					href-title="Angular Template Form (ngForm)"
-				>
-					Template Form
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/reactive-form"
-					href-title="Angular Reactive Form (FormGroup, FormBuilder, Validators)"
-				>
-					Reactive Form
-				</tf-side-drawer-sub-nav-link>
-				
-
-			</tf-side-drawer-sub-nav>
-
-		</tf-side-drawer-nav-link>
-
-		<!-- Form Sub Navigation -->
-		<tf-side-drawer-nav-link >
-			Elements
-			<tf-side-drawer-sub-nav slot="sub">
-
-				<tf-side-drawer-sub-nav-link
-						router-link="/title-breadcrumbs"
-						href-title="Page Title / Breadcrumbs"
-					>
-						Page Title / Breadcrumbs
-					</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/buttons"
-					href-title="Simple button components"
-				>
-					Buttons
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/dropdowns"
-					href-title="Simple dropdown components"
-				>
-					Dropdowns
-				</tf-side-drawer-sub-nav-link>
-
-			</tf-side-drawer-sub-nav>
-
-		</tf-side-drawer-nav-link>
-
-			<!-- Form Sub Navigation -->
-			<tf-side-drawer-nav-link >
-				Page Layouts
-				<tf-side-drawer-sub-nav slot="sub">
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/cards"
-						href-title="Card layout examples"
-					>
-						Cards
-					</tf-side-drawer-sub-nav-link>
+					{{ subItem.label }}
 					
-					<tf-side-drawer-sub-nav-link
-						router-link="/nodes"
-						href-title="Nodes elements examples"
-					>
-						Node
-					</tf-side-drawer-sub-nav-link>
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/node-flex"
-						href-title="Node-flex examples"
-					>
-						Node-flex
-					</tf-side-drawer-sub-nav-link>
-					
-					<tf-side-drawer-sub-nav-link
-						router-link="/node-row"
-						href-title="Node Responsive Row examples"
-					>
-						Node Responsive Row
-					</tf-side-drawer-sub-nav-link>
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/lists"
-						href-title="List examples"
-					>
-						Lists
-					</tf-side-drawer-sub-nav-link>
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/tables"
-						href-title="Table examples"
-					>
-						Tables
-					</tf-side-drawer-sub-nav-link>
-
-				</tf-side-drawer-sub-nav>
-	
-			</tf-side-drawer-nav-link>
-
-		<tf-side-drawer-nav-link 
-			router-link="/modals"
-			href-title="Simple modal components"
-		>
-			Modals
-		</tf-side-drawer-nav-link>
-
-			<!-- Form Sub Navigation -->
-			<tf-side-drawer-nav-link >
-				Feedback
-				<tf-side-drawer-sub-nav slot="sub">
-	
-					<tf-side-drawer-sub-nav-link
-						router-link="/alerts"
-						href-title="Feedback - alerts"
-					>
-						Alerts
-					</tf-side-drawer-sub-nav-link>
-	
-	
-				</tf-side-drawer-sub-nav>
-	
-			</tf-side-drawer-nav-link>
-
-			<!-- Form Sub Navigation -->
-			<tf-side-drawer-nav-link >
-				Example Pages
-				<tf-side-drawer-sub-nav slot="sub">
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/"
-						href-title="Example app page"
-					>
-						Example App Page
-					</tf-side-drawer-sub-nav-link>
-
-					<tf-side-drawer-sub-nav-link
-						href-title="Example"
-						router-link="/example-two"
-						(tfRouterLinkClicked)="onRouterNavLinkedClicked($event)"
-					>
-						App Page from Individual Route Link Capture
-					</tf-side-drawer-sub-nav-link>
-
-					
-					<tf-side-drawer-sub-nav-link
-						href-title="Visit NeutronVR's website"
-						href-link="https:www.neutronvr.com"
-					>
-						External HREF link
-					</tf-side-drawer-sub-nav-link>
-
-				</tf-side-drawer-sub-nav>
-			</tf-side-drawer-nav-link>
-
-			<tf-side-drawer-nav-link >
-				Product Pages
-				<tf-side-drawer-sub-nav slot="sub">
-
-					<tf-side-drawer-sub-nav-link
-						router-link="/product-hub"
-						href-title="Product Hub Components"
-					>
-						Product Hub
-					</tf-side-drawer-sub-nav-link>
-
-				</tf-side-drawer-sub-nav>
-			</tf-side-drawer-nav-link>
-
-		<!-- Design Systems -->
-		<tf-side-drawer-nav-link >
-			Design System
-			<tf-side-drawer-sub-nav slot="sub">
-
-				<tf-side-drawer-sub-nav-link
-						router-link="/colour-pallete"
-						href-title="Colour Pallete"
-					>
-						Colour Pallete
-					</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/typography"
-					href-title="Typography"
-				>
-					Typography
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/product-logos"
-					href-title="Product Logos"
-				>
-					Product Logos
-				</tf-side-drawer-sub-nav-link>
-
-				<tf-side-drawer-sub-nav-link
-					router-link="/browser-icons"
-					href-title="Broswer Icons & Page Titles"
-				>
-					Broswer Icons & Page Titles
 				</tf-side-drawer-sub-nav-link>
 
 			</tf-side-drawer-sub-nav>
@@ -247,5 +54,5 @@
 		</tf-side-drawer-nav-link>
 
 	</tf-side-drawer-nav>
-	
+
 </tf-side-drawer>

@@ -40,7 +40,7 @@ export class AlertComponent implements OnInit {
 			detail:{
 				message:"Something went wrong. Please try again", 
 				colour:"red", 
-				icon:"close",
+				icon:"exclamation",
 				showDuration:"1000"
 			},
 			bubbles: true,
