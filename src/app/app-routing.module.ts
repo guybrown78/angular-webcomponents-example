@@ -29,6 +29,7 @@ import { LayoutsComponent } from './layouts/layouts.component';
 import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleTwoComponent } from './pages/example-two/example-two.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
+import { ExampleFourComponent } from './pages/example-four/example-four.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 // product pages
@@ -141,6 +142,11 @@ const routes: Routes = [
 	{ 
 		path: 'example-three',
 		component: ExampleThreeComponent,
+		data: {}
+	},
+	{ 
+		path: 'example-four',
+		component: ExampleFourComponent,
 		data: {}
 	},
 	{

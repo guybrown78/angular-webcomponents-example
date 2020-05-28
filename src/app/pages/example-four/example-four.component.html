@@ -1,0 +1,67 @@
+<tf-card>
+	<tf-card-title>Node Row MarkUp</tf-card-title>
+	<tf-node-list>
+
+		<tf-node-row-header mobile-hide="true">
+			<tf-node-row-cell c-width="20%">
+				<h3>title</h3>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="100px">
+				<h3>version</h3>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="120px">
+				<h3>status</h3>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="flex" >	
+				<h3>description</h3>
+			</tf-node-row-cell>
+		</tf-node-row-header>
+
+		<tf-node-row 
+			*ngFor="let course of data" 
+			mobile-wrap="true"
+			(tfDropdownSelected)="onFormActionSelected($event)"
+		>
+			<tf-node-row-cell c-width="20%" >
+				<tf-node-row-cell-h5 slot="mobilecellheader">
+					Course Title
+				</tf-node-row-cell-h5>
+				<span>{{ course.name }}</span>
+			</tf-node-row-cell>
+
+			<tf-node-row-cell c-width="100px" >
+				<tf-node-row-cell-h5 slot="mobilecellheader">
+					Version
+				</tf-node-row-cell-h5>
+				<span>{{ course.version }}</span>
+			</tf-node-row-cell>
+
+			<tf-node-row-cell c-width="120px" >
+				<tf-status *ngIf="course.status == 'incomplete' " traffic-light-colour="red">Not Completed</tf-status>
+				<tf-status *ngIf="course.status == 'completed' " traffic-light-colour="green">Completed</tf-status>
+			</tf-node-row-cell>
+
+
+			<tf-node-row-cell c-width="flex">	
+				<span>{{ course.description }}</span>
+			</tf-node-row-cell>	
+
+			<tf-node-row-cell 
+				c-width="115px"
+				layout-align="flex-end"
+			>
+				<tf-dropdown 
+						display-title="Actions" 
+						colour="blue" 
+						attr.dropdown-id="{{course.id}}"
+					>
+							<tf-dropdown-option value="view" >View</tf-dropdown-option>
+							<tf-dropdown-option value="edit" >Edit</tf-dropdown-option>
+							<tf-dropdown-option value="duplicate" >Duplicate</tf-dropdown-option>
+					</tf-dropdown>
+			</tf-node-row-cell>
+
+		</tf-node-row>
+	</tf-node-list>
+</tf-card>
+

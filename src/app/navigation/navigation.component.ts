@@ -144,6 +144,16 @@ export class NavigationComponent implements OnInit {
 					label:"Page Two"
 				},
 				{
+					routerLink:"/example-three",
+					title:"",
+					label:"Page Three"
+				},
+				{
+					routerLink:"/example-four",
+					title:"",
+					label:"Page Four"
+				},
+				{
 					hrefLink:"https:www.neutronvr.com",
 					title:"Visit NeutronVR's website",
 					label:"External HREF link"

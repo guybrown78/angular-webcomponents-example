@@ -45,6 +45,7 @@ import { ColourPalleteComponent } from './design-system/colour-pallete/colour-pa
 import { BrowserIconsComponent } from './design-system/browser-icons/browser-icons.component';
 import { ProductLogosComponent } from './design-system/product-logos/product-logos.component';
 import { IconsComponent } from './elements/icons/icons.component';
+import { ExampleFourComponent } from './pages/example-four/example-four.component';
 
 
 
@@ -90,6 +91,7 @@ import { IconsComponent } from './elements/icons/icons.component';
 		BrowserIconsComponent,
 		ProductLogosComponent,
 		IconsComponent,
+		ExampleFourComponent,
   ],
   imports: [
 		BrowserModule,
