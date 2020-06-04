@@ -1,0 +1,175 @@
+
+<tf-h1 colour="white">Application Header / Masthead</tf-h1>
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">Hide Header</tf-h2>
+		<tf-p colour="white">Header Items are hidden but the header still displays and effects the page layout.</tf-p>
+		<tf-p colour="white">The <tf-span-normal colour="aqua">show-app-logo</tf-span-normal> property should be set to <tf-span-italic colour="aqua">false</tf-span-italic> and the header should have no children slots for this variation</tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="false"
+			app-title="Transform" 
+			app-initials="T"
+			show-app-logo="false"
+		>
+		</tf-app-base-header>
+	</div>
+</div>
+
+
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">Sign In Header</tf-h2>
+		<tf-p colour="white">Plain white hexagon <tf-span-italic colour="white">(no button click)</tf-span-italic>. This header variation should be used when the application header doesn't require the heaxagon to be a navigation button. <tf-span-italic colour="white">This will usually occur on the sign-in page.</tf-span-italic></tf-p>
+		<tf-p colour="white">In this example, the hexagon is showing a single T "Transform". The T suggests that app, or current state of the app doesn't belong to a specific product.</tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="false"
+			app-title="Transform" 
+			app-initials="T"
+			show-app-logo="true"
+		>
+		</tf-app-base-header>
+	</div>
+</div>
+
+
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">Navigation Header</tf-h2>
+		<tf-p colour="white">Gradient hexagon <tf-span-italic colour="white">(with button click)</tf-span-italic>. The <tf-span-normal colour="aqua">is-logo-clickable</tf-span-normal> property determines the state of the hexagon logo. If it is <tf-span-italic colour="aqua">true</tf-span-italic> then it is rendered as a gradient and emits the custom event <tf-span-normal colour="aqua">tfAppLogoClicked</tf-span-normal> when clicked.</tf-p>
+		<tf-p colour="white">The side drawer navigation is expected to listen to <tf-span-normal colour="aqua">tfAppLogoClicked</tf-span-normal> and handle the event itself.</tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			app-title="Transform" 
+			app-initials="T"
+			show-app-logo="true"
+		>
+		</tf-app-base-header>
+	</div>
+</div>
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">Client Logo</tf-h2>
+		<tf-p colour="white">Use the component <tf-span-normal colour="aqua">tf-app-client-logo</tf-span-normal> to accept a client logo image and display the image within the fixed image area.</tf-p>
+		<tf-p colour="white">The component is added to the header as a child node and uses the <tf-span-normal colour="aqua">clientlogo</tf-span-normal> slot.</tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			app-title="Competence Management" 
+			app-initials="CM"
+			show-app-logo="true"
+		>
+
+			<tf-app-client-logo 
+				slot="clientlogo" 
+				client-logo-source="https://dwglogo.com/wp-content/uploads/2016/01/Petrofac-Logo.png"
+			>
+			</tf-app-client-logo>
+			
+		</tf-app-base-header>
+	</div>
+
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			app-title="Competence Management" 
+			app-initials="CM"
+			show-app-logo="true"
+		>
+
+			<tf-app-client-logo 
+				slot="clientlogo" 
+				client-logo-source="https://www.altrad.com/assets/images/d/Logo_Altrad-70a68d1e.jpg"
+			>
+			</tf-app-client-logo>
+			
+		</tf-app-base-header>
+	</div>
+
+</div>
+
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">User Account Navigation</tf-h2>
+		<tf-p colour="white">Within the <tf-span-normal colour="aqua">tf-app-client-logo</tf-span-normal> there is an option to include a logged-in user specific dropdown menu.</tf-p>
+		<tf-p colour="white">This is accessed with the property <tf-span-normal colour="aqua">show-app-logo</tf-span-normal>. When this property is <tf-span-italic colour="aqua">true</tf-span-italic>, the component expects the menu options to be passed in through its children</tf-p>
+		<tf-p colour="white">Each option in the menu should be a <tf-span-normal colour="aqua">tf-dropdown-option</tf-span-normal>. This works the same way as a dropdown except that this component emits a client logo specific event called <tf-span-normal colour="aqua">tfUserAccountDropdownSelected</tf-span-normal></tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			app-title="Safety Management" 
+			app-initials="SM"
+			show-app-logo="true"
+		>
+
+			<tf-app-client-logo 
+				slot="clientlogo" 
+				client-logo-source="https://logodix.com/logo/80482.png"
+				show-user-account="true"
+				(tfUserAccountDropdownSelected)="onUserAccountItemSelected($event)"
+			>
+				<tf-dropdown-option value="userAccount" >My Account</tf-dropdown-option>
+				<tf-dropdown-option value="userSettings" >Settings</tf-dropdown-option>
+				<tf-dropdown-option value="signOut" >SignOut</tf-dropdown-option>
+			</tf-app-client-logo>
+
+		</tf-app-base-header>
+	</div>
+</div>
+
+
+
+
+<div class="header-wrapper">
+	<div class="info">
+		<tf-h2 colour="white">Quick Links</tf-h2>
+		<tf-p colour="white">Similar to the client logo/user account navigation, the header can also accept the application specific quick links dropdown component <tf-span-normal colour="aqua">tf-quick-links</tf-span-normal>.</tf-p>
+
+		<tf-p colour="white">The component is added to the header as a child node and uses the <tf-span-normal colour="aqua">quicklinks</tf-span-normal> slot.</tf-p>
+
+		<tf-p colour="white">Again, like the user account navigation above, each option in the dropdown should be a <tf-span-normal colour="aqua">tf-dropdown-option</tf-span-normal>. However, unlike the user account navigation, this isn't app header specific. Instead it emits the general dropdown event <tf-span-normal colour="aqua">tfDropdownSelected</tf-span-normal>. It is therefore sensible to specifically identify this component with the id property <tf-span-normal colour="aqua">dropdown-id</tf-span-normal></tf-p>
+	</div>
+	<div class="header-container">
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			app-title="Training Management" 
+			app-initials="TM"
+			show-app-logo="true"
+		>
+
+			<tf-quick-links
+				slot="quicklinks" 
+				dropdown-id="quicklinks-dd"
+				(tfDropdownSelected)="onQuicklinkOptionSelected($event)"
+			>
+				<tf-dropdown-option value="1" >Add User</tf-dropdown-option>
+				<tf-dropdown-option value="2" >Add Course</tf-dropdown-option>
+				<tf-dropdown-option value="3" >Quick Link</tf-dropdown-option>
+			</tf-quick-links>
+
+			<tf-app-client-logo 
+				slot="clientlogo" 
+				client-logo-source="https://logodix.com/logo/80482.png"
+				show-user-account="true"
+				(tfUserAccountDropdownSelected)="onUserAccountItemSelected($event)"
+			>
+				<tf-dropdown-option value="signOut" >SignOut</tf-dropdown-option>
+			</tf-app-client-logo>
+
+		</tf-app-base-header>
+	</div>
+</div>
+
+<div class="footer">&nbsp;</div>

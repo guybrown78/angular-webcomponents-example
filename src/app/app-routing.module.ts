@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
 import { ReactiveLoginComponent } from './login/reactive-login/reactive-login.component'
 // elements
+import { AppHeaderComponent } from './elements/app-header/app-header.component'
 import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { IconsComponent } from './elements/icons/icons.component';
@@ -65,6 +66,10 @@ const routes: Routes = [
 		data: {} 
 	},
 	{ path:'reactive-login', component: ReactiveLoginComponent},
+	{
+		path:'header',
+		component: AppHeaderComponent,
+	},
 	{
 		path:'title-breadcrumbs',
 		component: PagetitleBreadcrumbsComponent,

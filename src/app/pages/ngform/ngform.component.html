@@ -1,18 +1,26 @@
 
-<tf-flex fill-height layout-align="center center">
+<tf-form-card>
 
-		<div class="bg-white w-3/5 rounded-lg flex flex-col justify-center py-12 px-5">
 
-			<div class="login-header sm:mx-auto sm:w-full sm:max-w-md">
+<!-- <tf-flex fill-height layout-align="center center"> -->
+
+		<!-- <div class="bg-white w-3/5 rounded-lg flex flex-col justify-center py-12 px-5"> -->
+
+			<!-- <div class="login-header sm:mx-auto sm:w-full sm:max-w-md">
 				<h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
 					ngForm: Template Form Example
 				</h2>
-			</div>
+			</div> -->
+			<tf-form-title>
+				<tf-h2>
+					ngForm: <tf-span-normal>Template&nbsp;Form&nbsp;Example</tf-span-normal>
+				</tf-h2>
+			</tf-form-title>
 
-			<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+			<!-- <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
 
-				<div class="bg-white pb-8 sm:rounded-lg">
-
+				<div class="bg-white pb-8 sm:rounded-lg"> -->
+				<tf-form-wrapper>
 					<form 
 						#form="ngForm" 
 						(ngSubmit)="onNgSubmit(form)"
@@ -81,9 +89,10 @@
 							Form submitted: {{ form.submitted }}
 						</p>
 					</form>
+				</tf-form-wrapper>
+				<!-- </div>
+			</div> -->
+		<!-- </div> -->
 
-				</div>
-			</div>
-		</div>
-
-</tf-flex>
+<!-- </tf-flex> -->
+</tf-form-card>

@@ -1,116 +1,87 @@
 
-<tf-flex fill-height layout-align="center center">
+<tf-form-card>
 
-	<div class="bg-white w-3/5 rounded-lg flex flex-col justify-center py-12 px-5">
+	<tf-form-title>
+		<tf-h2>
+			Reactive Form Example
+		</tf-h2>
+	</tf-form-title>
 
-		<div class="login-header sm:mx-auto sm:w-full sm:max-w-md">
-			<h2 class="mt-6 text-3xl leading-9 font-extrabold text-gray-900">
-				Reactive Form Example
-			</h2>
-		</div>
 
-		<div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
 
-			<form [formGroup]="form" (ngSubmit)="onSubmit()">
+			<tf-ng-input 
+				[label]="'Current Password'" 
+				[name]="oldPassword"
+				[type]="'password'" 	
+				formControlName="oldPassword"
+				[error]="oldPassword.touched && oldPassword.invalid"
+				[placeholder]="'Enter your current password'"
+				[hint]="
+					oldPassword.untouched 
+						? 'Your current password is pass1234' 
+						: ''
+				"
+				[errorMessage]="
+					oldPassword.errors && oldPassword.errors.required 
+						? 'Please enter your current password!' 
+						: oldPassword.errors && oldPassword.errors.invalidOldPassword
+							? 'Old password is invalid. Hint: (pass1234)'
+							: ''
+				" 
+			></tf-ng-input>
 
-					<!-- <tf-ng-input 
-						[label]="'Current Password'" 
-						[name]="oldPassword"
-						[type]="'password'" 	
-						[formControl]="getControl('oldPassword')"
-						[error]="oldPassword.touched && oldPassword.invalid"
-						[placeholder]="'Enter your current password'"
-						[inputHint]="
-							oldPassword.untouched 
-								? 'Your current password is pass1234' 
-								: ''
-						"
-						[inputError]="
-							oldPassword.errors && oldPassword.errors.required 
-								? 'Please enter your current password' 
-								: oldPassword.errors && oldPassword.errors.invalidOldPassword
-									? 'Old password is invalid. Hint: (pass1234)'
-									: ''
-						" 
-					></tf-ng-input> -->
+			<!-- <div class="my-6 sm:mx-auto sm:w-full sm:max-w-md">
+				<div class="flex w-full h-px bg-gray-400"></div>
+			</div> -->
+			<!-- <tf-divider></tf-divider> -->
 
-					<tf-ng-input 
-						[label]="'Current Password'" 
-						[name]="oldPassword"
-						[type]="'password'" 	
-						formControlName="oldPassword"
-						[error]="oldPassword.touched && oldPassword.invalid"
-						[placeholder]="'Enter your current password'"
-						[hint]="
-							oldPassword.untouched 
-								? 'Your current password is pass1234' 
-								: ''
-						"
-						[errorMessage]="
-							oldPassword.errors && oldPassword.errors.required 
-								? 'Please enter your current password!' 
-								: oldPassword.errors && oldPassword.errors.invalidOldPassword
-									? 'Old password is invalid. Hint: (pass1234)'
-									: ''
-						" 
-					></tf-ng-input>
+			<tf-ng-input 
+				[label]="'New Password'" 
+				[name]="newPassword"
+				[type]="'password'" 	
+				formControlName="newPassword"
+				[error]="newPassword.touched && newPassword.invalid"
+				[inputError]="
+					newPassword.errors && newPassword.errors.required 
+						? 'Please enter your new password' 
+						: ''
+				" 
+			></tf-ng-input>
 
-					<div class="my-6 sm:mx-auto sm:w-full sm:max-w-md">
-						<div class="flex w-full h-px bg-gray-400"></div>
-					</div>
+			<tf-ng-input 
+				[label]="'Confirm Password'" 
+				[name]="confirmPassword"
+				[type]="'password'" 	
+				formControlName="confirmPassword"
+				[error]="confirmPassword.touched && confirmPassword.invalid"
+				[inputError]="
+					confirmPassword.errors && confirmPassword.errors.required 
+						? 'Please Confirm your password' 
+						: ''
+				" 
+			></tf-ng-input>
 
-					<tf-ng-input 
-						[label]="'New Password'" 
-						[name]="newPassword"
-						[type]="'password'" 	
-						formControlName="newPassword"
-						[error]="newPassword.touched && newPassword.invalid"
-						[inputError]="
-							newPassword.errors && newPassword.errors.required 
-								? 'Please enter your new password' 
-								: ''
-						" 
-					></tf-ng-input>
+			<div *ngIf="form.errors">
+				<div *ngIf="confirmPassword.valid && form.invalid && form.errors.passwordsShouldMatch">
+					Passwords do not match.
+				</div>
+			</div>
+			
 
-					<tf-ng-input 
-						[label]="'Confirm Password'" 
-						[name]="confirmPassword"
-						[type]="'password'" 	
-						formControlName="confirmPassword"
-						[error]="confirmPassword.touched && confirmPassword.invalid"
-						[inputError]="
-							confirmPassword.errors && confirmPassword.errors.required 
-								? 'Please Confirm your password' 
-								: ''
-						" 
-					></tf-ng-input>
+		<tf-node-flex-fxr>
 
-					<div *ngIf="form.errors">
-						<div *ngIf="confirmPassword.valid && form.invalid && form.errors.passwordsShouldMatch">
-							Passwords do not match.
-						</div>
-					</div>
-					
+			<tf-button 
+				slot="fxr"
+				colour="aqua" 
+				button-type="submit"
+				[disabled]="!form.valid"
+			>
+				Change Password
+			</tf-button>
 
-				<tf-node-flex-fxr>
+		</tf-node-flex-fxr>
 
-					<tf-button 
-						slot="fxr"
-						colour="aqua" 
-						button-type="submit"
-						[disabled]="!form.valid"
-					>
-						Change Password
-					</tf-button>
 
-				</tf-node-flex-fxr>
-
-				<!-- <p>
-					{{ form.errors | json }}
-				</p> -->
-
-			</form>
-
-		</div>
-	</div>
-</tf-flex>
+	</form>
+</tf-form-card>

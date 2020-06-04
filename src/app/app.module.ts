@@ -46,6 +46,7 @@ import { BrowserIconsComponent } from './design-system/browser-icons/browser-ico
 import { ProductLogosComponent } from './design-system/product-logos/product-logos.component';
 import { IconsComponent } from './elements/icons/icons.component';
 import { ExampleFourComponent } from './pages/example-four/example-four.component';
+import { AppHeaderComponent } from './elements/app-header/app-header.component';
 
 
 
@@ -92,6 +93,7 @@ import { ExampleFourComponent } from './pages/example-four/example-four.componen
 		ProductLogosComponent,
 		IconsComponent,
 		ExampleFourComponent,
+		AppHeaderComponent,
   ],
   imports: [
 		BrowserModule,

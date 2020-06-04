@@ -51,6 +51,11 @@ export class NavigationComponent implements OnInit {
 			hasSub:true,
 			subItems:[
 				{
+					routerLink:"/header",
+					title:"Application header",
+					label:"Application Header / Masthead"
+				},
+				{
 					routerLink:"/title-breadcrumbs",
 					title:"Page Title and Breadcrumbs",
 					label:"Page Title / Breadcrumbs"
