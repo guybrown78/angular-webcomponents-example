@@ -6,10 +6,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app-header.component.css']
 })
 export class AppHeaderComponent implements OnInit {
-
+	tenantLogo:string = "https://logodix.com/logo/80482.png"
+	index:number = 0;
+	tenants:any [] = [
+		{code:"Bi", title:"Business intelligence", logo:"https://logodix.com/logo/80482.png"},
+		{code:"R3", title:"R3", logo:"https://www.altrad.com/assets/images/d/Logo_Altrad-70a68d1e.jpg"},
+		{code:"MP", title:"Global Training Marketplace", logo:"https://dwglogo.com/wp-content/uploads/2016/01/Petrofac-Logo.png"}
+	]
   constructor() { }
 
+
   ngOnInit() {
+		setInterval(() => {
+			const t = this.tenants[this.index]
+			this.tenantLogo = t.logo
+			this.index = this.index >= this.tenants.length - 1 ? 0 : this.index + 1;
+			
+		}, 1500);
   }
 
 	onUserAccountItemSelected(event){

@@ -95,6 +95,29 @@
 			
 		</tf-app-base-header>
 	</div>
+	<div class="info">
+		<tf-p colour="white">Binding properties can be achieved with camelCase property names such as  <tf-span-normal colour="aqua">appTitle</tf-span-normal>, <tf-span-normal colour="aqua">appInitials</tf-span-normal> and <tf-span-normal colour="aqua">clientLogoSource</tf-span-normal></tf-p>
+	</div>
+	<div class="header-container">
+		
+		<tf-app-base-header 	
+			is-logo-clickable="true"
+			[appTitle]="tenants[index].title"
+			[appInitials]="tenants[index].code"
+			show-app-logo="true"
+		>
+
+			<tf-app-client-logo 
+				slot="clientlogo" 
+				[clientLogoSource]="tenantLogo"
+				show-user-account="false"
+			>
+			</tf-app-client-logo>
+
+		</tf-app-base-header>
+
+	</div>
+	
 
 </div>
 
@@ -161,7 +184,7 @@
 
 			<tf-app-client-logo 
 				slot="clientlogo" 
-				client-logo-source="https://logodix.com/logo/80482.png"
+				[clientLogoSource]="tenants[0].logo"
 				show-user-account="true"
 				(tfUserAccountDropdownSelected)="onUserAccountItemSelected($event)"
 			>
