@@ -42,6 +42,18 @@ add the method in main.ts;
 
 `defineCustomElements(window)`
 
+## Edge and IE11 polyfills
+
+If the application needs to work on older browsers, the defineCustomElements() function should be surrounded by the applyPolyfills() method.
+
+`import { applyPolyfills, defineCustomElements } from 'tf-core-components/loader';`
+
+...
+
+`applyPolyfills().then(() => {
+  defineCustomElements()
+})`
+
 ## Font
 
 The components are designed around the font `Roboto Condensed`. This font isn't shipped with the components and needs to be added.
@@ -101,6 +113,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 I needed to update package.json to allow building with Schema's. Replace the angular-devkit/build-angular in devDependencies
 `"@angular-devkit/build-angular": "^0.12.4"`
+
 
 
 
