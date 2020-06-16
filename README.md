@@ -110,3 +110,6 @@ I needed to update package.json to allow building with Schema's. Replace the ang
 
 npm install classlist.js --save
 npm install promise-polyfill --save-exact
+
+add to polyfil...
+import 'core-js/es6/promise';
