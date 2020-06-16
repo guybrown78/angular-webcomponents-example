@@ -101,3 +101,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 I needed to update package.json to allow building with Schema's. Replace the angular-devkit/build-angular in devDependencies
 `"@angular-devkit/build-angular": "^0.12.4"`
+
+
+
+
+
+
+
+npm install classlist.js --save
+npm install promise-polyfill --save-exact
