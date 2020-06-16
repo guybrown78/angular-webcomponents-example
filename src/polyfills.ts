@@ -24,6 +24,7 @@ import 'core-js/es6/object';
 import 'core-js/es6/function';
 import 'core-js/es6/parse-int';
 import 'core-js/es6/parse-float';
+import 'core-js/es6/promise';
 import 'core-js/es6/number';
 import 'core-js/es6/math';
 import 'core-js/es6/string';
@@ -78,4 +79,4 @@ import 'zone.js/dist/zone';  // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */
-import 'promise-polyfill/src/polyfill';
+// import 'promise-polyfill/src/polyfill';
