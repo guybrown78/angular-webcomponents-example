@@ -4,33 +4,46 @@
 <tf-app-base-header 
 	*ngIf="!headerData"	
 	app-title="Transform Web Components" 
-	app-initials="TF"
+	app-initials="T"
+	is-logo-clickable="true"
 	show-app-logo="true"
-	show-client-logo="false"
 >
 </tf-app-base-header>
+
 
 <tf-app-base-header 
 	*ngIf="headerData"	
 	app-title="Transform Web Components" 
 	app-initials="T"
+	is-logo-clickable="true"
 	show-app-logo="true"
-	show-client-logo="true"
-	client-logo-source="https://logodix.com/logo/80482.png"
-
-	[showUserAccount]="headerData"
-	[userAccountMenuItems]="JSON.stringify(userAccountMenuItems)"
-	(tfUserAccountDropdownSelected)="onUserAccountItemSelected($event)"
 >
 	<tf-quick-links
-	slot="quicklinks" 
-	dropdown-id="quicklinks-dd"
-	(tfDropdownSelected)="onQuicklinkOptionSelected($event)"
+		slot="quicklinks" 
+		dropdown-id="quicklinks-dd"
+		(tfDropdownSelected)="onQuicklinkOptionSelected($event)"
 	>
 		<tf-dropdown-option value="1" >Add User</tf-dropdown-option>
 		<tf-dropdown-option value="2" >Add Course</tf-dropdown-option>
 		<tf-dropdown-option value="3" >Quick Link</tf-dropdown-option>
 	</tf-quick-links>
+
+	<tf-app-client-logo 
+		slot="clientlogo" 
+		client-logo-source="https://logodix.com/logo/80482.png"
+		[showUserAccount]="showUserAccountMenu"
+		(tfUserAccountDropdownSelected)="onUserAccountItemSelected($event)"
+	>
+		<tf-dropdown-option 
+			*ngFor="let item of userAccountMenuItems"
+			attr.value="{{ item.value }}"
+		>
+			{{item.label}}
+		</tf-dropdown-option> 
+
+	</tf-app-client-logo>
+
+
 </tf-app-base-header>
 
 

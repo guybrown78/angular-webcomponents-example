@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 	userAccountMenuItems:any;
 	// userAccountMenuItemsStringified:string;
 	headerData:boolean = false;
+	showUserAccountMenu:boolean = false;
 	JSON:any;
   constructor() {
 		this.userAccountMenuItems = [
@@ -22,6 +23,7 @@ export class HeaderComponent implements OnInit {
 	}
 
   ngOnInit() {
+		this.showUserAccountMenu = true;
 		this.headerData = true;
 	}
 	
