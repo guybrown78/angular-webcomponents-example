@@ -12,3 +12,9 @@ body {
 	width: 100%;
 	height: 100vh;
 }
+.edge-ie-slot-fix{
+	border: solid 1px red;
+	display: block;
+	width: 100%;
+	height:100%;
+}
