@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalComponent implements OnInit {
 	modalOpened:boolean = false;	
+	modalTestOpened:boolean=true;
 	alertModalOpened:boolean = false;	
   constructor() { }
   ngOnInit() {
@@ -16,6 +17,12 @@ export class ModalComponent implements OnInit {
 		console.log(`launch modal`);
 		this.modalOpened = true;
 	}
+
+	onModalTestClicked(event){
+		console.log(`launch test modal`);
+		this.modalTestOpened = true;
+	}
+
 	onAlertModalClicked(event){
 		console.log(`launch alert modal`);
 		this.alertModalOpened = true;
@@ -28,6 +35,7 @@ export class ModalComponent implements OnInit {
 	tfModalClosedHandler(event){
 		console.log("modal closed")
 		this.modalOpened = false;
+		this.modalTestOpened = false;
 	}
 
 	tfAlertModalConfirmedHandler(event){

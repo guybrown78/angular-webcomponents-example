@@ -31,9 +31,31 @@
 		</tf-node-flex-fxr>
 	</tf-node>
 
+
+	<tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Launch Test</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="grey"
+				id="launchModalPopupBtn"
+				(click)="onModalTestClicked($event)"
+			>
+				Test
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
 </tf-card>
 
-<tf-modal-test id="modal-test" display-title="Modal popup example" cancel-text="Not Today">
+<tf-modal-test 
+	id="modal-test" 
+	display-title="Modal popup example" 
+	cancel-text="Not Today"
+	[opened]="modalTestOpened" 
+	(tfModalClosed)="tfModalClosedHandler($event)"
+>
 	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
 </tf-modal-test>
 
