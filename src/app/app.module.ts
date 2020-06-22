@@ -47,6 +47,12 @@ import { ProductLogosComponent } from './design-system/product-logos/product-log
 import { IconsComponent } from './elements/icons/icons.component';
 import { ExampleFourComponent } from './pages/example-four/example-four.component';
 import { AppHeaderComponent } from './elements/app-header/app-header.component';
+import { TestsComponent } from './modal/tests/tests.component';
+import { TestAComponent } from './modal/tests/test-a/test-a.component';
+import { TestBComponent } from './modal/tests/test-b/test-b.component';
+import { TestCComponent } from './modal/tests/test-c/test-c.component';
+import { TestDComponent } from './modal/tests/test-d/test-d.component';
+import { TestEComponent } from './modal/tests/test-e/test-e.component';
 
 
 
@@ -94,6 +100,12 @@ import { AppHeaderComponent } from './elements/app-header/app-header.component';
 		IconsComponent,
 		ExampleFourComponent,
 		AppHeaderComponent,
+		TestsComponent,
+		TestAComponent,
+		TestBComponent,
+		TestCComponent,
+		TestDComponent,
+		TestEComponent,
   ],
   imports: [
 		BrowserModule,

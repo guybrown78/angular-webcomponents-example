@@ -1,0 +1,18 @@
+<div class="tab-wrapper">
+	<div (click)="onTabSelect('a')" class="tab">A</div>
+	<div (click)="onTabSelect('b')" class="tab">B</div>
+	<div (click)="onTabSelect('c')" class="tab">C</div>
+	<div (click)="onTabSelect('d')" class="tab">D</div>
+	<div (click)="onTabSelect('e')" class="tab">E</div>
+</div>
+
+<tf-card>
+	<tf-card-title>{{testTitle}}</tf-card-title>
+
+	<app-test-a *ngIf="currentTab === 'a'"></app-test-a>
+	<app-test-b *ngIf="currentTab === 'b'"></app-test-b>
+	<app-test-c *ngIf="currentTab === 'c'"></app-test-c>
+	<app-test-d *ngIf="currentTab === 'd'"></app-test-d>
+	<app-test-e *ngIf="currentTab === 'e'"></app-test-e>
+
+</tf-card>

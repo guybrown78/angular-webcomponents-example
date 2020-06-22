@@ -1,0 +1,17 @@
+.tab-wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5px;
+	position: relative;
+	z-index: 99990;
+}
+
+.tab{
+	display: flex;
+	padding: 10px 20px;
+	cursor: pointer;
+	border:solid 1px red;
+	background-color: thistle;
+	margin-right: 10px;
+}

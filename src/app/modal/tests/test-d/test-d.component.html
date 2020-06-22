@@ -1,0 +1,24 @@
+<tf-node>
+	<tf-node-flex-fxr>
+		<p slot="flex">Test D</p>
+		<tf-button 
+			slot="fxr" 
+			size="m" 
+			colour="aqua"
+			id="launchModalPopupBtn"
+			(click)="onModalClicked($event)"
+		>
+			Launch Test D
+		</tf-button>
+	</tf-node-flex-fxr>
+</tf-node>
+
+
+<tf-modal-test-e 
+	id="modal-test" 
+	display-title="Modal D" 
+	(tfModalClosed)="tfModalClosedHandler()"
+	[opened]="mo" 
+>
+	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
+</tf-modal-test-e>
