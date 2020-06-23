@@ -17,12 +17,80 @@
 		</tf-node-flex-fxr>
 	</tf-node>
 
+	<tf-node>
+		<tf-node-flex-fxr class="tf-ie-slot-fx-fix">
+			<p slot="flex">Launch alert message</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="blue"
+				id="launchModalPopupBtn2"
+				(click)="onAlertModalClicked($event)"
+			>
+				Alert
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
+
+	<!-- <tf-node>
+		<tf-node-flex-fxr>
+			<p slot="flex">Launch Test</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="grey"
+				id="launchModalPopupBtn"
+				(click)="onModalTestClicked($event)"
+			>
+				Test
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node> -->
+
 </tf-card>
 
-<tf-barry 
-	display-title="Bazza - 108"
-	(tfModalClosed)="tfModalClosedHandler($event)"
-	[opened]="modalOpened" 
+
+<!-- <tf-modal-test-a 
+	id="modalTest" 
+	display-title="Modal A" 
 >
-	<tf-p>Barry is here</tf-p>
-</tf-barry>
+	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
+</tf-modal-test-a> -->
+
+<!-- 
+<tf-modal-test 
+	id="modal-test" 
+	display-title="Modal 2 popup example" 
+	cancel-text="Not Today"
+	(tfModalClosed)="tfModalClosedHandler($event)"
+>
+	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
+</tf-modal-test> -->
+
+<tf-modal 
+	id="modal2" 
+	display-title="Modal popup example"
+	[opened]="modalOpened" 
+	(tfModalClosed)="tfModalClosedHandler($event)"
+	(tfModalConfirmed)="tfModalConfirmedHandler($event)"
+	
+>
+	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
+</tf-modal>
+
+<tf-modal 
+	id="modal2" 
+	display-title="Alert Message Example"
+	header-style="alert"
+	show-cancel="false"
+	show-close="false"
+	show-confirm
+	confirm-text="Okey Dokey"
+	confirm-colour="blue"
+	[opened]="alertModalOpened" 
+	(tfModalConfirmed)="tfAlertModalConfirmedHandler($event)"
+>
+	<tf-p-tag>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque sem imperdiet, aliquam augue quis, blandit nibh. Etiam mauris augue, lacinia quis luctus sit amet, bibendum et ipsum. Nulla ultrices hendrerit urna. </tf-p-tag>
+	<tf-p-tag>Curabitur eu erat egestas, dictum nunc id, feugiat risus. Nulla a consequat nulla.</tf-p-tag>
+</tf-modal>

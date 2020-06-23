@@ -1,0 +1,28 @@
+
+<tf-card>
+	<tf-card-title>Modals</tf-card-title>
+
+	<tf-node>
+		<tf-node-flex-fxr class="tf-ie-slot-fx-fix">
+			<p slot="flex">Launch Modal Popup Overlay</p>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="aqua"
+				id="launchModalPopupBtn"
+				(click)="onModalClicked($event)"
+			>
+				Launch Modal
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
+
+</tf-card>
+
+<tf-barry 
+	display-title="Bazza - 108"
+	(tfModalClosed)="tfModalClosedHandler($event)"
+	[opened]="modalOpened" 
+>
+	<tf-p>Barry is here</tf-p>
+</tf-barry>
