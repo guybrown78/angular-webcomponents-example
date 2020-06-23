@@ -16,13 +16,13 @@ export class TestDComponent implements OnInit {
   }
 
 	onModalClicked(){
-		console.log(`launch test modal`);
+		console.log(`launch test modal d`);
 		this.mo = true;
 	}
 
 
 	tfModalClosedHandler(){
-		console.log("modal closed")
+		console.log("modal closed d	")
 		this.mo = false;
 	}
 

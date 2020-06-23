@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-test-b',
@@ -7,23 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestBComponent implements OnInit {
 
-
-	mo:boolean = false;	
-
-  constructor() { }
+	@ViewChild("modalTest") tfModal;
+  constructor() {}
 
   ngOnInit() {
   }
 
 	onModalClicked(){
 		console.log(`launch test modal`);
-		this.mo = true;
+		console.log(this.tfModal)
+		this.tfModal.nativeElement.open();
 	}
 
 
 	tfModalClosedHandler(){
 		console.log("modal closed")
-		this.mo = false;
 	}
 
 }
