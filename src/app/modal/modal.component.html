@@ -10,6 +10,7 @@
 				size="m" 
 				colour="aqua"
 				id="launchModalPopupBtn"
+				(click)="onModalClicked($event)"
 			>
 				Launch Modal
 			</tf-button>
@@ -18,6 +19,9 @@
 
 </tf-card>
 
-<tf-barry display-title="Bazza - 104">
+<tf-barry 
+	display-title="Bazza - 105"
+	(tfModalClosed)="tfModalClosedHandler($event)"
+>
 	<tf-p>Barry is here</tf-p>
 </tf-barry>
