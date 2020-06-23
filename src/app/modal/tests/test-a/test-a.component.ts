@@ -16,7 +16,7 @@ export class TestAComponent implements OnInit {
 	onModalClicked(){
 		console.log(`launch test modal`);
 		console.log(this.tfModal)
-		this.tfModal.nativeElement.open();
+		// this.tfModal.nativeElement.open();
 	}
 
 
