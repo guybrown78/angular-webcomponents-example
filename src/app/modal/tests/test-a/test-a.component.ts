@@ -13,15 +13,6 @@ export class TestAComponent implements OnInit {
   ngOnInit() {
   }
 
-	onModalClicked(){
-		console.log(`launch test modal`);
-		console.log(this.tfModal)
-		// this.tfModal.nativeElement.open();
-	}
 
-
-	tfModalClosedHandler(){
-		console.log("modal closed")
-	}
 
 }

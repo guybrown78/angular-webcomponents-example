@@ -6,7 +6,6 @@
 			size="m" 
 			colour="aqua"
 			id="launchModalPopupBtn"
-			(click)="onModalClicked()"
 		>
 			Launch Test A
 		</tf-button>
@@ -16,9 +15,7 @@
 
 <tf-modal-test-a 
 	id="modalTest" 
-	#modalTest
 	display-title="Modal A" 
-	(tfModalClosed)="tfModalClosedHandler()"
 >
 	<tf-p-tag>Modal content lorum ipsum solar dolar</tf-p-tag>
 </tf-modal-test-a>
