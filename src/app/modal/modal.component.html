@@ -4,7 +4,10 @@
 
 	<tf-node>
 		<tf-node-flex-fxr class="tf-ie-slot-fx-fix">
-			<p slot="flex">Launch Modal Popup Overlay</p>
+			<tf-node-text slot="flex">
+				Launch Modal Popup Overlay
+			</tf-node-text>
+			<p slot="flex"></p>
 			<tf-button 
 				slot="fxr" 
 				size="m" 
@@ -19,7 +22,9 @@
 
 	<tf-node>
 		<tf-node-flex-fxr class="tf-ie-slot-fx-fix">
-			<p slot="flex">Launch alert message</p>
+			<tf-node-text slot="flex">
+				Launch alert message
+			</tf-node-text>
 			<tf-button 
 				slot="fxr" 
 				size="m" 
@@ -32,7 +37,21 @@
 		</tf-node-flex-fxr>
 	</tf-node>
 
-
+	<tf-node>
+		<tf-node-flex-fxr class="tf-ie-slot-fx-fix">
+			<tf-node-text slot="flex">
+				Flexible modal header title <tf-span-italic colour="grey">(example shows delegates name under the modal header)</tf-span-italic>
+			</tf-node-text>
+			<tf-button 
+				slot="fxr" 
+				size="m" 
+				colour="aqua"
+				(click)="onHeaderModalClicked()"
+			>
+				Alert
+			</tf-button>
+		</tf-node-flex-fxr>
+	</tf-node>
 	<!-- <tf-node>
 		<tf-node-flex-fxr>
 			<p slot="flex">Launch Test</p>
@@ -93,4 +112,14 @@
 >
 	<tf-p-tag>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pellentesque sem imperdiet, aliquam augue quis, blandit nibh. Etiam mauris augue, lacinia quis luctus sit amet, bibendum et ipsum. Nulla ultrices hendrerit urna. </tf-p-tag>
 	<tf-p-tag>Curabitur eu erat egestas, dictum nunc id, feugiat risus. Nulla a consequat nulla.</tf-p-tag>
+</tf-modal>
+
+<tf-modal #modal3 >
+	<div slot="headertitle">
+		<tf-h2 >Edit Delegate</tf-h2>
+		<tf-span-normal >
+			<tf-span-italic>Delegate:</tf-span-italic> John Simpson
+		</tf-span-normal>
+	</div>
+	<tf-p>Modal content lorum ipsum solar don gerty.</tf-p>
 </tf-modal>

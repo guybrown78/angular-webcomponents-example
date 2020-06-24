@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild  } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -9,6 +9,9 @@ export class ModalComponent implements OnInit {
 	modalOpened:boolean = false;	
 	modalTestOpened:boolean=true;
 	alertModalOpened:boolean = false;	
+
+	@ViewChild("modal3") tfModalElement;
+
   constructor() { }
   ngOnInit() {
   }
@@ -41,5 +44,9 @@ export class ModalComponent implements OnInit {
 	tfAlertModalConfirmedHandler(event){
 		console.log("alert modal closed")
 		this.alertModalOpened = false;
+	}
+
+	onHeaderModalClicked(){
+		this.tfModalElement.nativeElement.open()
 	}
 }
