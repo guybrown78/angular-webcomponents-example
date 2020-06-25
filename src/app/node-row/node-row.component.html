@@ -4,16 +4,16 @@
 
 		<tf-node-row-header mobile-hide="true">
 			<tf-node-row-cell c-width="25%">
-				<h3>title</h3>
+				<tf-node-header-title>title</tf-node-header-title>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="45px" layout-align="center">
-				<h3>code</h3>
+				<tf-node-header-title>code</tf-node-header-title>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="10%" layout-align="center">
-				<h3>count</h3>
+				<tf-node-header-title>count</tf-node-header-title>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="flex" >	
-				<h3>description</h3>
+				<tf-node-header-title>description</tf-node-header-title>
 			</tf-node-row-cell>
 		</tf-node-row-header>
 
@@ -26,7 +26,7 @@
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Course Title
 				</tf-node-row-cell-h5>
-				<span>{{ course.name }}</span>
+				<tf-node-row-cell-span>{{ course.name }}</tf-node-row-cell-span>
 			</tf-node-row-cell>
 
 			<tf-node-row-cell 
@@ -37,7 +37,7 @@
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Course Code
 				</tf-node-row-cell-h5>
-				<span>{{ course.code}}</span>
+				<tf-node-row-cell-span>{{ course.code}}</tf-node-row-cell-span>
 			</tf-node-row-cell>
 
 			<tf-node-row-cell 
@@ -48,11 +48,11 @@
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Registered
 				</tf-node-row-cell-h5>
-				<span>{{ course.registered }}</span>
+				<tf-node-row-cell-span>{{ course.registered }}</tf-node-row-cell-span>
 			</tf-node-row-cell>
 
 			<tf-node-row-cell c-width="flex">	
-				<span>{{ course.description }}</span>
+				<tf-node-row-cell-span>{{ course.description }}</tf-node-row-cell-span>
 			</tf-node-row-cell>	
 
 			<tf-node-row-cell 
@@ -80,13 +80,13 @@
 
 		<tf-node-row-header mobile-hide="false">
 			<tf-node-row-cell c-width="20%">
-				<h3>title</h3>
+				<tf-node-header-title>title</tf-node-header-title>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="125px" layout-align="center">
-				<h3>Number of Delegates</h3>
+				<tf-node-header-title>Number of Delegates</tf-node-header-title>
 			</tf-node-row-cell>
 			<tf-node-row-cell c-width="flex" >	
-				<h3>description</h3>
+				<tf-node-header-title>description</tf-node-header-title>
 			</tf-node-row-cell>
 		</tf-node-row-header>
 
@@ -96,7 +96,7 @@
 			(tfDropdownSelected)="onCourseActionSelected($event)"
 		>
 			<tf-node-row-cell c-width="20%" >
-				<span>{{ course.name }}</span>
+				<tf-node-row-cell-span>{{ course.name }}</tf-node-row-cell-span>
 			</tf-node-row-cell>
 
 
@@ -107,11 +107,11 @@
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Registered
 				</tf-node-row-cell-h5>
-				<span>{{ course.registered }}</span>
+				<tf-node-row-cell-span>{{ course.registered }}</tf-node-row-cell-span>
 			</tf-node-row-cell>
 
 			<tf-node-row-cell c-width="flex">	
-				<span>{{ course.description }}</span>
+				<tf-node-row-cell-span>{{ course.description }}</tf-node-row-cell-span>
 			</tf-node-row-cell>	
 
 			<tf-node-row-cell 
