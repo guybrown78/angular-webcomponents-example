@@ -1,17 +1,18 @@
+
 <tf-card>
 	<tf-card-title>Node-Flex Layout</tf-card-title>
 	<tf-node>
 		<tf-node-fxl-flex-fxr>
 
-			<div slot="fxl" style="padding: 10px; background-color: aquamarine;">
+			<tf-node-slot-wrapper slot="fxl" style="padding: 10px; background-color: aquamarine;">
 				<tf-p-tag >Content in the Left 'fxl' slot. fxl = FIXED LEFT</tf-p-tag>
-			</div>
-			<div slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
+			</tf-node-slot-wrapper>
+			<tf-node-slot-wrapper slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
 				<tf-p-tag>Content in the Flex 'flex' slot - main area - tag 'tf-node-fxl-flex-fxr'. flex = GROW</tf-p-tag>
-			</div>
-			<div slot="fxr" style="padding: 10px; background-color: pink">
+			</tf-node-slot-wrapper>
+			<tf-node-slot-wrapper slot="fxr" style="padding: 10px; background-color: pink">
 				<tf-p-tag>Content in the Right 'fxr' slot. fxr = FIXED RIGHT</tf-p-tag>
-			</div>
+			</tf-node-slot-wrapper>
 			
 		</tf-node-fxl-flex-fxr>
 	</tf-node>
@@ -19,9 +20,9 @@
 	<tf-node>
 		<tf-node-flex>
 
-			<div slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
+			<tf-node-slot-wrapper slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
 				<tf-p-tag>Content in the Flex 'flex' slot - main area  - tag 'tf-node-flex'. Node-flex tags naturally allow the content to flow</tf-p-tag>
-			</div>
+			</tf-node-slot-wrapper>
 
 		</tf-node-flex>
 	</tf-node>
@@ -29,12 +30,12 @@
 	<tf-node>
 		<tf-node-fxl-flex>
 
-			<div slot="fxl" style="padding: 10px; background-color: aquamarine;">
+			<tf-node-slot-wrapper slot="fxl" style="padding: 10px; background-color: aquamarine;">
 				<tf-p-tag >Left 'fxl' slot</tf-p-tag>
-			</div>
-			<div slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
+			</tf-node-slot-wrapper>
+			<tf-node-slot-wrapper slot="flex" class="" style="padding: 10px; background-color: rgb(219, 241, 156);">
 				<tf-p-tag>Flex 'flex' slot - main area - tag 'tf-node-fxl-flex'</tf-p-tag>
-			</div>
+			</tf-node-slot-wrapper>
 
 		</tf-node-fxl-flex>
 	</tf-node>
@@ -44,18 +45,16 @@
 	<tf-node>
 		<tf-node-flex-fxr>
 
-			<div slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
+			<tf-node-slot-wrapper slot="flex" style="padding: 10px; background-color: rgb(219, 241, 156);">
 				<tf-p-tag>Flex 'flex' slot - main area - tag 'tf-node-flex-fxr'</tf-p-tag>
-			</div>
-			<div slot="fxr" style="padding: 10px; background-color: pink">
+			</tf-node-slot-wrapper>
+			<tf-node-slot-wrapper slot="fxr" style="padding: 10px; background-color: pink">
 				<tf-p-tag>Right 'fxr' slot</tf-p-tag>
-			</div>
+			</tf-node-slot-wrapper>
 
 		</tf-node-flex-fxr>
 	</tf-node>
 </tf-card>
-
-
 
 
 <tf-card>
