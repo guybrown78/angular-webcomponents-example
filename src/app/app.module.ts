@@ -53,6 +53,7 @@ import { TestBComponent } from './modal/tests/test-b/test-b.component';
 import { TestCComponent } from './modal/tests/test-c/test-c.component';
 import { TestDComponent } from './modal/tests/test-d/test-d.component';
 import { TestEComponent } from './modal/tests/test-e/test-e.component';
+import { StatusesComponent } from './elements/statuses/statuses.component';
 
 
 
@@ -106,6 +107,7 @@ import { TestEComponent } from './modal/tests/test-e/test-e.component';
 		TestCComponent,
 		TestDComponent,
 		TestEComponent,
+		StatusesComponent,
   ],
   imports: [
 		BrowserModule,

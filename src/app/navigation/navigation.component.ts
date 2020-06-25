@@ -75,6 +75,11 @@ export class NavigationComponent implements OnInit {
 					title:"Simple dropdown components",
 					label:"Dropdown"
 				},
+				{
+					routerLink:"/statuses",
+					title:"Status components",
+					label:"Status"
+				}
 			]
 		},
 		{
