@@ -1,5 +1,5 @@
 <tf-card>
-	<tf-card-title>Responsive Node Row - With Mobile Cell Headers</tf-card-title>
+	<tf-card-title>Node Row - With Mobile Cell Headers</tf-card-title>
 	<tf-node-list>
 
 		<tf-node-row-header mobile-hide="true">
@@ -40,6 +40,65 @@
 
 			<tf-node-row-cell 
 				c-width="10%" 
+			>
+				<tf-node-row-cell-h5 slot="mobilecellheader">
+					Registered
+				</tf-node-row-cell-h5>
+				<tf-node-row-cell-span>{{ course.registered }}</tf-node-row-cell-span>
+			</tf-node-row-cell>
+
+			<tf-node-row-cell c-width="flex">	
+				<tf-node-row-cell-span>{{ course.description }}</tf-node-row-cell-span>
+			</tf-node-row-cell>	
+
+			<tf-node-row-cell 
+				c-width="115px"
+				layout-align="flex-end"
+			>
+				<tf-dropdown 
+						display-title="Actions" 
+						colour="blue" 
+						attr.dropdown-id="{{course.id}}"
+					>
+							<tf-dropdown-option value="1" >Edit Course</tf-dropdown-option>
+							<tf-dropdown-option value="2" >Remove Course</tf-dropdown-option>
+					</tf-dropdown>
+			</tf-node-row-cell>
+
+		</tf-node-row>
+	</tf-node-list>
+</tf-card>
+
+
+<tf-card>
+	<tf-card-title>Node Row - No Wrap</tf-card-title>
+	<tf-node-list>
+
+		<tf-node-row-header mobile-hide="false">
+			<tf-node-row-cell c-width="20%">
+				<tf-node-header-title>title</tf-node-header-title>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="125px" layout-align="center">
+				<tf-node-header-title>Number of Delegates</tf-node-header-title>
+			</tf-node-row-cell>
+			<tf-node-row-cell c-width="flex" >	
+				<tf-node-header-title>description</tf-node-header-title>
+			</tf-node-row-cell>
+		</tf-node-row-header>
+
+		<tf-node-row 
+			*ngFor="let course of data" 
+			mobile-wrap="false"
+			(tfDropdownSelected)="onCourseActionSelected($event)"
+		>
+			<tf-node-row-cell c-width="20%" >
+				<tf-node-row-cell-span>{{ course.name }}</tf-node-row-cell-span>
+			</tf-node-row-cell>
+
+
+			<tf-node-row-cell 
+				c-width="125px" 
+				layout-align="center"
 			>
 				<tf-node-row-cell-h5 slot="mobilecellheader">
 					Registered
