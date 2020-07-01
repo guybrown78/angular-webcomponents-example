@@ -1,7 +1,7 @@
 
 <tf-search-card>
 	<tf-h3 colour="white" slot="title">
-		Search for the supplier you want to view the bookings for
+		Search for the delegate you want to edit
 	</tf-h3>
 	<tf-search
 		name="delegateSearch" 	
@@ -9,55 +9,37 @@
 	></tf-search>
 </tf-search-card>
 
-<tf-search-card search-align="center" colour="grey">
-	<tf-h3 colour="blue" slot="title" text-align="center">
-		Search for the supplier you want to view the bookings for
+<tf-search-card search-align="center">
+	<tf-h3 colour="white" slot="title" text-align="center">
+		Find a course to manage bookings
 	</tf-h3>
 	<tf-search
 		name="delegateSearch" 	
-		placeholder="Joe Bloggs"
+		placeholder="Course Title ..."
 	></tf-search>
 </tf-search-card>
 
-<tf-search-card search-align="right" colour="navy">
-	<tf-h3 colour="white" slot="title" text-align="right">
-		Search for the supplier you want to view the bookings for
-	</tf-h3>
-	<tf-search
-		name="delegateSearch" 	
-		placeholder="Joe Bloggs"
-	></tf-search>
-</tf-search-card>
 
 <tf-search-card>
 
 	<tf-search
-		name="delegateSearch" 	
-		placeholder="Joe Bloggs"
+		name="countrySearch" 	
+		placeholder="Find a country ..."
+		(tfOnInput)="onSearchInput($event)"
+		(tfOnSearch)="onSearchSelected($event)"
 	>
 		<tf-dropdown-rendered-option
-			value="Afgan"
-			element-title="a"
+			*ngFor="let c of resultsList"
+			attr.value="{{ c.name }}"
+			attr.element-title="{{ c.name }}"
 			colour="white"
-			parent="a"
 		>
-			Afgan
+			{{ c.name }}
 		</tf-dropdown-rendered-option>
-		<tf-dropdown-rendered-option
-			value="Argentina"
-			element-title="a"
-			colour="white"
-			parent="a"
-		>
-			Argentina
-		</tf-dropdown-rendered-option>
-		<tf-dropdown-rendered-option
-			value="andora"
-			element-title="a"
-			colour="white"
-			parent="a"
-		>
-			andora
-		</tf-dropdown-rendered-option>
+		
+	
 	</tf-search>
 </tf-search-card>
+
+
+<div style="display:block; height:300px;"></div>
