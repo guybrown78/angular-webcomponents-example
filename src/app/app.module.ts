@@ -54,6 +54,7 @@ import { TestCComponent } from './modal/tests/test-c/test-c.component';
 import { TestDComponent } from './modal/tests/test-d/test-d.component';
 import { TestEComponent } from './modal/tests/test-e/test-e.component';
 import { StatusesComponent } from './elements/statuses/statuses.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -108,6 +109,7 @@ import { StatusesComponent } from './elements/statuses/statuses.component';
 		TestDComponent,
 		TestEComponent,
 		StatusesComponent,
+		SearchComponent,
   ],
   imports: [
 		BrowserModule,

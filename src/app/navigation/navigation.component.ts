@@ -79,6 +79,11 @@ export class NavigationComponent implements OnInit {
 					routerLink:"/statuses",
 					title:"Status components",
 					label:"Status"
+				},
+				{
+					routerLink:"/search",
+					title:"Search autocomplete components",
+					label:"Search Autocomplete"
 				}
 			]
 		},

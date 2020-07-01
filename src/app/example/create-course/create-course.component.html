@@ -1,124 +1,128 @@
-<tf-node>
-	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
 
-		<form [formGroup]="form" (ngSubmit)="onSubmit()">
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Create Course
+		</tf-h3>
+	</tf-form-title>
 
-			<tf-ng-input 
-				[label]="'Course Name'" 
-				[name]="name"
-				[type]="'input'"
-				[placeholder]="'Course Name'"
-				[error]="name.touched && name.invalid"
-				[formControl]="name"
-				[errorMessage]="
-						name.errors && name.errors.required
-						? 'Please Provide a Course Name'
-						: ''
+	<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+		<tf-ng-input 
+			[label]="'Course Name'" 
+			[name]="name"
+			[type]="'input'"
+			[placeholder]="'Course Name'"
+			[error]="name.touched && name.invalid"
+			[formControl]="name"
+			[errorMessage]="
+					name.errors && name.errors.required
+					? 'Please Provide a Course Name'
+					: ''
+			"
+		>
+		</tf-ng-input>
+
+		<tf-ng-textarea
+			[label]="'Course Description'" 
+			[name]="desc"
+			[rowCount]="6"
+			[placeholder]="'What is the course about?'"
+			[error]="desc.touched && desc.invalid"
+			[formControl]="desc"
+			[errorMessage]="
+						desc.errors && desc.errors.required
+						? 'Please Provide a Course Description'
+						: desc.errors && desc.errors.minlength
+							? 'The Course Description should be at least ' + desc.errors.minlength.requiredLength + ' characters long. (' + (desc.errors.minlength.requiredLength - desc.errors.minlength.actualLength) + ' characters to go!)'
+							: ''
 				"
+		>
+		</tf-ng-textarea>
+
+		<tf-ng-select
+			[label]="'Course Type'" 
+			[name]="type"
+			[formControl]="type"
+			[error]="type.touched && type.invalid"
+			[errorMessage]="
+				type.errors && type.errors.required
+					? 'Select a course type'
+					: ''
+			"
+		>
+			<tf-select-option attr.value="{{ null }}">
+				Select a course type
+			</tf-select-option>
+			<tf-select-option 
+				*ngFor="let type of courseTypes"
+				attr.value="{{ type.value }}"
 			>
-			</tf-ng-input>
+				{{ type.name }}
+			</tf-select-option>
+		</tf-ng-select>	
 
-			<tf-ng-textarea
-				[label]="'Course Description'" 
-				[name]="desc"
-				[rowCount]="6"
-				[placeholder]="'What is the course about?'"
-				[error]="desc.touched && desc.invalid"
-				[formControl]="desc"
-				[errorMessage]="
-							desc.errors && desc.errors.required
-							? 'Please Provide a Course Description'
-							: desc.errors && desc.errors.minlength
-								? 'The Course Description should be at least ' + desc.errors.minlength.requiredLength + ' characters long. (' + (desc.errors.minlength.requiredLength - desc.errors.minlength.actualLength) + ' characters to go!)'
-								: ''
-					"
-			>
-			</tf-ng-textarea>
-
-			<tf-ng-select
-				[label]="'Course Type'" 
-				[name]="type"
-				[formControl]="type"
-				[error]="type.touched && type.invalid"
-				[errorMessage]="
-					type.errors && type.errors.required
-						? 'Select a course type'
-						: ''
-				"
-			>
-				<tf-select-option attr.value="{{ null }}">
-					Select a course type
-				</tf-select-option>
-				<tf-select-option 
-					*ngFor="let type of courseTypes"
-					attr.value="{{ type.value }}"
-				>
-					{{ type.name }}
-				</tf-select-option>
-			</tf-ng-select>	
-
-			<tf-ng-radio-group 
-				label="'Course Status'" 
-				name="statusgroup"
-				[formControl]="status"
-				description="What is the initial status when the course is published?"
-				[error]="status.touched && status.invalid"
-				[errorMessage]="
-					status.errors && status.errors.required
-						? 'Select a course status'
-						: ''
-				"
-			>
-				<tf-radio 
-					name="pending" 
-					group-name="statusgroup"
-					label="Pending" 
-					hint="The course isn't due to start straight away, a start date can be set once it is published"
-				></tf-radio>
-				<tf-radio 
-					name="live" 
-					group-name="statusgroup"
-					label="Live" 
-					hint="The course is available from the day it is published"
-				></tf-radio>
-				<tf-radio 
-					name="archived" 
-					group-name="statusgroup"
-					label="Archived" 
-					hint="This course is not intended to be active"
-				></tf-radio>
-				
-			</tf-ng-radio-group>
-
-			<tf-divider></tf-divider>
-
-			<tf-ng-checkbox 
-				[name]="isSignedOff" 
-				[label]="'Course has been Signed Off'" 
-				hint="You must confirm that the course has been Signed Off"
-				[formControl]="isSignedOff"
-				[error]="isSignedOff.touched && isSignedOff.invalid"
-				[errorMessage]="
-					isSignedOff.errors && isSignedOff.errors.required
-						? 'Please confirm that the course has been Signed Off'
-						: ''
-				"
-			></tf-ng-checkbox>
-
-			<tf-node-flex-fxr>
-
-				<tf-button 
-					slot="fxr"
-					colour="aqua" 
-					button-type="submit"
-					[disabled]="!form.valid"
-				>
-					Submit
-				</tf-button>
-
-			</tf-node-flex-fxr>
-		</form>
+		<tf-ng-radio-group 
+			label="'Course Status'" 
+			name="statusgroup"
+			[formControl]="status"
+			description="What is the initial status when the course is published?"
+			[error]="status.touched && status.invalid"
+			[errorMessage]="
+				status.errors && status.errors.required
+					? 'Select a course status'
+					: ''
+			"
+		>
+			<tf-radio 
+				name="pending" 
+				group-name="statusgroup"
+				label="Pending" 
+				hint="The course isn't due to start straight away, a start date can be set once it is published"
+			></tf-radio>
+			<tf-radio 
+				name="live" 
+				group-name="statusgroup"
+				label="Live" 
+				hint="The course is available from the day it is published"
+			></tf-radio>
+			<tf-radio 
+				name="archived" 
+				group-name="statusgroup"
+				label="Archived" 
+				hint="This course is not intended to be active"
+			></tf-radio>
 			
-	</div>
-	
-</tf-node>
+		</tf-ng-radio-group>
+
+		<tf-divider></tf-divider>
+
+		<tf-ng-checkbox 
+			[name]="isSignedOff" 
+			[label]="'Course has been Signed Off'" 
+			hint="You must confirm that the course has been Signed Off"
+			[formControl]="isSignedOff"
+			[error]="isSignedOff.touched && isSignedOff.invalid"
+			[errorMessage]="
+				isSignedOff.errors && isSignedOff.errors.required
+					? 'Please confirm that the course has been Signed Off'
+					: ''
+			"
+		></tf-ng-checkbox>
+
+		<tf-node-flex-fxr>
+
+			<tf-button 
+				slot="fxr"
+				colour="aqua" 
+				button-type="submit"
+				[disabled]="!form.valid"
+			>
+				Submit
+			</tf-button>
+
+		</tf-node-flex-fxr>
+	</form>
+		
+</tf-form-page-card>
+

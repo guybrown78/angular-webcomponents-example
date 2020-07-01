@@ -1,13 +1,12 @@
 
-<tf-form-card>
-
-	<tf-form-title>
-		<tf-h2>
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
 			Reactive Form Example
-		</tf-h2>
+		</tf-h3>
 	</tf-form-title>
 
-
+	<!-- form goes here -->
 	<form [formGroup]="form" (ngSubmit)="onSubmit()">
 
 			<tf-ng-input 
@@ -84,4 +83,6 @@
 
 
 	</form>
-</tf-form-card>
+
+</tf-form-page-card>
+

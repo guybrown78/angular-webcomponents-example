@@ -1,90 +1,107 @@
-<tf-node>
-	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
-		<p>Example of a non Transform Component Form</p>
-		<div style="background-color: #eee; padding:20px;">
-			<section>
-				<form [formGroup]="addLocationForm" (ngSubmit)="onSubmit()" novalidate>
-					<div> <!-- mat-card -->
-						<div> <!-- mat-card-content -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Location Name</label>
-									</span>
-									<input formControlName="name">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Address Line 1</label>
-									</span>
-									<input formControlName="addressLine1">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Address Line 2</label>
-									</span>
-									<input formControlName="addressLine2">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">City/Town</label>
-									</span>
-									<input formControlName="city">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Region</label>
-									</span>
-									<input formControlName="region">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Country</label>
-									</span>
-									<input formControlName="country">
-								</div> <!-- /mat-form-field -->
-								<div> <!-- mat-form-field -->
-									<span class="custom-floating-label-wrapper">
-										<label class="custom-floating-label">Post/Zip code</label>
-									</span>
-									<input formControlName="postcode">
-								</div> <!-- mat-form-field -->
-						</div> <!-- mat-card-content -->
-						<div> <!-- mat-card-actions -->
-							<button type="submit" [disabled]="!addLocationForm.valid">
-								Submit
-							</button>
-						</div> <!-- mat-card-actions -->
-					</div> <!-- /mat-card -->
-				</form>
-			</section>
-		</div>
 
-	</div>
-</tf-node>
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Example of a NON Transform Component Form
+		</tf-h3>
+	</tf-form-title>
 
-<tf-node>
-	<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
-		<p>Example of a minimal Transform Component Form</p>
-		<form [formGroup]="locationForm" (ngSubmit)="onLocationFormSubmit()" novalidate>
-			<tf-ng-input label="Location Name" formControlName="name">
-			</tf-ng-input>
-			<tf-ng-input label="Address Line 1" formControlName="addressLine1">
-			</tf-ng-input>
-			<tf-ng-input label="Address Line 2" formControlName="addressLine2">
-			</tf-ng-input>
-			<tf-ng-input label="City/Town" formControlName="city">
-			</tf-ng-input>
-			<tf-ng-input label="Region" formControlName="region">
-			</tf-ng-input>
-			<tf-ng-input label="Country" formControlName="country">
-			</tf-ng-input>
-			<tf-ng-input label="Post/Zip code" formControlName="postcode">
-			</tf-ng-input>
-			<tf-node-flex-fxr>
-				<tf-button slot="fxr" colour="aqua" button-type="submit" [disabled]="!locationForm.valid">
+	<!-- form goes here -->
+	<form [formGroup]="addLocationForm" (ngSubmit)="onSubmit()" novalidate>
+		<div> <!-- mat-card -->
+			<div> <!-- mat-card-content -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Location Name</label>
+						</span>
+						<input formControlName="name">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Address Line 1</label>
+						</span>
+						<input formControlName="addressLine1">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Address Line 2</label>
+						</span>
+						<input formControlName="addressLine2">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">City/Town</label>
+						</span>
+						<input formControlName="city">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Region</label>
+						</span>
+						<input formControlName="region">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Country</label>
+						</span>
+						<input formControlName="country">
+					</div> <!-- /mat-form-field -->
+					<div> <!-- mat-form-field -->
+						<span class="custom-floating-label-wrapper">
+							<label class="custom-floating-label">Post/Zip code</label>
+						</span>
+						<input formControlName="postcode">
+					</div> <!-- mat-form-field -->
+			</div> <!-- mat-card-content -->
+			<div> <!-- mat-card-actions -->
+				<button type="submit" [disabled]="!addLocationForm.valid">
 					Submit
-				</tf-button>
-			</tf-node-flex-fxr> 
-		</form>
-	</div>
-</tf-node>
+				</button>
+			</div> <!-- mat-card-actions -->
+		</div> <!-- /mat-card -->
+	</form>
+</tf-form-page-card>
+
+
+<tf-form-page-card colour="grey">
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Example of a minimal Transform Component Form
+		</tf-h3>
+	</tf-form-title>
+
+	<form [formGroup]="locationForm" (ngSubmit)="onLocationFormSubmit()" novalidate>
+		<tf-ng-input label="Location Name" formControlName="name">
+		</tf-ng-input>
+		<tf-ng-input label="Address Line 1" formControlName="addressLine1">
+		</tf-ng-input>
+		<tf-ng-input label="Address Line 2" formControlName="addressLine2">
+		</tf-ng-input>
+		<tf-ng-input label="City/Town" formControlName="city">
+		</tf-ng-input>
+		<tf-ng-input label="Region" formControlName="region">
+		</tf-ng-input>
+		<tf-ng-input label="Country" formControlName="country">
+		</tf-ng-input>
+		<tf-ng-input label="Post/Zip code" formControlName="postcode">
+		</tf-ng-input>
+		<tf-node-flex-fxr>
+			<tf-button slot="fxr" colour="aqua" button-type="submit" [disabled]="!locationForm.valid">
+				Submit
+			</tf-button>
+		</tf-node-flex-fxr> 
+	</form>
+
+</tf-form-page-card>
+
+	
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Example of a minimal Transform Component Form
+		</tf-h3>
+	</tf-form-title>
+
+	<!-- form goes here -->
+
+</tf-form-page-card>

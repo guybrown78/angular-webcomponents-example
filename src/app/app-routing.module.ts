@@ -15,6 +15,7 @@ import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { IconsComponent } from './elements/icons/icons.component';
 import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
 import { StatusesComponent } from './elements/statuses/statuses.component'
+import { SearchComponent } from './search/search.component'
 //
 import { ModalComponent } from './modal/modal.component';
 //
@@ -93,6 +94,10 @@ const routes: Routes = [
 	{
 		path: 'statuses',
 		component: StatusesComponent,
+	},
+	{
+		path: 'search',
+		component: SearchComponent,
 	},
 	{ 
 		path: 'modals', 

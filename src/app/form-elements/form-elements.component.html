@@ -1,8 +1,13 @@
-<tf-card>
-	<tf-card-title>Textarea</tf-card-title>
-	<tf-node>
-		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+	
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Textarea
+		</tf-h3>
+	</tf-form-title>
 
+	<!-- form goes here -->
+	<form>
 			<tf-textarea
 				name="about-you" 
 				label="About You" 
@@ -10,7 +15,6 @@
 				hint="Describe yourself"
 			>
 			</tf-textarea>
-
 
 			<tf-textarea
 				name="message" 
@@ -21,16 +25,20 @@
 				error
 			>
 			</tf-textarea>
+	</form>
+</tf-form-page-card>
 
-		</div>
-	</tf-node>
-</tf-card>
+	
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Select
+		</tf-h3>
+	</tf-form-title>
 
-<tf-card>
-	<tf-card-title>Select</tf-card-title>
-	<tf-node>
-		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
-			<tf-select
+	<!-- form goes here -->
+	<form>
+		<tf-select
 				name="country" 
 				label="Country / Six Nation Team" 
 				hint="Who you think will win the Six Nations?"
@@ -66,16 +74,21 @@
 				<tf-select-option value="2">North West</tf-select-option>
 				<tf-select-option value="3" selected>North East</tf-select-option>
 				<tf-select-option value="4">Midlands</tf-select-option>
-			</tf-select>	
+			</tf-select>
+			
+		</form>
+</tf-form-page-card>
 
-		</div>
-	</tf-node>
-</tf-card>
+	
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Checkbox
+		</tf-h3>
+	</tf-form-title>
 
-<tf-card>
-	<tf-card-title>Checkbox</tf-card-title>
-	<tf-node>
-		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
+	<!-- form goes here -->
+	<form>
 			<tf-checkbox 
 				name="rememberMe" 
 				label="Remember Me" 
@@ -94,30 +107,19 @@
 				error-message="Please agree to our Terms and Contitions to continue"
 				error
 			></tf-checkbox>
-		</div>
-	</tf-node>
-</tf-card>
+	</form>
 
-<tf-card>
-	<tf-card-title>Radio</tf-card-title>
-	<tf-node>
-		<div style="display:flex; flex-direction: column; flex:1; padding: 10px 30px; margin-bottom: 30px;">
-			<!-- <tf-radio 
-				name="gender-m" 
-				group-name="gender"
-				label="Male" 
-			></tf-radio>
-			<tf-radio 
-				name="gender-f" 
-				group-name="gender"
-				label="Female" 
-			></tf-radio>
-			<tf-radio 
-				name="gender-na" 
-				group-name="gender"
-				label="Rather not disclose" 
-			></tf-radio> -->
+</tf-form-page-card>
 
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			Radio
+		</tf-h3>
+	</tf-form-title>
+
+	<!-- form goes here -->
+	<form>
 			<tf-radio-group 
 				name="gender" 
 				label="Gender" 
@@ -166,7 +168,6 @@
 					hint="Recieve notifications on delegate registration"
 				></tf-radio>
 			</tf-radio-group>
+	</form>
 
-		</div>
-	</tf-node>
-</tf-card>
+</tf-form-page-card>
