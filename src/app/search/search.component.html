@@ -28,16 +28,9 @@
 		(tfOnInput)="onSearchInput($event)"
 		(tfOnSearch)="onSearchSelected($event)"
 	>
-		<tf-dropdown-rendered-option
-			*ngFor="let c of resultsList"
-			attr.value="{{ c.name }}"
-			attr.element-title="{{ c.name }}"
-			colour="white"
-		>
-			{{ c.name }}
-		</tf-dropdown-rendered-option>
+		<tf-dropdown-option *ngFor="let c of resultsList" attr.value="{{ c.name }}">
+		</tf-dropdown-option>
 		
-	
 	</tf-search>
 </tf-search-card>
 
