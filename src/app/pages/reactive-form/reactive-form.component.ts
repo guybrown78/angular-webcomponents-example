@@ -28,7 +28,6 @@ export class ReactiveFormComponent implements OnInit {
   }
 
 	get oldPassword() { 
-		console.log(this.form.get('oldPassword'))
 		return this.form.get('oldPassword'); 
 	}
   get newPassword() { return this.form.get('newPassword'); }
@@ -39,7 +38,7 @@ export class ReactiveFormComponent implements OnInit {
 	// }
 	
 	onSubmit(){
-		console.log("submit")
+		console.log(" *****************submit")
 		console.log(this.form)
 	}
 }
