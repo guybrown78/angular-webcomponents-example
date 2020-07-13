@@ -54,6 +54,10 @@ If the application needs to work on older browsers, the defineCustomElements() f
   defineCustomElements()
 })`
 
+Don't forget to add the angular polyfills to your project in the usual way.
+
+You will also need additional styles, see the Global Styles section of this readme.
+
 ## Font
 
 The components are designed around the font `Roboto Condensed`. This font isn't shipped with the components and needs to be added.
@@ -83,11 +87,42 @@ body {
 	height: 100vh;
 }
 ```
+
+If the application needs to be used on EDGE/IE11 then additional 'helper' style class selectors need to be included. These are:
+
+```css
+.tf-ie-slot-fx-fix{
+	display: block;
+	width: 100%;
+	height:100%;
+}
+.tf-hostroot-flex{
+	display:flex;
+	flex:1 1 0%;
+}
+```
+
 # Forms
 
 Out of the box, we can not use the angular formControl or ngModel directive directly on a transform input component like we do with native form elements. This is because the form directives need to access direct native DOM properties. Transform components are build on the shadow DOM and wrapped in the 'tf-...' tag.
 
- 
+To get around this, we have provided a wrapper for each form component. These wrappers are packaged up in https://www.npmjs.com/package/tf-ng-form-components and should be installed once you install the tf-core-components
+
+`npm i tf-ng-form-components`
+
+Once installed, we just add the TfNgFormComponentsModule to the app.module as usual;
+
+`import { TfNgFormComponentsModule } from 'tf-ng-form-components'`
+
+and add the TfNgFormComponentsModule to the imports;
+
+`imports: [
+		TfNgFormComponentsModule,
+		...
+  ]`
+
+using the ... is as simple as just accessing the `tf-ng-input` component instead of `tf-input` in our forms
+
 ## Reactive Forms
 
 A ControlValueAccessor acts as a bridge between the Angular forms API and a native element in the DOM

@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//
+import { TfNgFormComponentsModule } from 'tf-ng-form-components'
 // pages
 import { ExampleComponent } from './example/example.component'; 
 import { LoginComponent } from './login/login.component';
@@ -28,13 +30,7 @@ import { ExampleOneComponent } from './pages/example-one/example-one.component';
 import { ExampleThreeComponent } from './pages/example-three/example-three.component';
 import { ReactiveFormComponent } from './pages/reactive-form/reactive-form.component';
 import { NgformComponent } from './pages/ngform/ngform.component';
-import { TfNgInputComponent } from './forms/tf-ng-input/tf-ng-input.component';
 import { CreateCourseComponent } from './example/create-course/create-course.component';
-import { TfNgTextareaComponent } from './forms/tf-ng-textarea/tf-ng-textarea.component';
-import { TfNgSelectComponent } from './forms/tf-ng-select/tf-ng-select.component';
-import { TfNgCheckboxComponent } from './forms/tf-ng-checkbox/tf-ng-checkbox.component';
-import { TfNgRadioGroupComponent } from './forms/tf-ng-radio-group/tf-ng-radio-group.component';
-import { TfNgRadioComponent } from './forms/tf-ng-radio/tf-ng-radio.component';
 import { AddLocationComponent } from './example/add-location/add-location.component';
 import { PhComponent } from './product-examples/ph/ph.component';
 import { NodeRowComponent } from './node-row/node-row.component';
@@ -83,13 +79,7 @@ import { SearchComponent } from './search/search.component';
 		ExampleThreeComponent,
 		ReactiveFormComponent,
 		NgformComponent,
-		TfNgInputComponent,
 		CreateCourseComponent,
-		TfNgTextareaComponent,
-		TfNgSelectComponent,
-		TfNgCheckboxComponent,
-		TfNgRadioGroupComponent,
-		TfNgRadioComponent,
 		AddLocationComponent,
 		PhComponent,
 		NodeRowComponent,
@@ -117,6 +107,7 @@ import { SearchComponent } from './search/search.component';
 		HttpClientModule,
 		FormsModule,
 		ReactiveFormsModule,
+		TfNgFormComponentsModule
   ],
   providers: [],
 	bootstrap: [AppComponent],
