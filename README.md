@@ -1,5 +1,5 @@
 
-## Setup
+# Setup
 
 This project is started from the basic, out the box Angular CLI create new project `ng new`
 
@@ -54,11 +54,24 @@ If the application needs to work on older browsers, the defineCustomElements() f
   defineCustomElements()
 })`
 
-Don't forget to add the angular polyfills to your project in the usual way.
+Don't forget to add the angular polyfills to your project in the usual way. See the official documentation for guidence `https://angular.io/guide/browser-support`.
 
-You will also need additional styles, see the Global Styles section of this readme.
+In this example, the polyfill.ts is pretty much standard. We installed the IE11 support for SVG and uncommented it within the polyfill.ts;
 
-## Font
+`npm install classlist.js --save`
+
+We uncommented all the a other IE11 polyfills too. We have had a few issues with `core-js`, mainly the version. It is probably safest to force version `2.6.11` on your project;
+
+`"core-js": "^2.6.11"`
+
+The only additionaly polyfill we added was the promise;
+
+`import 'core-js/es6/promise';`
+
+
+Finally, you will also need additional styles, see the Global Styles section of this readme.
+
+# Font
 
 The components are designed around the font `Roboto Condensed`. This font isn't shipped with the components and needs to be added.
 
@@ -67,7 +80,7 @@ in `index.html` add;
 `<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">`
 
 
-## global CSS
+# global CSS
 
 To get the components sitting nicely on the page and to set the font, we need to include the following base css. This is added to `styles.css`;
 
@@ -121,28 +134,15 @@ and add the TfNgFormComponentsModule to the imports;
 		...
   ]`
 
-using the ... is as simple as just accessing the `tf-ng-input` component instead of `tf-input` in our forms
-
-## Reactive Forms
-
-A ControlValueAccessor acts as a bridge between the Angular forms API and a native element in the DOM
-
-https://angular.io/api/forms/ControlValueAccessor#description
-
-We have created an angular custom input (tf-ng-input) to wrap our form transform components and then use the formControl directive on it. Now, the data can flow two-way between Transform form components and angular form
-
-There is an example reative form page to show the tf-ng-input component working
-
+using the TfNgFormComponentsModule is as simple as just accessing the `tf-ng-input` component instead of `tf-input` in our forms
 
 ## Template Forms
 
-We can use the tf-ng-input within the NgForm directive too.
-
-Failing the use of tf-ng-input within NgForm, you can use the raw, unwrapped transform form components but we need to add a few properties;
+Failing to install tf-ng-form-components and the use of tf-ng-input within NgForm, you can use the raw, unwrapped transform form components but we need to add a few properties;
 
 enforce ngDefaultControl onto tf-input components to bridge the communication from angular to the component. Also need to manually set touched and untouched properties (for now) with (change)="name.control.markAsTouched()"
 
-## Build
+# Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag OR `npm run prod` for a production build.
 
@@ -153,11 +153,11 @@ I needed to update package.json to allow building with Schema's. Replace the ang
 
 
 
+--------------------
 
+### notes
 
+We looked at the idea of adding an application promise for the components but this is now pre-baked into the tf-components;
 
-npm install classlist.js --save
 npm install promise-polyfill --save-exact
 
-add to polyfil...
-import 'core-js/es6/promise';
