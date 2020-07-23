@@ -51,6 +51,8 @@ import { TestDComponent } from './modal/tests/test-d/test-d.component';
 import { TestEComponent } from './modal/tests/test-e/test-e.component';
 import { StatusesComponent } from './elements/statuses/statuses.component';
 import { SearchComponent } from './search/search.component';
+import { TestCheckboxComponent } from './do-not-use/test-checkbox/test-checkbox.component';
+import { TestRadioGroupComponent } from './do-not-use/test-radio-group/test-radio-group.component';
 
 
 
@@ -100,6 +102,8 @@ import { SearchComponent } from './search/search.component';
 		TestEComponent,
 		StatusesComponent,
 		SearchComponent,
+		TestCheckboxComponent,
+		TestRadioGroupComponent,
   ],
   imports: [
 		BrowserModule,

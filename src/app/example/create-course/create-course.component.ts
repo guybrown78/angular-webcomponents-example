@@ -17,14 +17,15 @@ export class CreateCourseComponent implements OnInit {
 
   constructor(fb: FormBuilder) {
     this.form = fb.group({ 
-			name: ['', Validators.required],
+			name: ['Default Name', Validators.required],
 			desc: ['', Validators.compose([
 				Validators.required,
 				Validators.minLength(10)
 			])],
-			type: ['', Validators.required],
-			isSignedOff: ['', Validators.requiredTrue],
-			status: ['', Validators.required]
+			type: ['1', Validators.required],
+			isSignedOff: [false, Validators.requiredTrue],
+			courseEnabled: [true],
+			status: ['pending', Validators.required]
     });
   }
 
@@ -34,6 +35,7 @@ export class CreateCourseComponent implements OnInit {
 	get desc() { return this.form.get('desc'); }
 	get type() { return this.form.get('type'); }
 	get isSignedOff() { return this.form.get('isSignedOff'); }
+	get courseEnabled() { return this.form.get('courseEnabled'); }
 	get status() { return this.form.get('status'); }
 
 	onSubmit(){

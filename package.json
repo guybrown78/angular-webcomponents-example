@@ -26,7 +26,7 @@
     "promise-polyfill": "8.1.3",
     "rxjs": "~6.3.3",
     "tf-core-components": "0.0.134",
-    "tf-ng-form-components": "0.0.5",
+    "tf-ng-form-components": "0.0.6",
     "zone.js": "^0.8.29"
   },
   "devDependencies": {

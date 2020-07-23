@@ -1,0 +1,16 @@
+<tf-radio-group 
+	name={{name}}
+	label={{label}} 
+	[hint]="hint"
+	[description]="description"
+	required="required"
+	hideLabel="hideLabel"
+	[error]="error"
+	[errorMessage]="errorMessage"
+	[value]="value"
+	(tfOnItemSelected)="onValueChange($event)"
+
+	(focusout)="onBlur()"
+>
+	<ng-content></ng-content>
+</tf-radio-group>	
