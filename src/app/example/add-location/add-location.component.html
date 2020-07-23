@@ -1,66 +1,4 @@
 
-<tf-form-page-card>
-	<tf-form-title type="page" slot="title">
-		<tf-h3>
-			Example of a NON Transform Component Form
-		</tf-h3>
-	</tf-form-title>
-
-	<!-- form goes here -->
-	<form [formGroup]="addLocationForm" (ngSubmit)="onSubmit()" novalidate>
-		<div> <!-- mat-card -->
-			<div> <!-- mat-card-content -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Location Name</label>
-						</span>
-						<input formControlName="name">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Address Line 1</label>
-						</span>
-						<input formControlName="addressLine1">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Address Line 2</label>
-						</span>
-						<input formControlName="addressLine2">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">City/Town</label>
-						</span>
-						<input formControlName="city">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Region</label>
-						</span>
-						<input formControlName="region">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Country</label>
-						</span>
-						<input formControlName="country">
-					</div> <!-- /mat-form-field -->
-					<div> <!-- mat-form-field -->
-						<span class="custom-floating-label-wrapper">
-							<label class="custom-floating-label">Post/Zip code</label>
-						</span>
-						<input formControlName="postcode">
-					</div> <!-- mat-form-field -->
-			</div> <!-- mat-card-content -->
-			<div> <!-- mat-card-actions -->
-				<button type="submit" [disabled]="!addLocationForm.valid">
-					Submit
-				</button>
-			</div> <!-- mat-card-actions -->
-		</div> <!-- /mat-card -->
-	</form>
-</tf-form-page-card>
 
 
 <tf-form-page-card colour="grey">
@@ -98,10 +36,13 @@
 <tf-form-page-card>
 	<tf-form-title type="page" slot="title">
 		<tf-h3>
-			Example of a minimal Transform Component Form
+			Example of a minimal Transform Form Page Component
 		</tf-h3>
 	</tf-form-title>
 
 	<!-- form goes here -->
+	<tf-p>
+		<tf-span-italic colour="grey">Form goes here...</tf-span-italic>
+	</tf-p>
 
 </tf-form-page-card>
