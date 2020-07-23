@@ -1,0 +1,55 @@
+<tf-h2 colour="white">Statistic Cards</tf-h2>
+<tf-p colour="white">The <tf-span-italic colour="aqua">tf-stats-panel</tf-span-italic> accepts <tf-span-italic colour="aqua">tf-stat-data-card</tf-span-italic> as it's children. You can add a <tf-span-italic colour="aqua">colour</tf-span-italic> property to each child and it expects two slots, <tf-span-italic colour="aqua">title</tf-span-italic> and <tf-span-italic colour="aqua">data.</tf-span-italic></tf-p>
+
+<tf-stats-panel>
+	<tf-stat-data-card colour="blue">
+		<div slot="title">Data Title</div>
+		<div slot="data">75,562</div>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="green">
+		<div slot="title">Avg. Open Rate</div>
+		<div slot="data">58.16%</div>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="amber">
+		<div slot="title">Avg. Click Rate</div>
+		<div slot="data">54.57%</div>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="red">
+		<div slot="title">Todays sales</div>
+		<div slot="data">£1.20</div>
+	</tf-stat-data-card>
+
+</tf-stats-panel>
+
+
+<tf-p colour="white">LMS example of 'Completed', 'In Progress' and 'Not Started' Statistic Cards.</tf-p>
+<tf-stats-panel>
+	<tf-stat-data-card colour="red">
+		<div slot="title">Not Started</div>
+		<div slot="data">1</div>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="amber">
+		<div slot="title">In Progress</div>
+		<div slot="data">19</div>
+	</tf-stat-data-card>
+
+	<tf-stat-data-card colour="green">
+		<div slot="title">Completed</div>
+		<div slot="data">20</div>
+	</tf-stat-data-card>
+
+</tf-stats-panel>
+
+
+<tf-h2 colour="white">Mobile Example</tf-h2>
+<tf-p colour="white">The <tf-span-italic colour="aqua">tf-stats-panel</tf-span-italic> component manages the screen size and when it reponds down it collects it's <tf-span-italic colour="aqua">tf-stat-data-card</tf-span-italic> children and presents them as a carousel.</tf-p>
+<iframe 
+	src="https://tf-web-components.netlify.app/stats.html" 
+	title="Transform Components - statistic card mobile example"
+	width=500
+	height=650
+></iframe>

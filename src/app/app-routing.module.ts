@@ -13,9 +13,10 @@ import { AppHeaderComponent } from './elements/app-header/app-header.component'
 import { PagetitleBreadcrumbsComponent } from './elements/pagetitle-breadcrumbs/pagetitle-breadcrumbs.component';
 import { ButtonsComponent } from './elements/buttons/buttons.component';
 import { IconsComponent } from './elements/icons/icons.component';
-import { DropdownsComponent } from './elements/dropdowns/dropdowns.component'
-import { StatusesComponent } from './elements/statuses/statuses.component'
-import { SearchComponent } from './search/search.component'
+import { StatsComponent } from './elements/stats/stats.component';
+import { DropdownsComponent } from './elements/dropdowns/dropdowns.component';
+import { StatusesComponent } from './elements/statuses/statuses.component';
+import { SearchComponent } from './search/search.component';
 //
 import { ModalComponent } from './modal/modal.component';
 //
@@ -84,6 +85,11 @@ const routes: Routes = [
 	{ 
 		path: 'icons', 
 		component: IconsComponent, 
+		data: {} 
+	},
+	{ 
+		path: 'stats', 
+		component: StatsComponent, 
 		data: {} 
 	},
 	{ 

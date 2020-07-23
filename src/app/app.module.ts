@@ -53,6 +53,7 @@ import { StatusesComponent } from './elements/statuses/statuses.component';
 import { SearchComponent } from './search/search.component';
 import { TestCheckboxComponent } from './do-not-use/test-checkbox/test-checkbox.component';
 import { TestRadioGroupComponent } from './do-not-use/test-radio-group/test-radio-group.component';
+import { StatsComponent } from './elements/stats/stats.component';
 
 
 
@@ -104,6 +105,7 @@ import { TestRadioGroupComponent } from './do-not-use/test-radio-group/test-radi
 		SearchComponent,
 		TestCheckboxComponent,
 		TestRadioGroupComponent,
+		StatsComponent,
   ],
   imports: [
 		BrowserModule,
