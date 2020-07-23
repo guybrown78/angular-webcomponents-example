@@ -6,6 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ph.component.css']
 })
 export class PhComponent implements OnInit {
+	activeProducts = [
+		{
+			id:"bi",
+			name:"Business intelligence",
+			code:"Bi",
+			description:"Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups",
+		},
+		{
+			id:"si",
+			name:"Simulators",
+			code:"Si",
+			description:"Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups",
+		},
+		{
+			id:"cm",
+			name:"Competence Management",
+			code:"CM",
+			description:"Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups",
+		},
+		{
+			id:"tm",
+			name:"Training Management",
+			code:"TM",
+			description:"Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups",
+		},
+		{
+			id:"lm",
+			name:"Learning Management",
+			code:"LM",
+			description:"Lorum ipsum solar dolar jhs description of product bla vle jsi dhdjhdlh management system ipsumly fapher epsom doups",
+		}
+	];
 
   constructor() { }
 

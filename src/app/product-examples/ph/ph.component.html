@@ -25,3 +25,16 @@
 		(tfPhOverviewButtonClicked)="onProductClicked($event)"
 	></tf-ph-overview-button>
 </tf-info-panel>
+
+	
+
+<tf-info-panel>
+	<tf-ph-overview-button
+		*ngFor="let product of activeProducts"
+		productCode="{{ product.code }}"
+		productTitle="{{ product.name }}"
+		is-active="false"
+		productDescription="{{ product.description }}"
+		product-id="{{ product.id }}"
+	></tf-ph-overview-button>
+</tf-info-panel>
