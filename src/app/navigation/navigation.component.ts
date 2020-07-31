@@ -19,6 +19,11 @@ export class NavigationComponent implements OnInit {
 					label:"Input Form Components"
 				},
 				{
+					routerLink:"/file-select",
+					title:"File select input components",
+					label:"File Select/DragDrop"
+				},
+				{
 					routerLink:"/form-elements",
 					title:"Form components",
 					label:"Other Form Components"

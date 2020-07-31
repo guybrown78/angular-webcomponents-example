@@ -54,6 +54,9 @@ import { SearchComponent } from './search/search.component';
 import { TestCheckboxComponent } from './do-not-use/test-checkbox/test-checkbox.component';
 import { TestRadioGroupComponent } from './do-not-use/test-radio-group/test-radio-group.component';
 import { StatsComponent } from './elements/stats/stats.component';
+import { TestFileSelectComponent } from './do-not-use/test-file-select/test-file-select.component';
+import { FileSelectComponent } from './form-elements/file-select/file-select.component';
+
 
 
 
@@ -106,6 +109,8 @@ import { StatsComponent } from './elements/stats/stats.component';
 		TestCheckboxComponent,
 		TestRadioGroupComponent,
 		StatsComponent,
+		TestFileSelectComponent,
+		FileSelectComponent,
   ],
   imports: [
 		BrowserModule,

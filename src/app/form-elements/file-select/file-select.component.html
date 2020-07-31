@@ -1,0 +1,103 @@
+
+<tf-form-page-card>
+	<tf-form-title type="page" slot="title">
+		<tf-h3>
+			File Select/DragDrop Inputs
+		</tf-h3>
+	</tf-form-title>
+
+	<!-- form goes here -->
+	<form>
+			
+		<tf-file-select
+		label="Your CV" 
+		name="dataFile"
+		icon=''
+	></tf-file-select>
+
+	<tf-file-select
+		label="Cover Image" 
+		name="coverImg"
+		hint="Select an image for the course cover image"
+		accept="image/*"
+		select-message="Choose an image"
+		drop-message="or drag one into here"
+	></tf-file-select>
+
+	<tf-divider></tf-divider>
+	
+	<tf-file-select
+		label="Upload Data" 
+		name="csvData"
+		accept=".csv"
+		multiple="false"
+		icon="cloud-upload"
+		error-message="You must select a picture to upload"
+		error
+	></tf-file-select>
+
+	<tf-divider></tf-divider>
+
+	<tf-file-select
+		hide-label="true"
+		label="Evidence" 
+		name="coverImg"
+		disable-drag-drop
+		select-message="Select a file"
+		error-message="You must select a file to upload"
+		error
+	></tf-file-select>
+
+	<tf-divider></tf-divider>
+
+
+	<tf-file-select
+		label="File upload" 
+		name="file4"
+		disable-drag-drop
+		select-message="Select a file"
+		hint-message="Select a file from your system"
+		icon="upload"
+	></tf-file-select>
+
+	<tf-divider></tf-divider>
+
+	<tf-file-select
+		label="Upload Data" 
+		name="file5"
+		disabled
+		display-state="success"
+		display-state-message="Upload Complete!"
+	></tf-file-select>
+
+	<tf-file-select
+		label="Upload Data" 
+		name="file6"
+		disabled
+		display-state="failed"
+		display-state-message="Upload Failed"
+		error
+		error-message="The file didn't upload. Please try another file"
+	></tf-file-select>
+
+	<tf-file-select
+		label="Upload Data" 
+		name="file7"
+		disabled
+		disable-drag-drop
+		display-state="success"
+		display-state-message="Upload Complete!"
+	></tf-file-select>
+
+	<tf-file-select
+		label="Upload Data" 
+		name="file8"
+		disabled
+		disable-drag-drop
+		display-state="failed"
+		display-state-message="Upload Failed"
+		error
+		error-message="The file didn't upload. Please try another file"
+	></tf-file-select>
+	</form>
+</tf-form-page-card>

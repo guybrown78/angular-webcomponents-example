@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ExampleComponent } from './example/example.component'; 
 // forms
 import { InputsComponent } from './inputs/inputs.component'
+import { FileSelectComponent } from './form-elements/file-select/file-select.component'
 import { FormElementsComponent } from './form-elements/form-elements.component'
 import { LoginComponent } from './login/login.component'; 
 import { DecoupledLoginComponent } from './login/decoupled-login/decoupled-login.component'; 
@@ -53,6 +54,10 @@ const routes: Routes = [
 		path: 'inputs', 
 		component: InputsComponent, 
 		data: {} 
+	},
+	{
+		path: 'file-select',
+		component: FileSelectComponent,
 	},
 	{
 		path: 'form-elements',

@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { FormGroup, FormControl, FormBuilder, Validators } from "@angular/forms";
+import { requiredFileType } from "./file.validators";
 
 @Component({
   selector: "app-create-course",
@@ -25,6 +26,7 @@ export class CreateCourseComponent implements OnInit {
 			type: ['1', Validators.required],
 			isSignedOff: [false, Validators.requiredTrue],
 			courseEnabled: [true],
+			image: [null, [Validators.required]],
 			status: ['pending', Validators.required]
     });
   }
@@ -37,6 +39,7 @@ export class CreateCourseComponent implements OnInit {
 	get isSignedOff() { return this.form.get('isSignedOff'); }
 	get courseEnabled() { return this.form.get('courseEnabled'); }
 	get status() { return this.form.get('status'); }
+	get image() { return this.form.get('image'); }
 
 	onSubmit(){
 		console.log("submit")

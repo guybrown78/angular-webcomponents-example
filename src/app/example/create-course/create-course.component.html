@@ -96,7 +96,119 @@
 			
 		</test-radio-group>
 
-		<tf-divider></tf-divider>
+
+		<tf-ng-file-select
+			label="Cover Image" 
+			[name]="image"
+			[formControl]="image"
+			selectMessage="Choose an image"
+			dropMessage="or drag one into here"
+			icon="cloud-upload"
+			hint="Select an image for the course cover image"
+			accept="image/*"
+			[error]="image.touched && image.invalid"
+			[errorMessage]="
+				image.errors && image.errors.required
+					? 'Select a course cover image'
+					: ''
+			"
+		></tf-ng-file-select> 
+		<!-- <app-file-upload formControlName="image"></app-file-upload> -->
+
+<!-- 
+		<test-file-select
+		label="Your CV" 
+		name="dataFile"
+		icon=''
+	></test-file-select> -->
+
+	<!-- <test-file-select
+		label="Cover Image" 
+		name="coverImg"
+		hint="Select an image for the course cover image"
+		accept="image/*"
+		selectMessage="Choose an image"
+		dropMessage="or drag one into here"
+	></test-file-select> -->
+<!-- 
+	<tf-divider></tf-divider> -->
+	
+	<!-- <test-file-select
+		label="Upload Data" 
+		name="csvData"
+		accept=".csv"
+		multiple="false"
+		icon="cloud-upload"
+		errorMessage="You must select a picture to upload"
+		error
+	></test-file-select> -->
+<!-- 
+	<tf-divider></tf-divider> -->
+
+	<!-- <test-file-select
+		hideLabel="true"
+		label="Evidence" 
+		name="coverImg"
+		disableDragDrop
+		selectMessage="Select a file"
+		errorMessage="You must select a file to upload"
+		error
+	></test-file-select> -->
+<!-- 
+	<tf-divider></tf-divider> -->
+
+
+	<!-- <test-file-select
+		label="File upload" 
+		name="file4"
+		disableDragDrop
+		selectMessage="Select a file"
+		hint="Select a file from your system"
+		icon="upload"
+	></test-file-select> -->
+
+	<tf-divider></tf-divider>
+
+	<!-- <test-file-select
+		label="Upload Data" 
+		name="file5"
+		disabled
+		displayState="success"
+		displayStateMessage="Upload Complete!"
+	></test-file-select> -->
+
+	<!-- <test-file-select
+		label="Upload Data" 
+		name="file6"
+		disabled
+		displayState="failed"
+		displayStateMessage="Upload Failed"
+		error
+		error-message="The file didn't upload. Please try another file"
+	></test-file-select> -->
+<!-- 
+	<test-file-select
+		label="Upload Data" 
+		name="file7"
+		disabled
+		disableDragDrop
+		displayState="success"
+		displayStateMessage="Upload Complete!"
+	></test-file-select> -->
+
+	<!-- <test-file-select
+		label="Upload Data" 
+		name="file8"
+		disabled
+		disableDragDrop
+		displayState="failed"
+		displayStateMessage="Upload Failed"
+		error
+		errorMessage="The file didn't upload. Please try another file"
+	></test-file-select> -->
+<!-- 
+
+		<tf-divider></tf-divider> -->
 
 		<tf-ng-checkbox 
 			[name]="isSignedOff" 

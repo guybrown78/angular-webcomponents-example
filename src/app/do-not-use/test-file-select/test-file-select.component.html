@@ -1,0 +1,23 @@
+<tf-file-select
+	name={{name}}
+	label={{label}} 
+	required="required"
+	hideLabel="hideLabel"
+	[icon]="icon"
+	[value]="value"
+	[hint]="hint"
+	[error]="error"
+	[errorMessage]="errorMessage"
+
+	accept="accept"
+	multiple="multiple"
+	[disabled]="disabled"
+	[selectMessage]="selectMessage"
+	[dropMessage]="dropMessage"
+	[disableDragDrop]="disableDragDrop"
+	[displayState]="displayState"
+	[displayStateMessage]="displayStateMessage"
+
+	(tfOnInput)="onValueChange($event)"
+	(focusout)="onBlur()"
+></tf-file-select>
